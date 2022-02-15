@@ -136,11 +136,21 @@ function galaxis_scripts() {
 	// Enqueue Google Fonts.
 	wp_enqueue_style( 'galaxis-fonts', galaxis_fonts_url(), array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
 
-	// Theme script.
-	wp_enqueue_script( 'galaxis-script', get_template_directory_uri() . '/js/script.min.js', array(), GALAXIS_VERSION, true );
-
-	// Theme stylesheet.
-	wp_enqueue_style( 'galaxis-style', get_template_directory_uri() . '/style.min.css', array(), GALAXIS_VERSION );
+	
+	
+	
+	if (WP_DEBUG) {
+		echo "<h1><font style='color:red;'>Debug mode activated!</font></h1>";
+		// Theme script.
+		wp_enqueue_script( 'galaxis-script', get_template_directory_uri() . '/js/script.min.js', array(), GALAXIS_VERSION, true );
+		// Theme stylesheet.
+		wp_enqueue_style( 'galaxis-style', get_template_directory_uri() . '/style.css', array(), GALAXIS_VERSION );
+	} else {
+		// Theme script.
+		wp_enqueue_script( 'galaxis-script', get_template_directory_uri() . '/js/script.min.js', array(), GALAXIS_VERSION, true );
+		// Theme stylesheet.
+		wp_enqueue_style( 'galaxis-style', get_template_directory_uri() . '/style.min.css', array(), GALAXIS_VERSION );
+	}
 	wp_style_add_data( 'galaxis-style', 'rtl', 'replace' );
 
 	// Add output of customizer settings as inline style.

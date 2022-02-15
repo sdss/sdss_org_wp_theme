@@ -3311,6 +3311,7 @@ body.page.page-template-template-no-title-compact .site-content>.wrapper {
 .site-footer-section .footer-menu {
 	padding: .5em 0;
 	text-align: center;
+	color:orange;
 }
 
 @media screen and (min-width: 800px) {
