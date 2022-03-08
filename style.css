@@ -48,6 +48,7 @@ Tags: blog, entertainment, e-commerce, one-column, two-columns, right-sidebar, l
 	## Galleries
 # WooCommerce
 	## Header cart
+# Home page
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -3838,4 +3839,20 @@ button.woocommerce-Button[name="save_account_details"] {
 	width: 1em;
 	font-size: 1.25em;
 	line-height: 1;
+}
+
+
+/*--------------------------------------------------------------
+## Home page
+--------------------------------------------------------------*/
+
+.homeslidertext {
+	color: #FFF !important;
+	font-family: 'Monda', sans-serif;
+	text-transform: uppercase;
+	font-size: 44px !important;
+	font-weight: bold;
+	line-height: 1.1em;
+	text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
+
 }

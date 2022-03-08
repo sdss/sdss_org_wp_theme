@@ -140,7 +140,7 @@ function galaxis_scripts() {
 	
 	
 	if (WP_DEBUG) {
-		echo "<h1><font style='color:red;'>Debug mode activated!</font></h1>";
+		//echo "<h1><font style='color:red;'>Debug mode activated!</font></h1>";
 		// Theme script.
 		wp_enqueue_script( 'galaxis-script', get_template_directory_uri() . '/js/script.min.js', array(), GALAXIS_VERSION, true );
 		// Theme stylesheet.
@@ -179,8 +179,8 @@ add_action( 'wp_enqueue_scripts', 'galaxis_scripts' );
  * Register custom fonts.
  */
 function galaxis_fonts_url() {
-	$fonts_url = apply_filters( 'galaxis_fonts_url', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital@0;1&display=swap' );
-
+	//$fonts_url = apply_filters( 'galaxis_fonts_url', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital@0;1&display=swap' );  // original code
+	$fonts_url = apply_filters( 'galaxis_fonts_url', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:ital@0;1&family=Monda&display=swap' ); 
 	return esc_url_raw( $fonts_url );
 }
 
