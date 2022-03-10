@@ -17,9 +17,10 @@
     2. Global styles
     3. Header
     4. Footer
-    5. Home page
-    6. Mapper Summary reusable block
-    7. Back to top control
+    5. Sidebars
+    6. Home page
+    7. Mapper Summary reusable block
+    8. Back to top control
 */
 
 /* ##################### 1. Fonts ##################### */
@@ -59,6 +60,17 @@ a {
     color: #6256A3;
     /*text-decoration: none !important;*/
 }
+
+
+.explore-button {    /* Used for the "Explore X" buttons on Mappers page */
+    text-align: center;
+    width:100%;
+    margin:auto;
+}
+
+    .explore-button a:hover {
+        text-decoration:underline;
+    }
 
 /* ##################### 3. Header ##################### */
 /*--------------------------------------------------------------
@@ -123,8 +135,21 @@ a {
             }
 
 
-    /* ##################### 5. Home page ##################### */
-    .home-spacer {
+/* ##################### 5. Sidebars ##################### */
+.sidebar__inner .menu {
+    /*background-color:aquamarine;*/
+}
+    .sidebar__inner .menu a {
+        color: #1291ee;
+        /*background-color:aquamarine;*/
+    }
+
+        .sidebar__inner .menu a:visited {
+            color: #6256A3;
+        }
+
+/* ##################### 6. Home page ##################### */
+.home-spacer {
     background-color: #867dba;
     margin-left: -50px;
     margin-right: -50px;
@@ -168,7 +193,7 @@ a {
 }
 
 
-/* ##################### 6. Mapper Summary reusable block ##################### */
+/* ##################### 7. Mapper Summary reusable block ##################### */
 .mapper-summary {
 }
 
@@ -200,7 +225,7 @@ a {
         }*/
 
 
-/* ##################### 7. Back to top control ##################### */
+/* ##################### 8. Back to top control ##################### */
 .back-to-top {
     background-color: #5f52a2;
 }
