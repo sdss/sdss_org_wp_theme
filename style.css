@@ -16,6 +16,8 @@
     1. Fonts
     2. Global styles
     3. Header
+        3.1. Logo
+        3.2. Breadcrumbs and search bar
     4. Footer
     5. Sidebars
     6. Home page
@@ -55,7 +57,21 @@
 
 
 /* ##################### 2. Global styles ##################### */
+/*
+#content {
+    padding-top: 0;
+    background-color: peachpuff;
+}
 
+.site-content {
+    background-color: pink;
+}
+
+    .site-content .wrapper {
+        background-color: aquamarine;
+    }
+
+    */
 a {
     color: #6256A3;
     /*text-decoration: none !important;*/
@@ -72,7 +88,24 @@ a {
         text-decoration:underline;
     }
 
+
+/*--------------------------------------------------------------
+# Utilities: change top and bottom margins of content container
+--------------------------------------------------------------*/
+/*.u-b-margin {
+    margin-bottom: 0.25rem;
+} */
+
+.u-t-margin {
+    margin-top: 0.25rem;
+}
+
 /* ##################### 3. Header ##################### */
+
+
+
+
+/* ##################### 3.1. Logo ##################### */
 /*--------------------------------------------------------------
 ## Embiggened branding in header
 --------------------------------------------------------------*/
@@ -92,6 +125,44 @@ a {
         max-width: 430px;
     }
 }
+
+
+/* ##################### 3.2. Breadcrumbs and search bar ##################### */
+#breadsearch {
+    margin-top: -15px;
+    margin-bottom: -25px;
+}
+
+    #breadsearch ul {
+        padding: 10px 16px;
+        margin-left: 0;
+        list-style: none;
+        background-color: white;
+    }
+        #breadsearch ul li {
+            display: inline;
+            font-size: 18px;
+        }
+
+            /* Add a slash symbol (/) before/behind each list item */
+            #breadsearch ul li + li:before {
+                padding: 8px;
+                color: black;
+                /*content: "/\00a0";*/
+                content: " >> ";
+            }
+
+            /* Add a color to all links inside the list */
+            #breadsearch ul li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
+
+            /* Add a color on mouse-over */
+                #breadsearch ul li a :hover {
+                    color: #01447e;
+                    text-decoration: underline;
+                }
 
 
 /* ##################### 4. Footer ##################### */
