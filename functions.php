@@ -32,18 +32,45 @@ function get_breadcrumbs() {
         echo "</strong></li>";
         echo "</ul>";
     }
-
-//    echo $ancestor_array[count($ancestor_array)];
-/*    foreach ($ancestor_array as $this_ancestor) {
-        echo "<p>".get_the_title($this_ancestor)."</p>";
-        //echo "<p>".get_the_title($this_ancestor)."</p>";
-    } */
-/*    echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
-    if (is_category() || is_single()) {
-        echo '>>';
-        the_title();
-    } elseif (is_page()) {
-        echo " >> ";
-        echo the_title();
-    } */
 }
+
+function sdss5_register_sidebar(){
+     register_sidebar(array(
+         'name' => esc_html__( 'Collaboration Sidebar', 'galaxis' ),
+         'id' => 'sidebar-collaboration',
+         'description' => esc_html__( 'Collaboration sidebar: Add widgets here.', 'galaxis' ),
+         'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+         'after_widget' => '</aside>',
+         'before_title' => '<h3 class="widget-title">',
+         'after_title' => '</h3>',
+     ));
+    register_sidebar(array(
+             'name' => esc_html__( 'Instruments Sidebar', 'galaxis' ),
+             'id' => 'sidebar-instruments',
+             'description' => esc_html__( 'Instruments sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+    register_sidebar(array(
+             'name' => esc_html__( 'Mappers Sidebar', 'galaxis' ),
+             'id' => 'sidebar-mappers',
+             'description' => esc_html__( 'Mappers sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+    register_sidebar(array(
+             'name' => esc_html__( 'Science Sidebar', 'galaxis' ),
+             'id' => 'sidebar-science',
+             'description' => esc_html__( 'Science sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+}
+
+add_action( 'widgets_init', 'sdss5_register_sidebar' );
