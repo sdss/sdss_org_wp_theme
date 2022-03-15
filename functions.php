@@ -12,24 +12,26 @@ function my_theme_enqueue_styles() {
 function get_breadcrumbs() {
    $this_page = get_post();
     
-   echo "<ul>";
+
    //echo "<li><a href='".get_home_url()."'>Home</a></li>";
 
     $ancestor_array = get_post_ancestors($this_page);
     $ancestor_array = array_reverse($ancestor_array);
 
-    for ($i = 0; $i < count($ancestor_array); $i++) {
-        echo "<li>";
-        echo "<a href='".get_page_link($ancestor_array[$i])."'>";
-        echo get_the_title($ancestor_array[$i]);
-        echo "</a>";
-        echo "</li>";
+    if (count($ancestor_array) >= 1) {
+       echo "<ul>";
+        for ($i = 0; $i < count($ancestor_array); $i++) {
+            echo "<li>";
+            echo "<a href='".get_page_link($ancestor_array[$i])."'>";
+            echo get_the_title($ancestor_array[$i]);
+            echo "</a>";
+            echo "</li>";
+        }
+        echo "<li><strong>";
+        echo get_the_title();
+        echo "</strong></li>";
+        echo "</ul>";
     }
-    echo "<li><strong>";
-    echo get_the_title();
-    echo "</strong></li>";
-
-    echo "</ul>";
 
 //    echo $ancestor_array[count($ancestor_array)];
 /*    foreach ($ancestor_array as $this_ancestor) {
