@@ -71,6 +71,27 @@ function sdss5_register_sidebar(){
              'before_title' => '<h3 class="widget-title">',
              'after_title' => '</h3>',
          ));
+    register_sidebar(array(
+             'name' => esc_html__( 'Science Results Sidebar', 'galaxis' ),
+             'id' => 'sidebar-science-results',
+             'description' => esc_html__( 'Science Results sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+    
+    register_sidebar(array(
+             'name' => esc_html__( 'Search widget', 'galaxis' ),
+             'id' => 'search-widget',
+             'description' => esc_html__( 'Search widget: Add widgets here.', 'galaxis' ),
+             //'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'before_widget' => '<section id="%1$s" class="widget %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+
 }
 
 add_action( 'widgets_init', 'sdss5_register_sidebar' );

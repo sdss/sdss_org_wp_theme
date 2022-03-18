@@ -44,6 +44,10 @@
 
 
 /* ##################### 2. Global styles ##################### */
+p {
+    color: #7A7A7A;
+}
+
 a {
     color: #6256A3;
 }
@@ -56,12 +60,26 @@ a {
 }
 
 
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.lefty {
+    float: left;
+}
+
+.righty {
+    float: right;
+}
+
+
 /*--------------------------------------------------------------
 # 2.1. Utilities: change top and bottom margins of content container
 --------------------------------------------------------------*/
-/*.u-b-margin {
+.u-b-margin {
     margin-bottom: 0.25rem;
-} */
+}
 
 .u-t-margin {
     margin-top: 0.25rem;
@@ -102,170 +120,272 @@ a {
 
 
 /* ##################### 3.2. Breadcrumbs and search bar ##################### */
-#breadsearch {
-    margin-top: -15px;
-    margin-bottom: -25px;
-}
 
-    #breadsearch ul {
-        padding: 10px 16px;
-        margin-left: 0;
-        list-style: none;
-        background-color: white;
+
+
+#breadsearch {
+}
+    #breadsearch .gx-card-content {
+        min-height: 45px;
+        padding: 0;
+        margin-top: 5px;
+        margin-bottom: 0;
     }
 
-        #breadsearch ul li {
+    #breadsearch .crumbs {
+        width: 50%;
+        float: left;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-top: 4px;
+        /*margin-top: -15px;
+        margin-bottom: -18px;
+        background-color: yellow;*/
+    }
+    @media screen and (max-width: 550px) {
+        #breadsearch .crumbs {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    }
+
+
+        #breadsearch .crumbs ul {
+            margin-left: 0;
+            list-style: none;
+            padding-left: 15px;
+            margin-bottom: 0;
+            /*background-color: orange;
+
+                margin-top: 10px;
+        margin-bottom: 10px;*/
+        }
+
+        @media screen and (max-width: 700px) {
+            #breadsearch .crumbs ul {
+                margin-top: 3px;
+            }
+        }
+
+        #breadsearch .crumbs ul li {
             display: inline;
             font-size: 18px;
         }
 
-            /* Add a slash symbol (/) before/behind each list item */
-            #breadsearch ul li + li:before {
-                padding: 8px;
-                color: black;
-                /*content: "/\00a0";*/
-                content: " >> ";
+        @media screen and (max-width: 700px) {
+            #breadsearch .crumbs ul li {
+                font-size: 14px;
             }
+        }
 
-            /* Add a color to all links inside the list */
-            #breadsearch ul li a {
-                color: #0275d8;
-                text-decoration: none;
+
+
+
+    /* Add a slash symbol (/) before/behind each list item   */
+    #breadsearch .crumbs ul li + li:before {
+        padding: 8px;
+        color: black;
+        content: " >> ";
+    }
+
+    /* Add a color to all links inside the list  */
+    #breadsearch .crumbs ul li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+        /* Add a color on mouse-over  */
+        #breadsearch .crumbs ul li a :hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+    #breadsearch .searcher {
+        width: 50%;
+        /*margin-top: -20px;*/
+        float: right;
+        margin-top: 2px;
+        /*background-color: pink;
+        
+        height: 42px;
+            display: flex;
+        align-items: center;*/
+    }
+
+    @media screen and (max-width: 550px) {
+        #breadsearch .searcher {
+            width: 100%;
+        }
+    }
+
+        #breadsearch .searcher .widget_search {
+            height: inherit;
+        }
+        
+
+            #breadsearch .searcher .widget_search .wp-block-search {
+                width: 100%;
             }
-
-                /* Add a color on mouse-over */
-                #breadsearch ul li a :hover {
-                    color: #01447e;
-                    text-decoration: underline;
+            
+                #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
+                    border: none !important;
                 }
 
-
-
-/* ##################### 4. Footer #####################  */
-
-.site-footer {
-    background-color: white;
-
-}
-
-    .site-footer .footmenu {
+    /* ##################### 4. Footer #####################  */
+    .site-footer {
+        background-color: white;
     }
 
-        .site-footer .footmenu .footmenu-label {
-            margin-bottom: 0;
+        .site-footer .footmenu {
         }
 
-        .site-footer .footmenu nav a {
-            color: #6256A3;
+            .site-footer .footmenu .footmenu-label {
+                margin-bottom: 0;
+            }
+
+            .site-footer .footmenu nav a {
+                color: #6256A3;
+            }
+
+        .site-footer .footlogos {
+            margin-top: 20px;
         }
 
-    .site-footer .footlogos {
-        margin-top: 20px;
-    }
-
-        .site-footer .footlogos p {
-            color: #6256A3;
-            text-transform: uppercase;
-            font-size: larger;
-            letter-spacing: .5px;
-        }
-/* 
+            .site-footer .footlogos p {
+                color: #6256A3;
+                text-transform: uppercase;
+                font-size: larger;
+                letter-spacing: .5px;
+            }
+    /* 
     .site-footer .wrapper {
            border: 5px solid red;
         padding-left: 5%;
         padding-right: 5%;
     }  */
 
-.site-footer__text {
-    background-color: #333;
-}
-
-
-
-/* ##################### 5. Sidebars ##################### */
-.sidebar__inner .menu {
-
-}
-
-    .sidebar__inner .menu a {
-        color: #1291ee;
+    .site-footer__text {
+        background-color: #333;
     }
 
-        .sidebar__inner .menu a:visited {
-            color: #6256A3;
+
+
+    /* ##################### 5. Sidebars ##################### */
+    .sidebar__inner .menu {
+    }
+
+        .sidebar__inner .menu a {
+            color: #1291ee;
         }
 
-/* ##################### 6. Home page ##################### */
-.home-spacer {
-    background-color: #867dba;
-    margin-left: -50px;
-    margin-right: -50px;
-    height: 40px !important;
-}
+            .sidebar__inner .menu a:visited {
+                color: #6256A3;
+            }
 
-
-/*
-.homeslidertext {
-    color: #FFF !important;
-    font-family: 'Monda', sans-serif;
-    text-transform: uppercase;
-    font-size: 44px !important;
-    font-weight: bold;
-    line-height: 1.1em;
-    text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
-}*/
-
-#home-summary {
-    text-align: center;
-}
-
-#press-releases {
-    text-transform: uppercase;
-    color: #663399;
-}
-
-    #press-releases a {
-        color: inherit;
-        text-decoration: none;
-        letter-spacing: .5px;
+    /* ##################### 6. Home page ##################### */
+    .home-spacer {
+        background-color: #867dba;
+        margin-left: -50px;
+        margin-right: -50px;
+        height: 40px !important;
     }
 
-.joinus-title {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.joinus-text {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 0;
-}
-
-
-.slidercaption {
-}
-    .slidercaption a {
-        text-decoration: none !important;
+    .homeslidertext {
+        color: #FFF !important;
+        font-family: 'Monda', sans-serif;
+        text-transform: uppercase;
+        font-size: 44px;
+        font-weight: bold;
+        line-height: 1.1em;
+        text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
     }
 
-@media screen and (max-width: 800px) {
+
+    @media screen and (max-width: 800px) {
+        .homeslidertext {
+            max-height: 118px !important;
+            font-size: large;
+        }
+    }
+
+
+    #home-summary {
+        text-align: center;
+    }
+
+    .press-releases-header {
+        color: #663399;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+        .press-releases-header a {
+            font-family: inherit;
+            text-transform: inherit;
+            color: inherit;
+            text-decoration: none;
+        }
+
+    .press-releases {
+        color: #663399;
+    }
+
+        .press-releases h3, p {
+            font-family: 'Monda', sans-serif;
+            letter-spacing: .5px;
+        }
+
+        .press-releases a {
+            font-family: inherit;
+            text-transform: inherit;
+            color: inherit;
+            text-decoration: none;
+            letter-spacing: .5px;
+        }
+
+    .joinus-title {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .joinus-text {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 0;
+    }
+
+
     .slidercaption {
-        max-height: 118px !important;
-        /*border: 5px solid red;
-        vertical-align: text-bottom;*/
     }
 
-        .slidercaption .caption {
-            height: 100%;
-            padding: 0 !important;
-            vertical-align: bottom !important;
+        .slidercaption a {
+            text-decoration: none !important;
         }
 
-        .slidercaption p {
-            visibility: hidden;
-            max-height: 0;
+    @media screen and (max-width: 800px) {
+        .slidercaption {
+            max-height: 118px !important;
+            /*border: 5px solid red;
+        vertical-align: text-bottom;*/
         }
-}
+
+            .slidercaption .caption {
+                height: 100%;
+                padding: 0 !important;
+                vertical-align: bottom !important;
+            }
+
+            .slidercaption p {
+                visibility: hidden;
+                max-height: 0;
+            }
+    }
 
 
     /* ##################### 7. Mapper Summary reusable block ##################### */
@@ -312,3 +432,61 @@ a {
         .back-to-top:active {
             background-color: #fff;
         }
+
+
+
+    /* ##################### 9. Page TOC ##################### */
+    .sidebar-toc {
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .sidebar-toc {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    }
+        
+
+
+    .page-toc {
+        width: 30%;
+        float: right;
+        margin-top: 0;
+        margin-left: 8px;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        padding-left: 4px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: 800px) {
+        .page-toc {
+            visibility: hidden;
+        }
+    }
+
+        .page-toc li {
+            display: block;
+            list-style-type: none;
+            padding-left: 5px;
+            padding-bottom: 8px;
+        }
+            /* Add a color to all links inside the list  */
+            .page-toc li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
+
+                /* Add a color on mouse-over  */
+                .page-toc li a :hover {
+                    color: #01447e;
+                    text-decoration: underline;
+                }
+
+            .page-toc li ul {
+                display: block;
+                margin-top: 4px;
+            }
