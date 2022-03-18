@@ -46,12 +46,16 @@
 /* ##################### 2. Global styles ##################### */
 p {
     color: #7A7A7A;
+    line-height: 1.35;
 }
 
 a {
     color: #6256A3;
 }
 
+figcaption {
+    /*line-height: 1.6;*/
+}
 
 .explore-button { /* Used for the "Explore X" buttons on Mappers page  */
     text-align: center;
@@ -65,13 +69,6 @@ a {
     height: auto;
 }
 
-.lefty {
-    float: left;
-}
-
-.righty {
-    float: right;
-}
 
 
 /*--------------------------------------------------------------
@@ -150,6 +147,10 @@ a {
         }
     }
 
+        #breadsearch .crumbs .pr-breadcrumb {
+            padding-left: 15px;
+            font-size: 18px;
+        }
 
         #breadsearch .crumbs ul {
             margin-left: 0;
@@ -316,7 +317,8 @@ a {
 
 
     #home-summary {
-        text-align: center;
+        text-align: center; 
+        line-height: 1.45;
     }
 
     .press-releases-header {
@@ -358,6 +360,7 @@ a {
         padding-left: 5%;
         padding-right: 5%;
         margin-top: 0;
+        line-height: 1.5;
     }
 
 
@@ -490,3 +493,33 @@ a {
                 display: block;
                 margin-top: 4px;
             }
+
+
+/* ##################### 10. Press Releases ##################### */
+
+.contacts {
+    border: 2px solid #867dba;
+    width: 30%;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-bottom: 0;
+}
+
+    .contacts h2 {
+        margin-top: 5px;
+    }
+
+    .contacts p {
+        /*line-height: 1.6;*/
+    }
+
+.pr-date {
+    font-weight: bold;
+}
+
+.pr-caption {
+    background-color: orange;
+    line-height: 1.5;
+}

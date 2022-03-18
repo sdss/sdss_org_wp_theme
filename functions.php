@@ -11,12 +11,16 @@ function my_theme_enqueue_styles() {
 
 function get_breadcrumbs() {
    $this_page = get_post();
-    
+   
 
-   //echo "<li><a href='".get_home_url()."'>Home</a></li>";
+   
 
     $ancestor_array = get_post_ancestors($this_page);
     $ancestor_array = array_reverse($ancestor_array);
+
+    if (get_post_type() == 'post') {
+        echo "<ul><li><a href='news/'>News</a></li></ul>";
+    }
 
     if (count($ancestor_array) >= 1) {
        echo "<ul>";
