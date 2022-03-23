@@ -258,6 +258,13 @@ a {
 
 
     /* ##################### 5. Sidebars ##################### */
+
+
+    .sidebar__inner .widget_block .gx-card-content {
+        border: none;
+        padding: 0;
+    }
+
     .sidebar__inner .menu {
     }
 
@@ -268,6 +275,25 @@ a {
             .sidebar__inner .menu a:visited {
                 color: #6256A3;
             }
+
+    .sidebar-newslist {
+    }
+
+        .sidebar-newslist:before {
+            content: "News";
+            font-family: Poppins, sans-serif;
+            line-height: 1.5;
+            font-weight: 600;
+            clear: both;
+            word-break: break-word;
+            word-wrap: break-word;
+            /*            margin: 0.82em 0;*/
+            margin-bottom: 2.7em;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid #ebebeb;
+            font-size: 1.2em;
+            margin-right: 0;
+        }
 
     /* ##################### 6. Home page ##################### */
     .home-spacer {

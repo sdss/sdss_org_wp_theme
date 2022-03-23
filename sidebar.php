@@ -23,14 +23,15 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			foreach ( $GLOBALS['wp_registered_sidebars'] as $this_sidebar ) {
 				array_push($sidebar_values, substr(ucwords($this_sidebar['id']), strpos(ucwords($this_sidebar['id']), '-')+1));
 			}
-
 			$which = explode('/',substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[0];
 			if (in_array($which, $sidebar_values)) {
 				$sidebar_to_load = 'sidebar-'.$which;
 			} else {
+				dynamic_sidebar( 'science-sidebar' ); 
 				$sidebar_to_load = 'sidebar-1';
 			}
 			dynamic_sidebar( $sidebar_to_load ); 
+
 			if (array_reverse(explode('/',$this_page_url))[0] == 'science') { ?>
 				<div class='sidebar-toc'>
 				<?php dynamic_sidebar( 'science-results-sidebar' ); ?>
