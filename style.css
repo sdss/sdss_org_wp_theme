@@ -44,11 +44,35 @@
 
 
 /* ##################### 2. Global styles ##################### */
-p {
-    color: #7A7A7A;
+p, ul {
+    /* color: #7A7A7A;*/
     line-height: 1.45;
 }
 
+.entry-title {
+    
+    /*    background-color: blue;
+    margin-bottom: 0.1em !important;*/
+}
+
+.entry-content {
+    
+}
+h2 {
+    
+    /*margin-top: 0.5em;
+    margin-bottom: 0.5em;*/
+}
+    h2:first-child {
+        
+        margin-top: 0.1em;
+    }
+/*
+h1, h2, h3, h4 {
+    background-color: pink;
+    margin-bottom: 0;
+}
+*/
 a {
     color: #6256A3;
 }
@@ -353,9 +377,10 @@ a {
             color: inherit;
             text-decoration: none;
         }
-
+/*
     .press-releases {
         color: #663399;
+        color: pink !important;
     }
 
         .press-releases h3, p {
@@ -370,7 +395,7 @@ a {
             text-decoration: none;
             letter-spacing: .5px;
         }
-
+    */
     .joinus-title {
         padding-left: 5%;
         padding-right: 5%;
@@ -384,11 +409,18 @@ a {
     }
 
 
-    .slidercaption {
+    .slidercaption p, h3 {
+        font-family: 'Monda', sans-serif;
+        letter-spacing: .5px;
     }
 
         .slidercaption a {
             text-decoration: none !important;
+            font-family: inherit;
+            text-transform: inherit;
+            color: inherit;
+            text-decoration: none;
+            letter-spacing: .5px;
         }
 
     @media screen and (max-width: 800px) {
