@@ -277,23 +277,37 @@ a {
             }
 
     .sidebar-newslist {
+        
     }
 
         .sidebar-newslist:before {
             content: "News";
+            font-family: inherit;
             font-family: Poppins, sans-serif;
+            font-size: 1.2em;
             line-height: 1.5;
             font-weight: 600;
             clear: both;
             word-break: break-word;
             word-wrap: break-word;
-            /*            margin: 0.82em 0;*/
+            /*
+            border-bottom: 1px solid #ebebeb;
+            padding-bottom: 0.2em;
+             margin: 0.82em 0;
             margin-bottom: 2.7em;
             padding-bottom: 0.3em;
-            border-bottom: 1px solid #ebebeb;
-            font-size: 1.2em;
-            margin-right: 0;
+                margin-right: 0;
+            */
         }
+
+        .sidebar-newslist li {
+        }
+
+            .sidebar-newslist li:first-child {
+                margin-top: 0.3em;
+                padding-top: 0.7em;
+                border-top: 1px solid #ebebeb;
+            }
 
     /* ##################### 6. Home page ##################### */
     .home-spacer {

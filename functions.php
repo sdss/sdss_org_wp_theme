@@ -10,31 +10,34 @@ function my_theme_enqueue_styles() {
 }
 
 function get_breadcrumbs() {
+   //global $wp_query;
    $this_page = get_post();
    
 
-   
+   // Don't show breadcrumbs if this is a search results page 
+   if (get_query_var('s') == '') {
 
-    $ancestor_array = get_post_ancestors($this_page);
-    $ancestor_array = array_reverse($ancestor_array);
+        $ancestor_array = get_post_ancestors($this_page);
+        $ancestor_array = array_reverse($ancestor_array);
 
-    if (get_post_type() == 'post') {
-        echo "<ul><li><a href='news/'>News</a></li></ul>";
-    }
-
-    if (count($ancestor_array) >= 1) {
-       echo "<ul>";
-        for ($i = 0; $i < count($ancestor_array); $i++) {
-            echo "<li>";
-            echo "<a href='".get_page_link($ancestor_array[$i])."'>";
-            echo get_the_title($ancestor_array[$i]);
-            echo "</a>";
-            echo "</li>";
+        if (get_post_type() == 'post') {
+            echo "<ul><li><a href='news/'>News</a></li></ul>";
         }
-        echo "<li><strong>";
-        echo get_the_title();
-        echo "</strong></li>";
-        echo "</ul>";
+
+        if (count($ancestor_array) >= 1) {
+           echo "<ul>";
+            for ($i = 0; $i < count($ancestor_array); $i++) {
+                echo "<li>";
+                echo "<a href='".get_page_link($ancestor_array[$i])."'>";
+                echo get_the_title($ancestor_array[$i]);
+                echo "</a>";
+                echo "</li>";
+            }
+            echo "<li><strong>";
+            echo get_the_title();
+            echo "</strong></li>";
+            echo "</ul>";
+        }
     }
 }
 
