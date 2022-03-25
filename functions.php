@@ -41,6 +41,7 @@ function get_breadcrumbs() {
     }
 }
 
+
 function sdss5_register_sidebar(){
      register_sidebar(array(
          'name' => esc_html__( 'Collaboration Sidebar', 'galaxis' ),
@@ -101,4 +102,55 @@ function sdss5_register_sidebar(){
 
 }
 
+function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {
+
+    global $wp_registered_sidebars;
+    $args = shortcode_atts( array(
+        'thesidebar' => 1
+    ), $attrs );
+    $output = '<div class="page-toc">';
+
+    if ( is_int( $attrs['thesidebar'] ) ) {
+        $sidebar_name = "sidebar-$thesidebar";
+    } else {
+        $sidebar_name = sanitize_title( $attrs['thesidebar'] );
+        foreach ( (array) $wp_registered_sidebars as $key => $value ) {
+            if ( sanitize_title( $value['name'] ) === $attrs['thesidebar'] ) {
+                $sidebar_name = $key;
+                break;
+            }
+        }
+    }
+    //print_r(get_option(sidebars_widgets));
+    ob_start();
+    dynamic_sidebar($sidebar_name);
+    $sidebar_html = htmlentities(ob_get_contents());
+    ob_end_clean();
+
+    $headerstartpos = strpos($sidebar_html, htmlentities("<h"));
+    $headerendpos = strpos(substr($sidebar_html, $headerstartpos), htmlentities("</aside>"));
+
+    $output .= html_entity_decode(substr($sidebar_html, $headerstartpos, $headerendpos));
+
+    $ulstartpos = strpos($sidebar_html, htmlentities("<ul>"));
+
+    $ulendpos = strpos(substr($sidebar_html, $ulstartpos), htmlentities("</aside>"));
+
+    $output .= html_entity_decode(substr($sidebar_html, $ulstartpos, $ulendpos));
+
+    //$listendpos = strpos($sidebar_html, htmlentities("</aside>"));
+
+    //$ulbefore = substr($sidebar_html, 0, $ulpos);
+    //$ulbeyond = substr($sidebar_html, $ulpos);
+
+    //$listasidepos = $headerstartpos + strpos($ulbeyond, htmlentities("</aside>"));
+
+    //$output .= substr($sidebar_html, $headerstartpos, $listasidepos);
+
+    $output .= "</div>";
+    return $output;
+}
+
+
 add_action( 'widgets_init', 'sdss5_register_sidebar' );
+add_shortcode('load_sidebar_as_page_toc', 'sdss5_load_sidebar_as_page_toc');

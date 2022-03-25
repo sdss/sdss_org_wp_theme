@@ -492,31 +492,32 @@ a {
 
     /* ##################### 9. Page TOC ##################### */
     .sidebar-toc {
-    }
-
-
-    @media screen and (max-width: 800px) {
-        .sidebar-toc {
-            visibility: hidden;
-            width: 0;
-            height: 0;
         }
-    }
-        
 
 
-    .page-toc {
-        width: 30%;
-        float: right;
-        margin-top: 0;
-        margin-left: 8px;
-        overflow-wrap: break-word;
-        line-height: 1.5;
-        padding-left: 4px;
-        margin-left: 0;
-        margin-top: 0;
-    }
+        @media screen and (max-width: 800px) {
+            .sidebar-toc {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+        }
 
+
+
+.page-toc {
+    width: 30%;
+    float: right;
+    margin-top: 0;
+    margin-left: 8px;
+    overflow-wrap: break-word;
+    height: auto;
+    line-height: 1.5;
+    padding-left: 4px;
+    margin-left: 0;
+    margin-top: 0;
+}
+    
     @media screen and (min-width: 800px) {
         .page-toc {
             visibility: hidden;
@@ -548,9 +549,7 @@ a {
                 margin-top: 4px;
             }
 
-
 /* ##################### 10. Press Releases ##################### */
-
 .contacts {
     border: 2px solid #867dba;
     width: 30%;
