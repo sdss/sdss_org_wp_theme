@@ -34,7 +34,13 @@ function get_breadcrumbs() {
                 echo "</li>";
             }
             echo "<li><strong>";
-            echo get_the_title();
+            if (get_the_title() == 'Local Volume Mapper Instrument') {
+                echo "LVMI";
+            } elseif (get_the_title() == 'Focal Plane System') {
+                echo "FPS";
+            } else {
+                echo get_the_title();
+            }
             echo "</strong></li>";
             echo "</ul>";
         }
