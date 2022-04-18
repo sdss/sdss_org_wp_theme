@@ -38,6 +38,8 @@ function get_breadcrumbs() {
                 echo "LVMI";
             } elseif (get_the_title() == 'Focal Plane System') {
                 echo "FPS";
+            } elseif (get_the_title() == 'The SDSS Science Collaboration Council') {
+                echo "CoCo";
             } else {
                 echo get_the_title();
             }
