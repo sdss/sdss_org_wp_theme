@@ -3,8 +3,8 @@ Theme Name: Galaxis
 Theme URI: https://scriptstown.com/wordpress-themes/galaxis-wordpress-theme/
 Author: ScriptsTown
 Author URI: https://scriptstown.com/
-Description: Galaxis is a lightweight WordPress theme built with a focus on speed, usability, and performance. It offers a minimalistic, clean, and fresh look. Say hello to Galaxis, a great theme for professional blogging, news, affiliate, movie, entertainment, media, magazine, educational, business, or eCommerce websites. The theme is designed for the best readability with great typography and clarity of each section on your website. Setting up a theme has never been this simple. The theme supports RTL layout and is fully responsive that looks nice on any screen-size device like mobile, tablet, desktop, etc. It comes with a sticky menu with multi-level dropdown menu items, social links menu, a top header bar, a sticky sidebar widget area that floats on scrolling, a background image, and various theme options. The theme supports WooCommerce for building an eCommerce site, Jetpack's infinite scrolling, and is also fully compatible with popular page builder plugins like Elementor, Divi, Visual Composer, etc. Also, it offers multiple page templates and block area for Gutenberg blocks in order to insert any custom content.
-Version: 1.4.3
+Description: Galaxis is a lightweight WordPress theme built with a focus on speed, usability, and performance. It offers a minimalistic, clean, and fresh look. Say hello to Galaxis, a great and unique theme for professional blogging, news, affiliate, movie, entertainment, media, magazine, educational, business, or eCommerce websites. The theme is designed for the best readability with great typography and clarity of each section on your website. Setting up a theme has never been this simple. The theme supports RTL layout and is fully responsive that looks nice on any screen-size device like mobile, tablet, desktop, etc. It comes with a sticky menu with multi-level accessible dropdown menu items, social links menu, a top header bar, a sticky sidebar widget area that floats on scrolling, a background image, and various theme options. The theme supports WooCommerce for building an eCommerce site, Jetpack's load more and infinite scrolling, and is also fully compatible with popular page builder plugins like Elementor, Divi, Visual Composer, etc. Also, it offers multiple page templates and block area for Gutenberg blocks in order to insert any custom content.
+Version: 1.5.3
 Requires at least: 5.0
 Tested up to: 5.9
 Requires PHP: 5.6
@@ -479,7 +479,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #000;
+	color: #272727;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -1021,8 +1021,16 @@ a:active {
 	-o-transform: translateY(-200px);
 }
 
-.admin-bar .site-menu-content--sticky.sticky-menu {
-	top: 32px;
+@media screen and (min-width: 601px) {
+	.admin-bar .site-menu-content--sticky.sticky-menu {
+		top: 46px;
+	}
+}
+
+@media screen and (min-width: 782px) {
+	.admin-bar .site-menu-content--sticky.sticky-menu {
+		top: 32px;
+	}
 }
 
 .site-menu-content--sticky.sticky-menu-in-view {
@@ -1152,7 +1160,7 @@ a:active {
 .main-navigation>.primary-menu-container {
 	position: absolute;
 	float: right;
-	right: -18px;
+	right: -385px;
 	top: 100%;
 	max-width: 380px;
 	width: 90%;
@@ -1163,16 +1171,11 @@ a:active {
 	background-color: #fff;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, .2), -1px -1px 4px rgba(0, 0, 0, .2);
 	z-index: 9999;
-	transform: translateX(100%);
-	-webkit-transform: translateX(100%);
-	-moz-transform: translateX(100%);
-	-ms-transform: translateX(100%);
-	-o-transform: translateX(100%);
-	transition: transform .3s ease-out;
-	-webkit-transition: transform .3s ease-out;
-	-moz-transition: transform .3s ease-out;
-	-ms-transition: transform .3s ease-out;
-	-o-transition: transform .3s ease-out;
+	transition: right .2s ease-out;
+	-webkit-transition: right .2s ease-out;
+	-moz-transition: right .2s ease-out;
+	-ms-transition: right .2s ease-out;
+	-o-transition: right .2s ease-out;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1229,11 +1232,6 @@ a:active {
 		overflow-y: visible;
 		background-color: transparent;
 		box-shadow: none;
-		transform: translateX(0);
-		-webkit-transform: translateX(0);
-		-moz-transform: translateX(0);
-		-ms-transform: translateX(0);
-		-o-transform: translateX(0);
 	}
 
 	.main-navigation .menu>li {
@@ -1273,24 +1271,6 @@ a:active {
 
 .main-navigation>.primary-menu-container--open {
 	right: 0;
-	transform: translateX(0);
-	-webkit-transform: translateX(0);
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	-o-transform: translateX(0);
-}
-
-@media screen and (min-width: 1025px) {
-	.main-navigation>.primary-menu-container {
-		position: static;
-		width: auto;
-		background-color: transparent;
-		transform: translateX(0);
-		-webkit-transform: translateX(0);
-		-moz-transform: translateX(0);
-		-ms-transform: translateX(0);
-		-o-transform: translateX(0);
-	}
 }
 
 .main-navigation .menu {
@@ -1859,28 +1839,18 @@ a:active {
 
 .entry-content .alignwide,
 body:not(.no-sidebar-galaxis) .entry-content .alignfull {
-	margin-left: calc(-1.1rem - 1px);
-	width: calc(100% + 2.2rem + 2px);
 	max-width: calc(100% + 2.2rem + 2px);
-}
-
-body.no-sidebar-galaxis .entry-content .alignfull {
-	max-width: 100vw;
-	margin-left: calc(100%/2 - 100vw/2);
-	width: calc(100% + (100% + 100vw/2 - 2.2em - 2px));
+	width: calc(100% + 2.2rem + 2px);
+	margin-left: calc(-1.1rem - 1px);
 }
 
 @media screen and (min-width: 530px) {
 
 	.entry-content .alignwide,
 	body:not(.no-sidebar-galaxis) .entry-content .alignfull {
-		margin-left: calc(-1.6rem - 1px);
-		width: calc(100% + 3.2rem + 2px);
 		max-width: calc(100% + 3.2rem + 2px);
-	}
-
-	body.no-sidebar-galaxis .entry-content .alignfull {
-		width: calc(100% + (100% + 100vw/2 - 3.2em - 2px));
+		width: calc(100% + 3.2rem + 2px);
+		margin-left: calc(-1.6rem - 1px);
 	}
 }
 
@@ -1888,21 +1858,18 @@ body.no-sidebar-galaxis .entry-content .alignfull {
 
 	.entry-content .alignwide,
 	body:not(.no-sidebar-galaxis) .entry-content .alignfull {
-		margin-left: calc(-1.9rem - 1px);
-		width: calc(100% + 3.8rem + 2px);
 		max-width: calc(100% + 3.8rem + 2px);
-	}
-
-	body.no-sidebar-galaxis .entry-content .alignfull {
-		width: calc(100% + (100% + 100vw/2 - 3.8em - 2px));
+		width: calc(100% + 3.8rem + 2px);
+		margin-left: calc(-1.9rem - 1px);
 	}
 }
 
+body.no-sidebar-galaxis .entry-content .alignfull,
 body.no-sidebar-galaxis .gx-footer-block-area .entry-content .alignfull,
 body:not(.no-sidebar-galaxis) .gx-footer-block-area .entry-content .alignfull {
-	margin-left: calc(100%/2 - 100vw/2);
 	max-width: 100vw;
 	width: 100vw;
+	margin-left: calc(50% - 50vw);
 }
 
 /*--------------------------------------------------------------
@@ -3045,7 +3012,7 @@ body .more-link:hover {
 }
 
 .search-title span {
-	color: #000;
+	color: #272727;
 }
 
 .wrapper.blog-has-left-sidebar>.columns,
@@ -3668,7 +3635,7 @@ object {
 }
 
 .woocommerce-review__author {
-	color: #000;
+	color: #272727;
 }
 
 .woocommerce-review__published-date {

@@ -12,7 +12,6 @@
  Text Domain: sdss5-org
  */
 
-
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
@@ -132,11 +131,8 @@ a {
     }
 }
 
-
+site-topbar-text site-topbar__left
 /* ##################### 3.2. Breadcrumbs and search bar ##################### */
-
-
-
 #breadsearch {
 }
     #breadsearch .gx-card-content {
@@ -215,42 +211,52 @@ a {
             text-decoration: underline;
         }
 
-
-
-
-
-
-#breadsearch .searcher {
-    width: 50%;
-    margin: 2px 0px 0px auto;
-}
-
-    @media screen and (max-width: 550px) {
-        #breadsearch .searcher {
-            width: 100%;
-        }
+    #breadsearch .searcher {
+        width: 50%;
+        margin: 2px 0px 0px auto;
     }
 
-        #breadsearch .searcher .widget_search {
-            height: inherit;
+        @media screen and (max-width: 550px) {
+            #breadsearch .searcher {
+                width: 100%;
+            }
         }
 
-
-            #breadsearch .searcher .widget_search .wp-block-search {
-                margin: 0px 0px 0px 0px;
-                max-width: 100%;
+            #breadsearch .searcher .widget_search {
+                height: inherit;
             }
 
-                #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
-                    padding: 10px;
-                    border: none;
+
+                #breadsearch .searcher .widget_search .wp-block-search {
                     margin: 0px 0px 0px 0px;
+                    max-width: 100%;
                 }
 
-    /* ##################### 4. Footer #####################  */
-    .site-footer {
-        background-color: white;
+                    #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
+                        padding: 10px;
+                        border: none;
+                        margin: 0px 0px 0px 0px;
+                    }
+
+/* ##################### 3.3. Special message area ##################### */
+    .site-topbar__left {
+        text-align: center;
+        padding: .3rem 0;
+        flex-basis: 100%;
+        flex-grow: 0;
     }
+
+        @media screen and (min-width: 530px) {
+            .site-topbar__left {
+                text-align: left;
+            }
+        }
+  
+
+/* ##################### 4. Footer #####################  */
+.site-footer {
+    background-color: white;
+}
 
         .site-footer .footmenu {
         }
