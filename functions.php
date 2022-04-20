@@ -91,7 +91,7 @@ function sdss5_register_sidebar(){
              'name' => esc_html__( 'Science Results Sidebar', 'galaxis' ),
              'id' => 'sidebar-science-results',
              'description' => esc_html__( 'Science Results sidebar: Add widgets here.', 'galaxis' ),
-             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'before_widget' => '<section id="%1$s" class="sidebar-science-results widget gx-card-content u-b-margin %2$s">',
              'after_widget' => '</aside>',
              'before_title' => '<h3 class="widget-title">',
              'after_title' => '</h3>',
@@ -134,7 +134,7 @@ function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {
     dynamic_sidebar($sidebar_name);
     $sidebar_html = htmlentities(ob_get_contents());
     ob_end_clean();
-
+/*
     $headerstartpos = strpos($sidebar_html, htmlentities("<h"));
     $headerendpos = strpos(substr($sidebar_html, $headerstartpos), htmlentities("</aside>"));
 
@@ -145,7 +145,7 @@ function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {
     $ulendpos = strpos(substr($sidebar_html, $ulstartpos), htmlentities("</aside>"));
 
     $output .= html_entity_decode(substr($sidebar_html, $ulstartpos, $ulendpos));
-
+    */
     //$listendpos = strpos($sidebar_html, htmlentities("</aside>"));
 
     //$ulbefore = substr($sidebar_html, 0, $ulpos);
@@ -154,7 +154,7 @@ function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {
     //$listasidepos = $headerstartpos + strpos($ulbeyond, htmlentities("</aside>"));
 
     //$output .= substr($sidebar_html, $headerstartpos, $listasidepos);
-
+    $output .= $sidebar_html;
     $output .= "</div>";
     return $output;
 }

@@ -339,6 +339,15 @@ site-topbar-text site-topbar__left
                 border-top: 1px solid #ebebeb;
             }
 
+    .sidebar-science-results {
+    }
+
+    .sidebar-science-results-in-page {
+        background-color: purple;
+    }
+
+
+
     /* ##################### 6. Home page ##################### */
     .home-spacer {
         background-color: #867dba;
@@ -367,7 +376,7 @@ site-topbar-text site-topbar__left
 
 
     #home-summary {
-        text-align: center; 
+        text-align: center;
         line-height: 1.45;
     }
 
@@ -383,7 +392,7 @@ site-topbar-text site-topbar__left
             color: inherit;
             text-decoration: none;
         }
-/*
+    /*
     .press-releases {
         color: #663399;
         color: pink !important;
@@ -420,14 +429,14 @@ site-topbar-text site-topbar__left
         letter-spacing: .5px;
     }
 
-        .slidercaption a {
-            text-decoration: none !important;
-            font-family: inherit;
-            text-transform: inherit;
-            color: inherit;
-            text-decoration: none;
-            letter-spacing: .5px;
-        }
+    .slidercaption a {
+        text-decoration: none !important;
+        font-family: inherit;
+        text-transform: inherit;
+        color: inherit;
+        text-decoration: none;
+        letter-spacing: .5px;
+    }
 
     @media screen and (max-width: 800px) {
         .slidercaption {
@@ -498,32 +507,32 @@ site-topbar-text site-topbar__left
 
     /* ##################### 9. Page TOC ##################### */
     .sidebar-toc {
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .sidebar-toc {
+            visibility: hidden;
+            width: 0;
+            height: 0;
         }
-
-
-        @media screen and (max-width: 800px) {
-            .sidebar-toc {
-                visibility: hidden;
-                width: 0;
-                height: 0;
-            }
-        }
+    }
 
 
 
-.page-toc {
-    width: 30%;
-    float: right;
-    margin-top: 0;
-    margin-left: 8px;
-    overflow-wrap: break-word;
-    height: auto;
-    line-height: 1.5;
-    padding-left: 4px;
-    margin-left: 0;
-    margin-top: 0;
-}
-    
+    .page-toc {
+        width: 30%;
+        float: right;
+        margin-top: 0;
+        margin-left: 8px;
+        overflow-wrap: break-word;
+        height: auto;
+        line-height: 1.5;
+        padding-left: 4px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
     @media screen and (min-width: 800px) {
         .page-toc {
             visibility: hidden;
@@ -532,53 +541,53 @@ site-topbar-text site-topbar__left
         }
     }
 
-        .page-toc li {
-            display: block;
-            list-style-type: none;
-            padding-left: 5px;
-            padding-bottom: 8px;
+    .page-toc li {
+        display: block;
+        list-style-type: none;
+        padding-left: 5px;
+        padding-bottom: 8px;
+    }
+        /* Add a color to all links inside the list  */
+        .page-toc li a {
+            color: #0275d8;
+            text-decoration: none;
         }
-            /* Add a color to all links inside the list  */
-            .page-toc li a {
-                color: #0275d8;
-                text-decoration: none;
+
+            /* Add a color on mouse-over  */
+            .page-toc li a :hover {
+                color: #01447e;
+                text-decoration: underline;
             }
 
-                /* Add a color on mouse-over  */
-                .page-toc li a :hover {
-                    color: #01447e;
-                    text-decoration: underline;
-                }
+        .page-toc li ul {
+            display: block;
+            margin-top: 4px;
+        }
 
-            .page-toc li ul {
-                display: block;
-                margin-top: 4px;
-            }
-
-/* ##################### 10. Press Releases ##################### */
-.contacts {
-    border: 2px solid #867dba;
-    width: 30%;
-    float: right;
-    margin: 10px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-bottom: 0;
-}
-
-    .contacts h2 {
-        margin-top: 5px;
+    /* ##################### 10. Press Releases ##################### */
+    .contacts {
+        border: 2px solid #867dba;
+        width: 30%;
+        float: right;
+        margin: 10px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-bottom: 0;
     }
 
-    .contacts p {
-        /*line-height: 1.6;*/
+        .contacts h2 {
+            margin-top: 5px;
+        }
+
+        .contacts p {
+            /*line-height: 1.6;*/
+        }
+
+    .pr-date {
+        font-weight: bold;
     }
 
-.pr-date {
-    font-weight: bold;
-}
-
-.pr-caption {
-    background-color: orange;
-    line-height: 1.5;
-}
+    .pr-caption {
+        background-color: orange;
+        line-height: 1.5;
+    }

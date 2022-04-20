@@ -32,11 +32,11 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			}
 			dynamic_sidebar( $sidebar_to_load ); 
 
-			if (array_reverse(explode('/',$this_page_url))[0] == 'science') { ?>
-				<div class='sidebar-toc'>
-				<?php dynamic_sidebar( 'science-results-sidebar' ); ?>
-				</div>
-			<?php } ?>
+			/*if (array_reverse(explode('/',$this_page_url))[0] == 'science') { */ ?>
+				<!--<div class='sidebar-toc'>-->
+				<?php /*dynamic_sidebar( 'science-results-sidebar' );*/ ?>
+				<!--</div>-->
+			<?php /*}*/ ?>
 		</aside><!-- #secondary -->
 
 		<?php do_action( 'galaxis_after_main_sidebar' ); ?>
