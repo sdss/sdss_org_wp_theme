@@ -3,8 +3,6 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 // Connect to parent theme (Galaxies)
 function my_theme_enqueue_styles() {
-    //echo "<h1><font color='red'>".substr(substr(get_home_url(),strpos(get_home_url(),'//'),9999),2,strpos(substr(get_home_url(),strpos(get_home_url(),'//'),9999),'.')-2)."</font></h1>";
-    echo WP_DEBUG;
     wp_enqueue_style( 'child-style', get_stylesheet_uri(),
         array( 'galaxis-style' ), 
         wp_get_theme()->get('Version') // this only works if you have Version in the style header
