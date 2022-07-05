@@ -21,7 +21,7 @@ function get_breadcrumbs() {
         $ancestor_array = array_reverse($ancestor_array);
 
         if (get_post_type() == 'post') {
-            echo "<ul><li><a href='news/'>News</a></li></ul>";
+            echo "<ul><li><a href='/news/'>News</a></li></ul>";
         }
 
         if (count($ancestor_array) >= 1) {
