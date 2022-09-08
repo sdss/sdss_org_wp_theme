@@ -41,6 +41,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 		get_template_part( 'template-parts/header/topbar' );
 		get_template_part( 'template-parts/header/main-menu' );
+		get_template_part( 'template-parts/header/secondary-menu' );
 		get_template_part( 'template-parts/header/breadsearch' );
 		do_action( 'galaxis_before_header_end' );
 

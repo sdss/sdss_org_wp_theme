@@ -15,6 +15,12 @@ function my_theme_enqueue_styles() {
     );
 }
 
+function register_secondary_menu() {
+    register_nav_menu('menu-2',__( 'Secondary Menu' ));
+}
+add_action( 'init', 'register_secondary_menu' );
+
+
 function get_breadcrumbs() {
    //global $wp_query;
    $this_page = get_post();

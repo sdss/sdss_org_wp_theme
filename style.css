@@ -124,8 +124,14 @@ a {
     }
 }
 
-site-topbar-text site-topbar__left
-/* ##################### 3.2. Breadcrumbs and search bar ##################### */
+/* ##################### 3.2. Secondary nav menu (for Data pages) ##################### */
+
+.secondary-menu {
+    background-color:orange;
+}
+
+
+/* ##################### 3.3. Breadcrumbs and search bar ##################### */
 #breadsearch {
 }
     #breadsearch .gx-card-content {
@@ -232,6 +238,13 @@ site-topbar-text site-topbar__left
                     }
 
 /* ##################### 3.3. Special message area ##################### */
+
+.site-topbar {
+    background-color: yellow; 
+    border: 5px solid red;
+    color:black;
+}
+
     .site-topbar__left {
         text-align: center;
         padding: .3rem 0;
