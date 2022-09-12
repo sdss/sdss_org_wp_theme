@@ -126,29 +126,92 @@ a {
 
 /* ##################### 3.2. Secondary nav menu (for Data pages) ##################### */
 
-.secondary-menu {
-    background-color:orange;
+/*@media screen and (min-width: 530px) {
+    .main-navigation {
+    }
+}*/
+
+
+#secondary-navigation {
+}
+
+.secondary-menu-container {
+    background-color: orange;
 }
 
 
-/* ##################### 3.3. Breadcrumbs and search bar ##################### */
-#breadsearch {
-}
-    #breadsearch .gx-card-content {
-        min-height: 65px;
-        padding: 0;
+@media screen and (min-width: 1025px) {
+    .secondary-menu-container {
+        width: 100%;
+        background-color: #fff;
+        padding-top: 0; /*1.1rem;*/
+        padding-bottom: 0;
+        padding-right: 10px;
+        border: 1px solid #ebebeb;
         margin-top: 5px;
-        margin-bottom: 0;
+        text-align: right;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+}
+
+#secondary-navigation .menu {
+    /*padding-top:0;*/
+    background-color: #fff;
+}
+    @media screen and (min-width: 1025px) {
+
+        #secondary-navigation .menu {
+            padding-top: inherit;
+            /*background-color: #fff;*/
+        }
     }
 
-    #breadsearch .crumbs {
-        width: 50%;
-        float: left;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-top: 2px;
-        padding-top: 8px;
+
+    #secondary-navigation .menu li {
+        background-color:#fff;
+
     }
+        @media screen and (min-width: 1025px) {
+
+            #secondary-navigation .menu li {
+                /*background-color: #fff;*/
+            }
+        }
+
+            #secondary-navigation .menu li a {
+                display:inline;
+            }
+
+                @media screen and (min-width: 1025px) {
+                    #secondary-navigation .menu li a {
+                        display:block;
+                    }
+                }
+
+        /* ##################### 3.3. Breadcrumbs and search bar ##################### */
+        #breadsearch {
+    }
+
+        #breadsearch .gx-card-content {
+            min-height: 65px;
+            padding: 0;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        #breadsearch .crumbs {
+            width: 50%;
+            float: left;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-top: 2px;
+            padding-top: 8px;
+        }
+
     @media screen and (max-width: 550px) {
         #breadsearch .crumbs {
             visibility: hidden;
@@ -157,36 +220,35 @@ a {
         }
     }
 
-        #breadsearch .crumbs .pr-breadcrumb {
-            padding-left: 15px;
-            font-size: 18px;
-        }
+    #breadsearch .crumbs .pr-breadcrumb {
+        padding-left: 15px;
+        font-size: 18px;
+    }
 
+    #breadsearch .crumbs ul {
+        margin-top: 10px;
+        margin-left: 0;
+        list-style: none;
+        padding-left: 15px;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 700px) {
         #breadsearch .crumbs ul {
-            
-            margin-top:10px;
-            margin-left: 0;
-            list-style: none;
-            padding-left: 15px;
-            margin-bottom: 0;
+            padding-top: 0px;
         }
+    }
 
-        @media screen and (max-width: 700px) {
-            #breadsearch .crumbs ul {
-                padding-top: 0px;
-            }
-        }
+    #breadsearch .crumbs ul li {
+        display: inline;
+        font-size: 18px;
+    }
 
+    @media screen and (max-width: 700px) {
         #breadsearch .crumbs ul li {
-            display: inline;
-            font-size: 18px;
+            font-size: 14px;
         }
-
-        @media screen and (max-width: 700px) {
-            #breadsearch .crumbs ul li {
-                font-size: 14px;
-            }
-        }
+    }
 
 
 
@@ -215,35 +277,35 @@ a {
         margin: 2px 0px 0px auto;
     }
 
-        @media screen and (max-width: 550px) {
-            #breadsearch .searcher {
-                width: 100%;
-            }
+    @media screen and (max-width: 550px) {
+        #breadsearch .searcher {
+            width: 100%;
+        }
+    }
+
+    #breadsearch .searcher .widget_search {
+        height: inherit;
+    }
+
+
+        #breadsearch .searcher .widget_search .wp-block-search {
+            margin: 0px 0px 0px 0px;
+            max-width: 100%;
         }
 
-            #breadsearch .searcher .widget_search {
-                height: inherit;
+            #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
+                padding: 10px;
+                border: none;
+                margin: 0px 0px 0px 0px;
             }
 
+    /* ##################### 3.3. Special message area ##################### */
 
-                #breadsearch .searcher .widget_search .wp-block-search {
-                    margin: 0px 0px 0px 0px;
-                    max-width: 100%;
-                }
-
-                    #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
-                        padding: 10px;
-                        border: none;
-                        margin: 0px 0px 0px 0px;
-                    }
-
-/* ##################### 3.3. Special message area ##################### */
-
-.site-topbar {
-    background-color: yellow; 
-    border: 5px solid red;
-    color:black;
-}
+    .site-topbar {
+        background-color: yellow;
+        border: 5px solid red;
+        color: black;
+    }
 
     .site-topbar__left {
         text-align: center;
@@ -252,17 +314,17 @@ a {
         flex-grow: 0;
     }
 
-        @media screen and (min-width: 530px) {
-            .site-topbar__left {
-                text-align: left;
-            }
+    @media screen and (min-width: 530px) {
+        .site-topbar__left {
+            text-align: left;
         }
-  
+    }
 
-/* ##################### 4. Footer #####################  */
-.site-footer {
-    background-color: white;
-}
+
+    /* ##################### 4. Footer #####################  */
+    .site-footer {
+        background-color: white;
+    }
 
         .site-footer .footmenu {
         }
@@ -302,7 +364,6 @@ a {
     }
 
     .sidebar-newslist {
-        
     }
 
         .sidebar-newslist:before {
