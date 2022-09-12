@@ -124,15 +124,38 @@ a {
     }
 }
 
-/* ##################### 3.2. Secondary nav menu (for Data pages) ##################### */
+/* ##################### 3.2. Main nav menu  ##################### 
 
-/*@media screen and (min-width: 530px) {
+.main-navigation {
+    background-color: orange;
+}
+
+    .main-navigation>.primary-menu-container {
+        background-color: mediumpurple;
+    }
+
+#primary-menu {
+       background-color:aqua;
+}
+
+#primary-menu li {
+    background-color: silver;
+}
+
+    #primary-menu li a {
+        color: red;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    */
+    /* ##################### 3.2. Secondary nav menu (for Data pages) ##################### */
+    /*@media screen and (min-width: 530px) {
     .main-navigation {
     }
 }*/
 
 
-#secondary-navigation {
+    #secondary-navigation {
 }
 
 .secondary-menu-container {
