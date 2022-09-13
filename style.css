@@ -99,63 +99,62 @@ a {
 
 /* ##################### 3.1. Logo branding ##################### */
 /*--------------------------------------------------------------
-## Embiggened branding in header
+## Embiggened branding, takes up only 20% of width
 -------------------------------------------------------------- */
+.site-branding {
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    max-width: 81%;
+    margin-right: 0;
+    word-break: break-word;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+@media screen and (min-width: 1025px) {
+    .site-branding {
+        max-width: 20%;
+        flex-basis: 20%;
+        margin-right: 1.5rem;
+    }
+}
+
 
 .site-branding .custom-logo-link img {
     display: block;
-    max-height: 52px;
-    max-width: 100px;
-    max-height: 104px;
-    max-width: 200px;
+    max-height: 82px;
+    max-width: 175px;
     width: auto;
     height: auto;
 }
 
-@media screen and (max-width: 800px) {
-    .site-branding .custom-logo-link img {
-        max-width: 100px;
-    }
+/* ##################### 3.2. Main nav menu (takes up 75% of width)  ##################### */
+
+.main-navigation {
+    flex-grow: 1;
+    text-align: right;
 }
 
 @media screen and (min-width: 1025px) {
-    .site-branding .custom-logo-link img {
-        max-width: 430px;
+    .main-navigation {
+        flex-basis: 75%;
+        text-align: center;
     }
 }
 
-/* ##################### 3.2. Main nav menu  ##################### 
-
-.main-navigation {
-    background-color: orange;
-}
-
-    .main-navigation>.primary-menu-container {
-        background-color: mediumpurple;
-    }
-
-#primary-menu {
-       background-color:aqua;
-}
-
-#primary-menu li {
-    background-color: silver;
-}
-
-    #primary-menu li a {
-        color: red;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    */
-    /* ##################### 3.2. Secondary nav menu (for Data pages) ##################### */
-    /*@media screen and (min-width: 530px) {
+    
+/* ##################### 3.3. Secondary nav menu (for Data pages) ##################### */
+/*@media screen and (min-width: 530px) {
     .main-navigation {
     }
 }*/
-
-
-    #secondary-navigation {
+#secondary-navigation {
 }
 
 .secondary-menu-container {
@@ -193,7 +192,6 @@ a {
         }
     }
 
-
     #secondary-navigation .menu li {
         background-color:#fff;
 
@@ -215,432 +213,432 @@ a {
                     }
                 }
 
-        /* ##################### 3.3. Breadcrumbs and search bar ##################### */
-        #breadsearch {
-    }
+    /* ##################### 3.3. Breadcrumbs and search bar ##################### */
+    #breadsearch {
+}
 
-        #breadsearch .gx-card-content {
-            min-height: 65px;
-            padding: 0;
-            margin-top: 5px;
-            margin-bottom: 0;
-        }
-
-        #breadsearch .crumbs {
-            width: 50%;
-            float: left;
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-top: 2px;
-            padding-top: 8px;
-        }
-
-    @media screen and (max-width: 550px) {
-        #breadsearch .crumbs {
-            visibility: hidden;
-            width: 0;
-            height: 0;
-        }
-    }
-
-    #breadsearch .crumbs .pr-breadcrumb {
-        padding-left: 15px;
-        font-size: 18px;
-    }
-
-    #breadsearch .crumbs ul {
-        margin-top: 10px;
-        margin-left: 0;
-        list-style: none;
-        padding-left: 15px;
+    #breadsearch .gx-card-content {
+        min-height: 65px;
+        padding: 0;
+        margin-top: 5px;
         margin-bottom: 0;
     }
 
-    @media screen and (max-width: 700px) {
-        #breadsearch .crumbs ul {
-            padding-top: 0px;
-        }
+    #breadsearch .crumbs {
+        width: 50%;
+        float: left;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-top: 2px;
+        padding-top: 8px;
     }
 
+@media screen and (max-width: 550px) {
+    #breadsearch .crumbs {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+#breadsearch .crumbs .pr-breadcrumb {
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+#breadsearch .crumbs ul {
+    margin-top: 10px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+    #breadsearch .crumbs ul {
+        padding-top: 0px;
+    }
+}
+
+#breadsearch .crumbs ul li {
+    display: inline;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 700px) {
     #breadsearch .crumbs ul li {
-        display: inline;
-        font-size: 18px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* Add a slash symbol (/) before/behind each list item   */
+#breadsearch .crumbs ul li + li:before {
+    padding: 8px;
+    color: black;
+    content: " >> ";
+}
+
+/* Add a color to all links inside the list  */
+#breadsearch .crumbs ul li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+    /* Add a color on mouse-over  */
+    #breadsearch .crumbs ul li a :hover {
+        color: #01447e;
+        text-decoration: underline;
     }
 
-    @media screen and (max-width: 700px) {
-        #breadsearch .crumbs ul li {
-            font-size: 14px;
+#breadsearch .searcher {
+    width: 50%;
+    margin: 2px 0px 0px auto;
+}
+
+@media screen and (max-width: 550px) {
+    #breadsearch .searcher {
+        width: 100%;
+    }
+}
+
+#breadsearch .searcher .widget_search {
+    height: inherit;
+}
+
+
+    #breadsearch .searcher .widget_search .wp-block-search {
+        margin: 0px 0px 0px 0px;
+        max-width: 100%;
+    }
+
+        #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
+            padding: 10px;
+            border: none;
+            margin: 0px 0px 0px 0px;
         }
+
+/* ##################### 3.4. Special message area ##################### */
+
+.site-topbar {
+    background-color: yellow;
+    border: 5px solid red;
+    color: black;
+}
+
+.site-topbar__left {
+    text-align: center;
+    padding: .3rem 0;
+    flex-basis: 100%;
+    flex-grow: 0;
+}
+
+@media screen and (min-width: 530px) {
+    .site-topbar__left {
+        text-align: left;
+    }
+}
+
+
+/* ##################### 4. Footer #####################  */
+.site-footer {
+    background-color: white;
+}
+
+    .site-footer .footmenu {
+    }
+
+        .site-footer .footmenu .footmenu-label {
+            margin-bottom: 0;
+        }
+
+        .site-footer .footmenu a {
+            color: #6256A3;
+            text-decoration: none;
+        }
+
+    .site-footer .footlogos {
+        margin-top: 20px;
+    }
+
+        .site-footer .footlogos p {
+            color: #6256A3;
+            text-transform: uppercase;
+            font-size: larger;
+            letter-spacing: .5px;
+        }
+
+.site-footer__text {
+    background-color: #333;
+}
+
+
+
+/* ##################### 5. Sidebars ##################### */
+
+
+.sidebar__inner .widget_block .gx-card-content {
+    border: none;
+    padding: 0;
+}
+
+.sidebar-newslist {
+}
+
+    .sidebar-newslist:before {
+        content: "News";
+        font-family: inherit;
+        font-family: Poppins, sans-serif;
+        font-size: 1.2em;
+        line-height: 1.5;
+        font-weight: 600;
+        clear: both;
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+
+    .sidebar-newslist li {
+    }
+
+        .sidebar-newslist li:first-child {
+            margin-top: 0.3em;
+            padding-top: 0.7em;
+            border-top: 1px solid #ebebeb;
+        }
+
+.sidebar-science-results {
+}
+
+.sidebar-science-results-in-page {
+    background-color: purple;
+}
+
+
+
+/* ##################### 6. Home page ##################### */
+.home-spacer {
+    background-color: #867dba;
+    margin-left: -50px;
+    margin-right: -50px;
+    height: 40px !important;
+}
+
+.homeslidertext {
+    color: #FFF !important;
+    font-family: 'Monda', sans-serif;
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1.1em;
+    text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
+}
+
+
+@media screen and (max-width: 800px) {
+    .homeslidertext {
+        max-height: 118px !important;
+        font-size: large;
+    }
+}
+
+
+#home-summary {
+    text-align: center;
+    line-height: 1.45;
+}
+
+.press-releases-header {
+    color: #663399;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+    .press-releases-header a {
+        font-family: inherit;
+        text-transform: inherit;
+        color: inherit;
+        text-decoration: none;
+    }
+
+.joinus-title {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.joinus-text {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+
+.slidercaption p, h3 {
+    font-family: 'Monda', sans-serif;
+    letter-spacing: .5px;
+}
+
+.slidercaption a {
+    text-decoration: none !important;
+    font-family: inherit;
+    text-transform: inherit;
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+@media screen and (max-width: 800px) {
+    .slidercaption {
+        max-height: 118px !important;
+        /*border: 5px solid red;
+    vertical-align: text-bottom;*/
+    }
+
+        .slidercaption .caption {
+            height: 100%;
+            padding: 0 !important;
+            vertical-align: bottom !important;
+        }
+
+        .slidercaption p {
+            visibility: hidden;
+            max-height: 0;
+        }
+}
+
+
+/* ##################### 7. Mapper Summary reusable block ##################### */
+.mapper-summary {
+}
+
+    .mapper-summary .mapper-info {
+        padding: 10px;
+        text-align: center;
+    }
+
+
+        .mapper-summary .mapper-info .title {
+            color: #6051A2;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            padding-bottom: 0px;
+            margin-bottom: 5px;
+        }
+
+            .mapper-summary .mapper-info .title a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+        .mapper-summary .mapper-info .program-head-label {
+            margin-bottom: 0;
+        }
+
+/*        .mapper-summary .mapper-info .program-head-name {
+        background-color: orange;
+    }*/
+
+
+/* ##################### 8. Back to top control ##################### */
+.back-to-top {
+    background-color: #5f52a2;
+}
+
+    .back-to-top:hover {
+        background-color: #999;
+    }
+
+    .back-to-top:active {
+        background-color: #fff;
     }
 
 
 
+/* ##################### 9. Page TOC ##################### */
+.sidebar-toc {
+}
 
-    /* Add a slash symbol (/) before/behind each list item   */
-    #breadsearch .crumbs ul li + li:before {
-        padding: 8px;
-        color: black;
-        content: " >> ";
+
+@media screen and (max-width: 800px) {
+    .sidebar-toc {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
+}
 
+
+
+.page-toc {
+    width: 30%;
+    float: right;
+    margin-top: 0;
+    margin-left: 8px;
+    overflow-wrap: break-word;
+    height: auto;
+    line-height: 1.5;
+    padding-left: 4px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 800px) {
+    .page-toc {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+.page-toc li {
+    display: block;
+    list-style-type: none;
+    padding-left: 5px;
+    padding-bottom: 8px;
+}
     /* Add a color to all links inside the list  */
-    #breadsearch .crumbs ul li a {
+    .page-toc li a {
         color: #0275d8;
         text-decoration: none;
     }
 
         /* Add a color on mouse-over  */
-        #breadsearch .crumbs ul li a :hover {
+        .page-toc li a :hover {
             color: #01447e;
             text-decoration: underline;
         }
 
-    #breadsearch .searcher {
-        width: 50%;
-        margin: 2px 0px 0px auto;
-    }
-
-    @media screen and (max-width: 550px) {
-        #breadsearch .searcher {
-            width: 100%;
-        }
-    }
-
-    #breadsearch .searcher .widget_search {
-        height: inherit;
-    }
-
-
-        #breadsearch .searcher .widget_search .wp-block-search {
-            margin: 0px 0px 0px 0px;
-            max-width: 100%;
-        }
-
-            #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
-                padding: 10px;
-                border: none;
-                margin: 0px 0px 0px 0px;
-            }
-
-    /* ##################### 3.3. Special message area ##################### */
-
-    .site-topbar {
-        background-color: yellow;
-        border: 5px solid red;
-        color: black;
-    }
-
-    .site-topbar__left {
-        text-align: center;
-        padding: .3rem 0;
-        flex-basis: 100%;
-        flex-grow: 0;
-    }
-
-    @media screen and (min-width: 530px) {
-        .site-topbar__left {
-            text-align: left;
-        }
-    }
-
-
-    /* ##################### 4. Footer #####################  */
-    .site-footer {
-        background-color: white;
-    }
-
-        .site-footer .footmenu {
-        }
-
-            .site-footer .footmenu .footmenu-label {
-                margin-bottom: 0;
-            }
-
-            .site-footer .footmenu a {
-                color: #6256A3;
-                text-decoration: none;
-            }
-
-        .site-footer .footlogos {
-            margin-top: 20px;
-        }
-
-            .site-footer .footlogos p {
-                color: #6256A3;
-                text-transform: uppercase;
-                font-size: larger;
-                letter-spacing: .5px;
-            }
-
-    .site-footer__text {
-        background-color: #333;
-    }
-
-
-
-    /* ##################### 5. Sidebars ##################### */
-
-
-    .sidebar__inner .widget_block .gx-card-content {
-        border: none;
-        padding: 0;
-    }
-
-    .sidebar-newslist {
-    }
-
-        .sidebar-newslist:before {
-            content: "News";
-            font-family: inherit;
-            font-family: Poppins, sans-serif;
-            font-size: 1.2em;
-            line-height: 1.5;
-            font-weight: 600;
-            clear: both;
-            word-break: break-word;
-            word-wrap: break-word;
-        }
-
-        .sidebar-newslist li {
-        }
-
-            .sidebar-newslist li:first-child {
-                margin-top: 0.3em;
-                padding-top: 0.7em;
-                border-top: 1px solid #ebebeb;
-            }
-
-    .sidebar-science-results {
-    }
-
-    .sidebar-science-results-in-page {
-        background-color: purple;
-    }
-
-
-
-    /* ##################### 6. Home page ##################### */
-    .home-spacer {
-        background-color: #867dba;
-        margin-left: -50px;
-        margin-right: -50px;
-        height: 40px !important;
-    }
-
-    .homeslidertext {
-        color: #FFF !important;
-        font-family: 'Monda', sans-serif;
-        text-transform: uppercase;
-        font-size: 44px;
-        font-weight: bold;
-        line-height: 1.1em;
-        text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
-    }
-
-
-    @media screen and (max-width: 800px) {
-        .homeslidertext {
-            max-height: 118px !important;
-            font-size: large;
-        }
-    }
-
-
-    #home-summary {
-        text-align: center;
-        line-height: 1.45;
-    }
-
-    .press-releases-header {
-        color: #663399;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-        .press-releases-header a {
-            font-family: inherit;
-            text-transform: inherit;
-            color: inherit;
-            text-decoration: none;
-        }
-
-    .joinus-title {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-
-    .joinus-text {
-        padding-left: 5%;
-        padding-right: 5%;
-        margin-top: 0;
-        line-height: 1.5;
-    }
-
-
-    .slidercaption p, h3 {
-        font-family: 'Monda', sans-serif;
-        letter-spacing: .5px;
-    }
-
-    .slidercaption a {
-        text-decoration: none !important;
-        font-family: inherit;
-        text-transform: inherit;
-        color: inherit;
-        text-decoration: none;
-        letter-spacing: .5px;
-    }
-
-    @media screen and (max-width: 800px) {
-        .slidercaption {
-            max-height: 118px !important;
-            /*border: 5px solid red;
-        vertical-align: text-bottom;*/
-        }
-
-            .slidercaption .caption {
-                height: 100%;
-                padding: 0 !important;
-                vertical-align: bottom !important;
-            }
-
-            .slidercaption p {
-                visibility: hidden;
-                max-height: 0;
-            }
-    }
-
-
-    /* ##################### 7. Mapper Summary reusable block ##################### */
-    .mapper-summary {
-    }
-
-        .mapper-summary .mapper-info {
-            padding: 10px;
-            text-align: center;
-        }
-
-
-            .mapper-summary .mapper-info .title {
-                color: #6051A2;
-                text-transform: uppercase;
-                letter-spacing: .8px;
-                padding-bottom: 0px;
-                margin-bottom: 5px;
-            }
-
-                .mapper-summary .mapper-info .title a {
-                    text-decoration: none;
-                    color: inherit;
-                }
-
-            .mapper-summary .mapper-info .program-head-label {
-                margin-bottom: 0;
-            }
-
-    /*        .mapper-summary .mapper-info .program-head-name {
-            background-color: orange;
-        }*/
-
-
-    /* ##################### 8. Back to top control ##################### */
-    .back-to-top {
-        background-color: #5f52a2;
-    }
-
-        .back-to-top:hover {
-            background-color: #999;
-        }
-
-        .back-to-top:active {
-            background-color: #fff;
-        }
-
-
-
-    /* ##################### 9. Page TOC ##################### */
-    .sidebar-toc {
-    }
-
-
-    @media screen and (max-width: 800px) {
-        .sidebar-toc {
-            visibility: hidden;
-            width: 0;
-            height: 0;
-        }
-    }
-
-
-
-    .page-toc {
-        width: 30%;
-        float: right;
-        margin-top: 0;
-        margin-left: 8px;
-        overflow-wrap: break-word;
-        height: auto;
-        line-height: 1.5;
-        padding-left: 4px;
-        margin-left: 0;
-        margin-top: 0;
-    }
-
-    @media screen and (min-width: 800px) {
-        .page-toc {
-            visibility: hidden;
-            width: 0;
-            height: 0;
-        }
-    }
-
-    .page-toc li {
+    .page-toc li ul {
         display: block;
-        list-style-type: none;
-        padding-left: 5px;
-        padding-bottom: 8px;
-    }
-        /* Add a color to all links inside the list  */
-        .page-toc li a {
-            color: #0275d8;
-            text-decoration: none;
-        }
-
-            /* Add a color on mouse-over  */
-            .page-toc li a :hover {
-                color: #01447e;
-                text-decoration: underline;
-            }
-
-        .page-toc li ul {
-            display: block;
-            margin-top: 4px;
-        }
-
-    /* ##################### 10. Press Releases ##################### */
-    .contacts {
-        border: 2px solid #867dba;
-        width: 30%;
-        float: right;
-        margin: 10px;
-        padding: 10px;
-        padding-left: 20px;
-        padding-bottom: 0;
+        margin-top: 4px;
     }
 
-        .contacts h2 {
-            margin-top: 5px;
-        }
+/* ##################### 10. Press Releases ##################### */
+.contacts {
+    border: 2px solid #867dba;
+    width: 30%;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-bottom: 0;
+}
 
-        .contacts p {
-            /*line-height: 1.6;*/
-        }
-
-    .pr-date {
-        font-weight: bold;
+    .contacts h2 {
+        margin-top: 5px;
     }
 
-    .pr-caption {
-        background-color: orange;
-        line-height: 1.5;
+    .contacts p {
+        /*line-height: 1.6;*/
     }
+
+.pr-date {
+    font-weight: bold;
+}
+
+.pr-caption {
+    background-color: orange;
+    line-height: 1.5;
+}
