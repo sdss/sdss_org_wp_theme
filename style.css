@@ -323,7 +323,7 @@ a {
 /* ##################### 3.4. Special message area ##################### */
 
 .site-topbar {
-    background-color: yellow;
+    background-color: orange;
     border: 5px solid red;
     color: black;
 }
@@ -541,7 +541,15 @@ a {
     }*/
 
 
-/* ##################### 8. Back to top control ##################### */
+/* ##################### 8. Data pages (DR18 and beyond) ##################### */
+
+
+.helpbox {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* ##################### 9. Back to top control ##################### */
 .back-to-top {
     background-color: #5f52a2;
 }
@@ -556,7 +564,7 @@ a {
 
 
 
-/* ##################### 9. Page TOC ##################### */
+/* ##################### 10. Page TOC ##################### */
 .sidebar-toc {
 }
 
