@@ -100,6 +100,69 @@ function sdss5_register_sidebar(){
              'after_title' => '</h3>',
          ));
    register_sidebar(array(
+             'name' => esc_html__( 'Data Access Sidebar', 'galaxis' ),
+             'id' => 'sidebar-data_access',
+             'description' => esc_html__( 'Data Access sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+   register_sidebar(array(
+             'name' => esc_html__( 'MWM Data Sidebar', 'galaxis' ),
+             'id' => 'sidebar-mwm',
+             'description' => esc_html__( 'MWM Data sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+   register_sidebar(array(
+             'name' => esc_html__( 'LVM Data Sidebar', 'galaxis' ),
+             'id' => 'sidebar-lvm',
+             'description' => esc_html__( 'LVM Data sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+   register_sidebar(array(
+             'name' => esc_html__( 'BHM Data Sidebar', 'galaxis' ),
+             'id' => 'sidebar-bhm',
+             'description' => esc_html__( 'BHM Data sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+   register_sidebar(array(
+             'name' => esc_html__( 'Targeting Sidebar', 'galaxis' ),
+             'id' => 'sidebar-targeting',
+             'description' => esc_html__( 'Software sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+   register_sidebar(array(
+             'name' => esc_html__( 'Software Sidebar', 'galaxis' ),
+             'id' => 'sidebar-software',
+             'description' => esc_html__( 'Software sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+   register_sidebar(array(
+             'name' => esc_html__( 'Tutorials Sidebar', 'galaxis' ),
+             'id' => 'sidebar-tutorials',
+             'description' => esc_html__( 'Tutorials sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+   register_sidebar(array(
              'name' => esc_html__( 'Help Sidebar', 'galaxis' ),
              'id' => 'sidebar-help',
              'description' => esc_html__( 'Help sidebar: Add widgets here.', 'galaxis' ),
