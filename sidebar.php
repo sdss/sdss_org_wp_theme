@@ -23,7 +23,11 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			foreach ( $GLOBALS['wp_registered_sidebars'] as $this_sidebar ) {
 				array_push($sidebar_values, substr(ucwords($this_sidebar['id']), strpos(ucwords($this_sidebar['id']), '-')+1));
 			}
+			echo "</font></h1>";
 			$which = explode('/',substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[0];
+			if (preg_match('/(dr\d|data)/i',$which)) {
+				$which = explode("/",substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[1];
+			}
 			if (in_array($which, $sidebar_values)) {
 				$sidebar_to_load = 'sidebar-'.$which;
 			} else {

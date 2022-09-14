@@ -99,6 +99,15 @@ function sdss5_register_sidebar(){
              'before_title' => '<h3 class="widget-title">',
              'after_title' => '</h3>',
          ));
+   register_sidebar(array(
+             'name' => esc_html__( 'Help Sidebar', 'galaxis' ),
+             'id' => 'sidebar-help',
+             'description' => esc_html__( 'Help sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
     register_sidebar(array(
              'name' => esc_html__( 'Science Results Sidebar', 'galaxis' ),
              'id' => 'sidebar-science-results',
