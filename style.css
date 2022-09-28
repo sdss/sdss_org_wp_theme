@@ -158,7 +158,7 @@ a {
 }
 
 .secondary-menu-container {
-    background-color: orange;
+    //background-color: yellow;
 }
 
 
@@ -323,7 +323,7 @@ a {
 /* ##################### 3.4. Special message area ##################### */
 
 .site-topbar {
-    background-color: orange;
+    background-color: yellow;
     border: 5px solid red;
     color: black;
 }
