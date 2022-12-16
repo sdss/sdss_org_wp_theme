@@ -370,6 +370,12 @@ a {
             letter-spacing: .5px;
         }
 
+    .site-footer .toc {
+        visibility:hidden;
+        width: 0;
+        height: 0;
+    }
+
 .site-footer__text {
     background-color: #333;
 }
@@ -563,8 +569,32 @@ a {
     }
 
 
+/* ##################### 10. Within-page TOC #####################  */
 
-/* ##################### 10. Page TOC ##################### */
+.toc {
+    border:solid 5px orange;
+    width:30%;
+    margin:10px;
+}
+
+.toc-right {
+    float: right;
+}
+
+.toc-left {
+    float: left;
+}
+
+    .toc ul {
+        /*background-color:green;*/
+    }
+
+        .toc ul li {
+            /*background-color: red;*/
+        }
+
+
+/* ##################### 10. Page TOC ##################### 
 .sidebar-toc {
 }
 
@@ -576,8 +606,6 @@ a {
         height: 0;
     }
 }
-
-
 
 .page-toc {
     width: 30%;
@@ -606,13 +634,13 @@ a {
     padding-left: 5px;
     padding-bottom: 8px;
 }
-    /* Add a color to all links inside the list  */
+    /* Add a color to all links inside the list  
     .page-toc li a {
         color: #0275d8;
         text-decoration: none;
     }
 
-        /* Add a color on mouse-over  */
+        /* Add a color on mouse-over  
         .page-toc li a :hover {
             color: #01447e;
             text-decoration: underline;
@@ -622,8 +650,10 @@ a {
         display: block;
         margin-top: 4px;
     }
+    */
 
-/* ##################### 10. Press Releases ##################### */
+
+/* ##################### 11. Press Releases ##################### */
 .contacts {
     border: 2px solid #867dba;
     width: 30%;
