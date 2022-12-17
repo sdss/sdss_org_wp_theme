@@ -5,11 +5,13 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 1.1.0
+ Version: 2.0.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss5-org
+ Version updates:
+ *** 2.0.1. Header levels displayed differently in TOC
  */
 
 /* ##################### 1. Fonts ##################### 
@@ -581,9 +583,32 @@ a {
     float: right;
 }
 
+.forh2 {
+
+}
+
+.forh3 {
+    margin-left: 10px;
+    font-size:small;
+}
+
+.forh4 {
+    margin-left: 20px;
+    font-size: smaller;
+}
+
+.forh5 {
+    margin-left: 30px;
+    font-size: x-small;
+}
+
 .toc-left {
     float: left;
 }
+
+    .toc p {
+        color:red;
+    }
 
     .toc ul {
         /*background-color:green;*/
@@ -593,8 +618,17 @@ a {
             /*background-color: red;*/
         }
 
+            .toc ul li a .forh2 {
 
-/* ##################### 10. Page TOC ##################### 
+            }
+
+            /*/.toc ul li a .forh3 {
+                margin-left: 5px !important;
+                background-color: green !important;
+            }*/
+
+
+            /* ##################### 10. Page TOC ##################### 
 .sidebar-toc {
 }
 
@@ -651,10 +685,8 @@ a {
         margin-top: 4px;
     }
     */
-
-
-/* ##################### 11. Press Releases ##################### */
-.contacts {
+            /* ##################### 11. Press Releases ##################### */
+            .contacts {
     border: 2px solid #867dba;
     width: 30%;
     float: right;
