@@ -612,10 +612,14 @@ a {
     float: left;
 }
 
-    .toc p {
+.toc-label {
+    color:red;
+}
+
+/*.toc p {
         color:red;
     }
-
+        */
     .toc ul {
         /*background-color:green;*/
     }
