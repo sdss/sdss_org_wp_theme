@@ -782,6 +782,17 @@ a {
     /*margin-bottom: 10px;*/
 }
 
+.vac-authors-full {
+    background-color: yellow;
+    /*    color: DarkSlateGrey;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    /* margin-left: 10px;
+    margin-top: 10px; */
+    font-style: italic;
+    /*margin-bottom: 10px;*/
+}
+
+
 .vac-tags {
     margin-top: 5px;
         /*border: 1px solid green;
@@ -833,6 +844,34 @@ a {
 
 .vac-object {
     background-color:#d9534f;
+}
+
+.vac-table {
+}
+
+    .vac-table a {
+        color:white;
+    }
+
+.vac-box {
+    background-color: #396c8f;
+    border-radius: 6px; /*0 6px 0 6px;*/
+    padding: 6px;
+    margin-bottom: 6px;
+}
+
+    .vac-box a {
+        color:white;
+    }
+
+.vac-sas {
+    background-color: #336699;
+    color:white;
+}
+
+.vac-datamodel {
+    background-color: #993399;
+    color: white;
 }
     /*
 .type-vac {
@@ -915,12 +954,7 @@ a {
     margin-bottom: 10px;
 }
 
-.vac-box {
-    .alert;
-    border-radius: 0 6px 0 6px;
-    padding: 6px;
-    margin-bottom: 6px;
-    .vac-box-label
+
 
 {
     .pull-left;
