@@ -14,6 +14,7 @@
  *** 2.0.1. Header levels displayed differently in TOC
  *** 2.0.2. Added TOC display for h5 and h6
  *** 2.0.3. Styling of VAC list page
+ *** 2.0.4. Styling of single VAC catalog pages
  */
 
 /* ##################### 1. Fonts ##################### 
@@ -910,6 +911,40 @@ single-vac {
 }
 
 
+.vac-cas-info {
+    /* background-color: pink;*/
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.vac-cas-info-title {
+    /*background-color: yellow;*/
+    vertical-align: middle;
+    margin: 0;
+}
+
+    .vac-cas-info-title h3 {
+        display: inline;
+        /*background-color: silver;*/
+        vertical-align: middle;
+    }
+
+.vac-cas-info ul {
+    /*background-color: orange;*/ 
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.vac-tags-cas-info {
+    display: inline-flex;
+    /*background-color: dodgerblue;*/
+    height: 100%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
 .vac-www {
     font-weight: bold;
     font-size: 1.1em;
@@ -917,6 +952,10 @@ single-vac {
     border: 2px solid black;
     border-radius: 10px;
     overflow-wrap: break-word;
+
+    padding: 10px;
+
+    line-height: 1.25;
 }
 
 .vac-back-to-list {
