@@ -5,7 +5,7 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 2.0.5
+ Version: 2.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
@@ -16,6 +16,7 @@
  *** 2.0.3. Styling of VAC list page
  *** 2.0.4. Styling of single VAC catalog pages
  *** 2.0.5. Styling of single TOC with or without accordion, added arrows for h3 and lower
+ *** 2.1. Formatting for back to top button to work with TOC
  */
 
 /* ##################### 1. Fonts ##################### 
@@ -585,9 +586,11 @@ a {
 /* ##################### 10. Within-page TOC #####################  */
 
 .toc {
-    border: solid 1px black;
+    border: 2px solid black;
+    border-radius: 8px;
     width: 30%;
     margin: 0 10px 10px 10px;
+    /*background-color: #ecf0f1;*/
 }
 
 .toc-left {
@@ -599,6 +602,7 @@ a {
 }
 
 .toc-label {
+    color: #3d0096;
     font-size: large;
     font-weight: bold;
     height: 100%;
@@ -606,6 +610,7 @@ a {
 }
 
 .toc-label-accordion, .toc-label-inner {
+    border-bottom: 2px solid black;
 }
 
     .toc-label-accordion:after {
@@ -635,6 +640,7 @@ a {
             .toc ul li a {
                 color: #0275d8;
                 text-decoration: none;
+                font-weight: normal;
             }
 
 .forh2 {
@@ -670,6 +676,34 @@ a {
     padding-left: 4px;
     font-size: xx-small;
 }
+
+.sdss-to-top { /* not to be confused with back-to-top class */
+    background-color: #5f52a2;
+    padding: 10px 20px 10px 20px;
+    display: inline;
+    font-size: 1.1em;
+    border-radius: 15px;
+    float:right;
+    /*    position: absolute;
+    right: 0;
+    
+    transform: translateY(-50%);*/
+}
+
+    .sdss-to-top:hover {
+        background-color: #999;
+    }
+
+
+    .sdss-to-top a {
+        color: #fff;
+        text-decoration:none;
+    }
+
+        .sdss-to-top a:active {
+            background-color: #999;
+        }
+
 
 /* ##################### 10. Page TOC #####################  
 .sidebar-toc {
