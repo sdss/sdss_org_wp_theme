@@ -5,7 +5,7 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 2.0.3
+ Version: 2.0.5
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
@@ -15,6 +15,7 @@
  *** 2.0.2. Added TOC display for h5 and h6
  *** 2.0.3. Styling of VAC list page
  *** 2.0.4. Styling of single VAC catalog pages
+ *** 2.0.5. Styling of single TOC with or without accordion, added arrows for h3 and lower
  */
 
 /* ##################### 1. Fonts ##################### 
@@ -584,70 +585,93 @@ a {
 /* ##################### 10. Within-page TOC #####################  */
 
 .toc {
-    border:solid 5px orange;
-    width:30%;
-    margin:10px;
-}
-
-.toc-right {
-    float: right;
-}
-
-.forh2 {
-
-}
-
-.forh3 {
-    margin-left: 10px;
-    font-size:small;
-}
-
-.forh4 {
-    margin-left: 20px;
-    font-size: smaller;
-}
-
-.forh5 {
-    margin-left: 30px;
-    font-size: x-small;
-}
-
-.forh6 {
-    margin-left: 40px;
-    font-size: xx-small;
+    border: solid 1px black;
+    width: 30%;
+    margin: 0 10px 10px 10px;
 }
 
 .toc-left {
     float: left;
 }
 
-.toc-label {
-    color:red;
+.toc-right {
+    float: right;
 }
 
-/*.toc p {
-        color:red;
+.toc-label {
+    font-size: large;
+    font-weight: bold;
+    height: 100%;
+    padding: 0 5px 1px 10px;
+}
+
+.toc-label-accordion, .toc-label-inner {
+}
+
+    .toc-label-accordion:after {
+        color: black;
+        content: "+";
+        font-weight: bold;
+        font-size: larger;
     }
-        */
-    .toc ul {
-        /*background-color:green;*/
-    }
+
+
+.toc ul {
+    list-style-type: none;
+    margin: 5px 10px 5px 10px;
+}
 
         .toc ul li {
-            /*background-color: red;*/
+            padding-top: 3px;
+            padding-bottom: 5px;
+            margin-left: 0;
         }
 
-            .toc ul li a .forh2 {
-
+            .toc ul li:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
             }
 
-            /*/.toc ul li a .forh3 {
-                margin-left: 5px !important;
-                background-color: green !important;
-            }*/
+            .toc ul li a {
+                color: #0275d8;
+                text-decoration: none;
+            }
 
+.forh2 {
+    margin-left: 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid black;
+}
 
-            /* ##################### 10. Page TOC ##################### 
+.forh3 {
+    list-style-type: ">";
+    margin-left: 9px !important;
+    padding-left: 5px;
+    font-size: small;
+}
+
+.forh4 {
+    list-style-type: ">>";
+    margin-left: 20px !important;
+    padding-left: 4px;
+    font-size: smaller;
+}
+
+.forh5 {
+    list-style-type: ">>>";
+    margin-left: 14px !important;
+    padding-left: 4px;
+    font-size: x-small;
+}
+
+.forh6 {
+    list-style-type: ">>>>";
+    margin-left: 9px !important;
+    padding-left: 4px;
+    font-size: xx-small;
+}
+
+/* ##################### 10. Page TOC #####################  
 .sidebar-toc {
 }
 
@@ -706,7 +730,7 @@ a {
     */
 
 /* ##################### 11. Press Releases ##################### */
-            .contacts {
+.contacts {
     border: 2px solid #867dba;
     width: 30%;
     float: right;
