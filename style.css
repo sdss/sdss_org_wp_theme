@@ -5,7 +5,7 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 2.1
+ Version: 2.2
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
@@ -17,6 +17,7 @@
  *** 2.0.4. Styling of single VAC catalog pages
  *** 2.0.5. Styling of single TOC with or without accordion, added arrows for h3 and lower
  *** 2.1. Formatting for back to top button to work with TOC
+ *** 2.2. Formatting second-level menu at screen size < 870px (I don't like this solution but meh)
  */
 
 /* ##################### 1. Fonts ##################### 
@@ -65,10 +66,8 @@ p, ul {
     
 }
 h2 {
-    
 }
     h2:first-child {
-        
         margin-top: 0.1em;
     }
 
@@ -80,7 +79,6 @@ a {
     width: 100%;
     margin: auto;
 }
-
 
 .img-responsive {
     width: 100%;
@@ -137,8 +135,6 @@ a {
         margin-right: 1.5rem;
     }
 }
-
-
 .site-branding .custom-logo-link img {
     display: block;
     max-height: 82px;
@@ -153,7 +149,6 @@ a {
     flex-grow: 1;
     text-align: right;
 }
-
 @media screen and (min-width: 1025px) {
     .main-navigation {
         flex-basis: 75%;
@@ -161,470 +156,464 @@ a {
     }
 }
 
-    
 /* ##################### 3.3. Secondary nav menu (for Data pages) ##################### */
-/*@media screen and (min-width: 530px) {
-    .main-navigation {
-    }
-}*/
+
 #secondary-navigation {
 }
 
 .secondary-menu-container {
-    //background-color: yellow;
-}
-
-
-@media screen and (min-width: 1025px) {
-    .secondary-menu-container {
-        width: 100%;
-        background-color: #fff;
-        padding-top: 0; /*1.1rem;*/
-        padding-bottom: 0;
-        padding-right: 10px;
-        border: 1px solid #ebebeb;
-        margin-top: 5px;
-        text-align: right;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-    }
-}
-
-#secondary-navigation .menu {
-    /*padding-top:0;*/
     background-color: #fff;
-}
-    @media screen and (min-width: 1025px) {
-
-        #secondary-navigation .menu {
-            padding-top: inherit;
-            /*background-color: #fff;*/
-        }
-    }
-
-    #secondary-navigation .menu li {
-        background-color:#fff;
-
-    }
-        @media screen and (min-width: 1025px) {
-
-            #secondary-navigation .menu li {
-                /*background-color: #fff;*/
-            }
-        }
-
-            #secondary-navigation .menu li a {
-                display:inline;
-            }
-
-                @media screen and (min-width: 1025px) {
-                    #secondary-navigation .menu li a {
-                        display:block;
-                    }
-                }
-
-    /* ##################### 3.3. Breadcrumbs and search bar ##################### */
-    #breadsearch {
-}
-
-    #breadsearch .gx-card-content {
-        min-height: 65px;
-        padding: 0;
-        margin-top: 5px;
-        margin-bottom: 0;
-    }
-
-    #breadsearch .crumbs {
-        width: 50%;
-        float: left;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-top: 2px;
-        padding-top: 8px;
-    }
-
-@media screen and (max-width: 550px) {
-    #breadsearch .crumbs {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-    }
-}
-
-#breadsearch .crumbs .pr-breadcrumb {
-    padding-left: 15px;
-    font-size: 18px;
-}
-
-#breadsearch .crumbs ul {
-    margin-top: 10px;
-    margin-left: 0;
-    list-style: none;
-    padding-left: 15px;
+    padding: 0;
+    margin-top: 5px;
     margin-bottom: 0;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    height: auto;
 }
 
-@media screen and (max-width: 700px) {
-    #breadsearch .crumbs ul {
-        padding-top: 0px;
-    }
+.secondary-menu {
+    margin: 0 0 0 auto;
+    list-style-type: none;
 }
 
-#breadsearch .crumbs ul li {
-    display: inline;
-    font-size: 18px;
-}
-
-@media screen and (max-width: 700px) {
-    #breadsearch .crumbs ul li {
-        font-size: 14px;
-    }
-}
-
-
-
-
-/* Add a slash symbol (/) before/behind each list item   */
-#breadsearch .crumbs ul li + li:before {
-    padding: 8px;
-    color: black;
-    content: " >> ";
-}
-
-/* Add a color to all links inside the list  */
-#breadsearch .crumbs ul li a {
-    color: #0275d8;
-    text-decoration: none;
-}
-
-    /* Add a color on mouse-over  */
-    #breadsearch .crumbs ul li a :hover {
-        color: #01447e;
-        text-decoration: underline;
+    .secondary-menu a {
+        color: black;
     }
 
-#breadsearch .searcher {
-    width: 50%;
-    margin: 2px 0px 0px auto;
-}
 
-@media screen and (max-width: 550px) {
-    #breadsearch .searcher {
-        width: 100%;
-    }
-}
+@media screen and (max-width: 870px) {
 
-#breadsearch .searcher .widget_search {
-    height: inherit;
-}
-
-
-    #breadsearch .searcher .widget_search .wp-block-search {
-        margin: 0px 0px 0px 0px;
-        max-width: 100%;
+    .secondary-menu {
     }
 
-        #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
-            padding: 10px;
-            border: none;
-            margin: 0px 0px 0px 0px;
+        .secondary-menu > li {
+            width: 100%;
+            border-bottom: 2px solid black;
+            text-align: center;
         }
 
-/* ##################### 3.4. Special message area ##################### */
+        .secondary-menu > li:last-child {
+            border-bottom: none;
+        }
 
-.site-topbar {
-    background-color: yellow;
-    border: 5px solid red;
-    color: black;
 }
 
-.site-topbar__left {
-    text-align: center;
-    padding: .3rem 0;
-    flex-basis: 100%;
-    flex-grow: 0;
-}
-
-@media screen and (min-width: 530px) {
-    .site-topbar__left {
-        text-align: left;
-    }
-}
-
-
-/* ##################### 4. Footer #####################  */
-.site-footer {
-    background-color: white;
-}
-
-    .site-footer .footmenu {
+@media screen and (min-width: 870px) {
+    .secondary-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: auto;
+        overflow-x: hidden;
     }
 
-        .site-footer .footmenu .footmenu-label {
+        .secondary-menu > li {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+}
+    /* ##################### 3.4. Breadcrumbs and search bar ##################### */
+    #breadsearch {
+    }
+
+        #breadsearch .gx-card-content {
+            min-height: 65px;
+            padding: 0;
+            margin-top: 5px;
             margin-bottom: 0;
         }
 
-        .site-footer .footmenu a {
-            color: #6256A3;
+        #breadsearch .crumbs {
+            width: 50%;
+            float: left;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-top: 2px;
+            padding-top: 8px;
+        }
+
+    @media screen and (max-width: 550px) {
+        #breadsearch .crumbs {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    #breadsearch .crumbs .pr-breadcrumb {
+        padding-left: 15px;
+        font-size: 18px;
+    }
+
+    #breadsearch .crumbs ul {
+        margin-top: 10px;
+        margin-left: 0;
+        list-style: none;
+        padding-left: 15px;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 700px) {
+        #breadsearch .crumbs ul {
+            padding-top: 0px;
+        }
+    }
+
+    #breadsearch .crumbs ul li {
+        display: inline;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 700px) {
+        #breadsearch .crumbs ul li {
+            font-size: 14px;
+        }
+    }
+
+
+
+
+    /* Add a slash symbol (/) before/behind each list item   */
+    #breadsearch .crumbs ul li + li:before {
+        padding: 8px;
+        color: black;
+        content: " >> ";
+    }
+
+    /* Add a color to all links inside the list  */
+    #breadsearch .crumbs ul li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+        /* Add a color on mouse-over  */
+        #breadsearch .crumbs ul li a :hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+
+    #breadsearch .searcher {
+        width: 50%;
+        margin: 2px 0px 0px auto;
+    }
+
+    @media screen and (max-width: 550px) {
+        #breadsearch .searcher {
+            width: 100%;
+        }
+    }
+
+    #breadsearch .searcher .widget_search {
+        height: inherit;
+    }
+
+
+        #breadsearch .searcher .widget_search .wp-block-search {
+            margin: 0px 0px 0px 0px;
+            max-width: 100%;
+        }
+
+            #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
+                padding: 10px;
+                border: none;
+                margin: 0px 0px 0px 0px;
+            }
+
+    /* ##################### 3.4. Special message area ##################### */
+
+    .site-topbar {
+        background-color: yellow;
+        border: 5px solid red;
+        color: black;
+    }
+
+    .site-topbar__left {
+        text-align: center;
+        padding: .3rem 0;
+        flex-basis: 100%;
+        flex-grow: 0;
+    }
+
+    @media screen and (min-width: 530px) {
+        .site-topbar__left {
+            text-align: left;
+        }
+    }
+
+
+    /* ##################### 4. Footer #####################  */
+    .site-footer {
+        background-color: white;
+    }
+
+        .site-footer .footmenu {
+        }
+
+            .site-footer .footmenu .footmenu-label {
+                margin-bottom: 0;
+            }
+
+            .site-footer .footmenu a {
+                color: #6256A3;
+                text-decoration: none;
+            }
+
+        .site-footer .footlogos {
+            margin-top: 20px;
+        }
+
+            .site-footer .footlogos p {
+                color: #6256A3;
+                text-transform: uppercase;
+                font-size: larger;
+                letter-spacing: .5px;
+            }
+
+        .site-footer .toc {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
+    .site-footer__text {
+        background-color: #333;
+    }
+
+
+
+    /* ##################### 5. Sidebars ##################### */
+
+
+    .sidebar__inner .widget_block .gx-card-content {
+        border: none;
+        padding: 0;
+    }
+
+    .sidebar-newslist {
+    }
+
+        .sidebar-newslist:before {
+            content: "News";
+            font-family: inherit;
+            font-family: Poppins, sans-serif;
+            font-size: 1.2em;
+            line-height: 1.5;
+            font-weight: 600;
+            clear: both;
+            word-break: break-word;
+            word-wrap: break-word;
+        }
+
+        .sidebar-newslist li {
+        }
+
+            .sidebar-newslist li:first-child {
+                margin-top: 0.3em;
+                padding-top: 0.7em;
+                border-top: 1px solid #ebebeb;
+            }
+
+    .sidebar-science-results {
+    }
+
+    .sidebar-science-results-in-page {
+        background-color: purple;
+    }
+
+
+
+    /* ##################### 6. Home page ##################### */
+    .home-spacer {
+        background-color: #867dba;
+        margin-left: -50px;
+        margin-right: -50px;
+        height: 40px !important;
+    }
+
+    .homeslidertext {
+        color: #FFF !important;
+        font-family: 'Monda', sans-serif;
+        text-transform: uppercase;
+        font-size: 44px;
+        font-weight: bold;
+        line-height: 1.1em;
+        text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .homeslidertext {
+            max-height: 118px !important;
+            font-size: large;
+        }
+    }
+
+
+    #home-summary {
+        text-align: center;
+        line-height: 1.45;
+    }
+
+    .press-releases-header {
+        color: #663399;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+        .press-releases-header a {
+            font-family: inherit;
+            text-transform: inherit;
+            color: inherit;
             text-decoration: none;
         }
 
-    .site-footer .footlogos {
-        margin-top: 20px;
+    .joinus-title {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
-        .site-footer .footlogos p {
-            color: #6256A3;
-            text-transform: uppercase;
-            font-size: larger;
-            letter-spacing: .5px;
-        }
-
-    .site-footer .toc {
-        visibility:hidden;
-        width: 0;
-        height: 0;
-    }
-
-.site-footer__text {
-    background-color: #333;
-}
-
-
-
-/* ##################### 5. Sidebars ##################### */
-
-
-.sidebar__inner .widget_block .gx-card-content {
-    border: none;
-    padding: 0;
-}
-
-.sidebar-newslist {
-}
-
-    .sidebar-newslist:before {
-        content: "News";
-        font-family: inherit;
-        font-family: Poppins, sans-serif;
-        font-size: 1.2em;
+    .joinus-text {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 0;
         line-height: 1.5;
-        font-weight: 600;
-        clear: both;
-        word-break: break-word;
-        word-wrap: break-word;
     }
 
-    .sidebar-newslist li {
+
+    .slidercaption p, h3 {
+        font-family: 'Monda', sans-serif;
+        letter-spacing: .5px;
     }
 
-        .sidebar-newslist li:first-child {
-            margin-top: 0.3em;
-            padding-top: 0.7em;
-            border-top: 1px solid #ebebeb;
-        }
-
-.sidebar-science-results {
-}
-
-.sidebar-science-results-in-page {
-    background-color: purple;
-}
-
-
-
-/* ##################### 6. Home page ##################### */
-.home-spacer {
-    background-color: #867dba;
-    margin-left: -50px;
-    margin-right: -50px;
-    height: 40px !important;
-}
-
-.homeslidertext {
-    color: #FFF !important;
-    font-family: 'Monda', sans-serif;
-    text-transform: uppercase;
-    font-size: 44px;
-    font-weight: bold;
-    line-height: 1.1em;
-    text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
-}
-
-
-@media screen and (max-width: 800px) {
-    .homeslidertext {
-        max-height: 118px !important;
-        font-size: large;
-    }
-}
-
-
-#home-summary {
-    text-align: center;
-    line-height: 1.45;
-}
-
-.press-releases-header {
-    color: #663399;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-    .press-releases-header a {
+    .slidercaption a {
+        text-decoration: none !important;
         font-family: inherit;
         text-transform: inherit;
         color: inherit;
         text-decoration: none;
+        letter-spacing: .5px;
     }
 
-.joinus-title {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.joinus-text {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 0;
-    line-height: 1.5;
-}
-
-
-.slidercaption p, h3 {
-    font-family: 'Monda', sans-serif;
-    letter-spacing: .5px;
-}
-
-.slidercaption a {
-    text-decoration: none !important;
-    font-family: inherit;
-    text-transform: inherit;
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: .5px;
-}
-
-@media screen and (max-width: 800px) {
-    .slidercaption {
-        max-height: 118px !important;
-        /*border: 5px solid red;
+    @media screen and (max-width: 800px) {
+        .slidercaption {
+            max-height: 118px !important;
+            /*border: 5px solid red;
     vertical-align: text-bottom;*/
-    }
-
-        .slidercaption .caption {
-            height: 100%;
-            padding: 0 !important;
-            vertical-align: bottom !important;
         }
 
-        .slidercaption p {
-            visibility: hidden;
-            max-height: 0;
-        }
-}
-
-
-/* ##################### 7. Mapper Summary reusable block ##################### */
-.mapper-summary {
-}
-
-    .mapper-summary .mapper-info {
-        padding: 10px;
-        text-align: center;
-    }
-
-
-        .mapper-summary .mapper-info .title {
-            color: #6051A2;
-            text-transform: uppercase;
-            letter-spacing: .8px;
-            padding-bottom: 0px;
-            margin-bottom: 5px;
-        }
-
-            .mapper-summary .mapper-info .title a {
-                text-decoration: none;
-                color: inherit;
+            .slidercaption .caption {
+                height: 100%;
+                padding: 0 !important;
+                vertical-align: bottom !important;
             }
 
-        .mapper-summary .mapper-info .program-head-label {
-            margin-bottom: 0;
+            .slidercaption p {
+                visibility: hidden;
+                max-height: 0;
+            }
+    }
+
+
+    /* ##################### 7. Mapper Summary reusable block ##################### */
+    .mapper-summary {
+    }
+
+        .mapper-summary .mapper-info {
+            padding: 10px;
+            text-align: center;
         }
 
-/*        .mapper-summary .mapper-info .program-head-name {
+
+            .mapper-summary .mapper-info .title {
+                color: #6051A2;
+                text-transform: uppercase;
+                letter-spacing: .8px;
+                padding-bottom: 0px;
+                margin-bottom: 5px;
+            }
+
+                .mapper-summary .mapper-info .title a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+            .mapper-summary .mapper-info .program-head-label {
+                margin-bottom: 0;
+            }
+
+    /*        .mapper-summary .mapper-info .program-head-name {
         background-color: orange;
     }*/
 
 
-/* ##################### 8. Data pages (DR18 and beyond) ##################### */
+    /* ##################### 8. Data pages (DR18 and beyond) ##################### */
 
 
-.helpbox {
-    border: 1px solid black;
-    padding: 10px;
-}
-
-/* ##################### 9. Back to top control ##################### */
-.back-to-top {
-    background-color: #5f52a2;
-    width: 400px;
-}
-
-    .back-to-top:hover {
-        background-color: #999;
+    .helpbox {
+        border: 1px solid black;
+        padding: 10px;
     }
 
-    .back-to-top:active {
-        background-color: #fff;
+    /* ##################### 9. Back to top control ##################### */
+    .back-to-top {
+        background-color: #5f52a2;
+        width: 400px;
     }
 
+        .back-to-top:hover {
+            background-color: #999;
+        }
 
-/* ##################### 10. Within-page TOC #####################  */
+        .back-to-top:active {
+            background-color: #fff;
+        }
 
-.toc {
-    border: 2px solid black;
-    border-radius: 8px;
-    width: 30%;
-    margin: 0 10px 10px 10px;
-    /*background-color: #ecf0f1;*/
-}
 
-.toc-left {
-    float: left;
-}
+    /* ##################### 10. Within-page TOC #####################  */
 
-.toc-right {
-    float: right;
-}
+    .toc {
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 30%;
+        margin: 0 10px 10px 10px;
+        /*background-color: #ecf0f1;*/
+    }
 
-.toc-label {
-    color: #3d0096;
-    font-size: large;
-    font-weight: bold;
-    height: 100%;
-    padding: 0 5px 1px 10px;
-}
+    .toc-left {
+        float: left;
+    }
 
-.toc-label-accordion, .toc-label-inner {
-    border-bottom: 2px solid black;
-}
+    .toc-right {
+        float: right;
+    }
 
-    .toc-label-accordion:after {
-        color: black;
-        content: "+";
+    .toc-label {
+        color: #3d0096;
+        font-size: large;
         font-weight: bold;
-        font-size: larger;
+        height: 100%;
+        padding: 0 5px 1px 10px;
     }
 
+    .toc-label-accordion, .toc-label-inner {
+        border-bottom: 2px solid black;
+    }
 
-.toc ul {
-    list-style-type: none;
-    margin: 5px 10px 5px 10px;
-}
+        .toc-label-accordion:after {
+            color: black;
+            content: "+";
+            font-weight: bold;
+            font-size: larger;
+        }
+
+
+    .toc ul {
+        list-style-type: none;
+        margin: 5px 10px 5px 10px;
+    }
 
         .toc ul li {
             padding-top: 3px;
@@ -643,69 +632,69 @@ a {
                 font-weight: normal;
             }
 
-.forh2 {
-    margin-left: 20px;
-    margin-bottom: 0;
-    border-bottom: 1px solid black;
-}
+    .forh2 {
+        margin-left: 20px;
+        margin-bottom: 0;
+        border-bottom: 1px solid black;
+    }
 
-.forh3 {
-    list-style-type: ">";
-    margin-left: 9px !important;
-    padding-left: 5px;
-    font-size: small;
-}
+    .forh3 {
+        list-style-type: ">";
+        margin-left: 9px !important;
+        padding-left: 5px;
+        font-size: small;
+    }
 
-.forh4 {
-    list-style-type: ">>";
-    margin-left: 20px !important;
-    padding-left: 4px;
-    font-size: smaller;
-}
+    .forh4 {
+        list-style-type: ">>";
+        margin-left: 20px !important;
+        padding-left: 4px;
+        font-size: smaller;
+    }
 
-.forh5 {
-    list-style-type: ">>>";
-    margin-left: 14px !important;
-    padding-left: 4px;
-    font-size: x-small;
-}
+    .forh5 {
+        list-style-type: ">>>";
+        margin-left: 14px !important;
+        padding-left: 4px;
+        font-size: x-small;
+    }
 
-.forh6 {
-    list-style-type: ">>>>";
-    margin-left: 9px !important;
-    padding-left: 4px;
-    font-size: xx-small;
-}
+    .forh6 {
+        list-style-type: ">>>>";
+        margin-left: 9px !important;
+        padding-left: 4px;
+        font-size: xx-small;
+    }
 
-.sdss-to-top { /* not to be confused with back-to-top class */
-    background-color: #5f52a2;
-    padding: 10px 20px 10px 20px;
-    display: inline;
-    font-size: 1.1em;
-    border-radius: 15px;
-    float:right;
-    /*    position: absolute;
+    .sdss-to-top { /* not to be confused with back-to-top class */
+        background-color: #5f52a2;
+        padding: 10px 20px 10px 20px;
+        display: inline;
+        font-size: 1.1em;
+        border-radius: 15px;
+        float: right;
+        /*    position: absolute;
     right: 0;
     
     transform: translateY(-50%);*/
-}
-
-    .sdss-to-top:hover {
-        background-color: #999;
     }
 
-
-    .sdss-to-top a {
-        color: #fff;
-        text-decoration:none;
-    }
-
-        .sdss-to-top a:active {
+        .sdss-to-top:hover {
             background-color: #999;
         }
 
 
-/* ##################### 10. Page TOC #####################  
+        .sdss-to-top a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+            .sdss-to-top a:active {
+                background-color: #999;
+            }
+
+
+    /* ##################### 10. Page TOC #####################  
 .sidebar-toc {
 }
 
@@ -763,77 +752,77 @@ a {
     }
     */
 
-/* ##################### 11. Press Releases ##################### */
-.contacts {
-    border: 2px solid #867dba;
-    width: 30%;
-    float: right;
-    margin: 10px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-bottom: 0;
-}
-
-    .contacts h2 {
-        margin-top: 5px;
+    /* ##################### 11. Press Releases ##################### */
+    .contacts {
+        border: 2px solid #867dba;
+        width: 30%;
+        float: right;
+        margin: 10px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-bottom: 0;
     }
 
-    .contacts p {
-        /*line-height: 1.6;*/
+        .contacts h2 {
+            margin-top: 5px;
+        }
+
+        .contacts p {
+            /*line-height: 1.6;*/
+        }
+
+    .pr-date {
+        font-weight: bold;
     }
 
-.pr-date {
-    font-weight: bold;
-}
-
-.pr-caption {
-    background-color: orange;
-    line-height: 1.5;
-}
-
-
-/* ##################### 12. Value-added catalogs #####################  */
-
-.vaclist {
-    display: flex;
-    flex-flow: row wrap;
-    /*border: 1px solid blue;*/
-}
-
-.vac {
-    margin: 10px 5px 10px 5px;
-    border: 3px solid black;
-    border-radius: 25px;
-    padding: 15px;
-    /*min-height:500px;*/
-    /*border: 5px solid purple; */
-}
-
-    .vac h2 {
-        font-size:1.37em;  /* make vac h2 the size of h3 without changing semantic structure */
-        margin-bottom: 0;
+    .pr-caption {
+        background-color: orange;
+        line-height: 1.5;
     }
 
-    .vac a {
-        text-decoration: none;
+
+    /* ##################### 12. Value-added catalogs #####################  */
+
+    .vaclist {
+        display: flex;
+        flex-flow: row wrap;
+        /*border: 1px solid blue;*/
     }
 
-.vac-left {
-    width: 48%;
-    float: left;
-}
+    .vac {
+        margin: 10px 5px 10px 5px;
+        border: 3px solid black;
+        border-radius: 25px;
+        padding: 15px;
+        /*min-height:500px;*/
+        /*border: 5px solid purple; */
+    }
 
-.vac-right {
-    width: 48%;
-    float: right;
-}
+        .vac h2 {
+            font-size: 1.37em; /* make vac h2 the size of h3 without changing semantic structure */
+            margin-bottom: 0;
+        }
 
-.vac-description {
-    /*margin: 10px;*/
-}
+        .vac a {
+            text-decoration: none;
+        }
 
-single-vac {
-}
+    .vac-left {
+        width: 48%;
+        float: left;
+    }
+
+    .vac-right {
+        width: 48%;
+        float: right;
+    }
+
+    .vac-description {
+        /*margin: 10px;*/
+    }
+
+    single-vac {
+    }
 
     .single-vac h2 {
         margin-bottom: 0;
@@ -844,195 +833,193 @@ single-vac {
     }
 
 
-.single-vac-description {
-    font-weight: bold;
-}
+    .single-vac-description {
+        font-weight: bold;
+    }
 
-    .single-vac-description p {
-        margin-bottom: 0;
+        .single-vac-description p {
+            margin-bottom: 0;
+        }
+
+
+    .vac-authors {
+        /*    background-color:yellow;
+    color: DarkSlateGrey;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+        /* margin-left: 10px;
+    margin-top: 10px; */
+        font-style: italic;
+        /*margin-bottom: 10px;*/
+    }
+
+    .vac-authors-full {
+        /*background-color: yellow;
+    /*    color: DarkSlateGrey;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+        /* margin-left: 10px;
+    margin-top: 10px; */
+        font-style: italic;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
 
-.vac-authors {
-    /*    background-color:yellow;
-    color: DarkSlateGrey;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    /* margin-left: 10px;
-    margin-top: 10px; */
-    font-style: italic;
-    /*margin-bottom: 10px;*/
-}
-
-.vac-authors-full {
-    /*background-color: yellow;
-    /*    color: DarkSlateGrey;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    /* margin-left: 10px;
-    margin-top: 10px; */
-    font-style: italic;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-
-.vac-tags {
-    display: flex;
-    flex-flow: row wrap;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    /*border: 1px solid green;
+    .vac-tags {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        /*border: 1px solid green;
     width: 100%;
     display: inline-block;*/
-}
+    }
 
-/*.vac-tags-row {
+    /*.vac-tags-row {
     margin-top: 0;
 }*/
 
 
 
-.vac-tag {
-    background-color: #cccccc;
-    vertical-align: central;
-    display: inline;
-    padding: 0.2em 0.6em 0.3em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    border-radius: 0.25em;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-
-.vac-dr {
-    /*.label-primary;*/
-    background-color: #2C3E50;
-}
-
-.vac-dr-latest {
-    background-color:#6256a3;
-}
-
-.vac-survey {
-    background-color:#f0ad4e;
-}
-
-.vac-cas-marvin {
-    background-color: #5cb85c;
-}
-
-.vac-category {
-    background-color: #5bc0de;
-}
-
-.vac-object {
-    background-color:#d9534f;
-}
-
-.vac-table {
-}
-
-    .vac-table a {
-        color:white;
-    }
-
-.vac-box {
-    background-color: #396c8f;
-    border-radius: 6px; /*0 6px 0 6px;*/
-    padding: 6px;
-    margin-bottom: 6px;
-}
-
-    .vac-box a {
-        color:white;
-    }
-
-.vac-sas {
-    background-color: #336699;
-    color: white;
-    overflow: auto;
-    padding-left: 10px;
-    margin-bottom: 10px;
-    /*padding: 5px;*/
-}
-
-.vac-datamodel {
-    background-color: #993399;
-    color: white;
-    overflow: auto;
-    padding-left: 10px;
-    margin-bottom: 10px;
-}
-
-
-.vac-cas-info {
-    /* background-color: pink;*/
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.vac-cas-info-title {
-    /*background-color: yellow;*/
-    vertical-align: middle;
-    margin: 0;
-}
-
-    .vac-cas-info-title h3 {
+    .vac-tag {
+        background-color: #cccccc;
+        vertical-align: central;
         display: inline;
-        /*background-color: silver;*/
+        padding: 0.2em 0.6em 0.3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: 0.25em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+    .vac-dr {
+        /*.label-primary;*/
+        background-color: #2C3E50;
+    }
+
+    .vac-dr-latest {
+        background-color: #6256a3;
+    }
+
+    .vac-survey {
+        background-color: #f0ad4e;
+    }
+
+    .vac-cas-marvin {
+        background-color: #5cb85c;
+    }
+
+    .vac-category {
+        background-color: #5bc0de;
+    }
+
+    .vac-object {
+        background-color: #d9534f;
+    }
+
+    .vac-table {
+    }
+
+        .vac-table a {
+            color: white;
+        }
+
+    .vac-box {
+        background-color: #396c8f;
+        border-radius: 6px; /*0 6px 0 6px;*/
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+        .vac-box a {
+            color: white;
+        }
+
+    .vac-sas {
+        background-color: #336699;
+        color: white;
+        overflow: auto;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        /*padding: 5px;*/
+    }
+
+    .vac-datamodel {
+        background-color: #993399;
+        color: white;
+        overflow: auto;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .vac-cas-info {
+        /* background-color: pink;*/
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .vac-cas-info-title {
+        /*background-color: yellow;*/
+        vertical-align: middle;
+        margin: 0;
+    }
+
+        .vac-cas-info-title h3 {
+            display: inline;
+            /*background-color: silver;*/
+            vertical-align: middle;
+        }
+
+    .vac-cas-info ul {
+        /*background-color: orange;*/
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .vac-tags-cas-info {
+        display: inline-flex;
+        /*background-color: dodgerblue;*/
+        height: 100%;
+        margin-left: 5px;
         vertical-align: middle;
     }
 
-.vac-cas-info ul {
-    /*background-color: orange;*/ 
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.vac-tags-cas-info {
-    display: inline-flex;
-    /*background-color: dodgerblue;*/
-    height: 100%;
-    margin-left: 5px;
-    vertical-align: middle;
-}
-
-.vac-www {
-    font-weight: bold;
-    font-size: 1.1em;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    overflow-wrap: break-word;
-
-    padding: 10px;
-
-    line-height: 1.25;
-}
-
-.vac-back-to-list {
-    border-radius: 9999px;
-    color: #fff;
-    background-color: #32373c;
-    box-shadow: none;
-    font-size: 1.125em;
-    padding: calc(0.667em + 2px) calc(1.333em + 2px);
-}
-
-    .vac-back-to-list a {
-        display: inline-block;
+    .vac-www {
+        font-weight: bold;
+        font-size: 1.1em;
         text-align: center;
-        word-break: break-word;
-        box-sizing: border-box;
-        text-decoration: none;
-        color: #fff;
+        border: 2px solid black;
+        border-radius: 10px;
+        overflow-wrap: break-word;
+        padding: 10px;
+        line-height: 1.25;
     }
+
+    .vac-back-to-list {
+        border-radius: 9999px;
+        color: #fff;
+        background-color: #32373c;
+        box-shadow: none;
+        font-size: 1.125em;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    }
+
+        .vac-back-to-list a {
+            display: inline-block;
+            text-align: center;
+            word-break: break-word;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: #fff;
+        }
     /*
 .type-vac {
     .vac-tags
