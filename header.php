@@ -17,6 +17,10 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+<script type="text/javascript" src="/wp-content/plugins/sdss5-shortcodes/authorhider.js"></script>
+
+
 </head>
 <body <?php body_class(); ?>>
 
