@@ -20,6 +20,7 @@
  *** 2.2. Formatting second-level menu at screen size < 870px (I don't like this solution but meh)
  *** 2.2.1. Show/hide full author list for publications pages
  *** 2.2.2. Created "new for DR18" and "updated for dr18" classes
+ *** 3.0. Added styling for VAC filtering controls
  */
 
 
@@ -834,17 +835,29 @@ a {
     .vaclist {
         display: flex;
         flex-flow: row wrap;
+        flex-basis: 100%;
         /*border: 1px solid blue;*/
     }
 
-    .vac {
-        margin: 10px 5px 10px 5px;
-        border: 3px solid black;
-        border-radius: 25px;
-        padding: 15px;
-        /*min-height:500px;*/
-        /*border: 5px solid purple; */
+.vac {
+    /*display: inline-block;*/
+    display: inline;
+    margin: 10px 5px 10px 5px;
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 15px;
+    width: 48%;
+    /*min-height:500px;*/
+    /*border: 5px solid purple; */
+}
+
+
+    @media screen and (max-width: 900px) {
+        .vac {
+            width: 100%;
+        }
     }
+
 
         .vac h2 {
             font-size: 1.37em; /* make vac h2 the size of h3 without changing semantic structure */
@@ -855,7 +868,7 @@ a {
             text-decoration: none;
         }
 
-    .vac-left {
+/*    .vac-left {
         width: 48%;
         float: left;
     }
@@ -863,7 +876,7 @@ a {
     .vac-right {
         width: 48%;
         float: right;
-    }
+    }*/
 
     .vac-description {
         /*margin: 10px;*/
@@ -1068,124 +1081,104 @@ a {
             text-decoration: none;
             color: #fff;
         }
-    /*
-.type-vac {
-    .vac-tags
 
-{
-    a .vac-tag
 
-{
-    &.vac-dr, &.vac-dr.vac-dr-latest, &.vac-table, &.vac-survey, &.vac-sas, &.vac-cas, &.vac-cas.vac-no-cas
+/* ##################### 12.1. VAC Search controls #####################  */
 
-{
-    text-decoration: underline;
+.vac-search-controls {
+    background-color: orange;
 }
 
+.vac-counts {
+    background-color: navajowhite;
 }
 
-.vac-tag {
-    //background-color: #cccccc;
-    .label;
-    .label-default;
-    .pull-right;
-    margin-left: 10px;
-    vertical-align: central;
-    &.vac-dr.vac-dr-latest
-
-{
-    .label-primary;
-    color: white;
-    background-color: #6256a3;
-    border-color: black;
+.vac-search-form {
+    margin: 5px;
+    background-color: pink;
 }
 
-&.vac-dr {
-    .label-primary;
-    background-color: #9088c0;
-}
-
-&.vac-survey {
-    .label-warning;
-}
-
-&.vac-table {
-    .label-success;
-}
-
-&.vac-sas {
-    .label-info;
-}
-
-&.vac-cas.vac-no-cas {
-    display: none;
-}
-
-&.vac-cas {
-    .label-success;
-}
-
-&.vac-object {
-    .label-danger;
-}
+.vac-search-textbox-and-label {
+    margin: 5px;
+    background-color: cyan;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
 
 }
+
+.vac-filter {
+    background-color: gold;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
 }
 
-.vac-link {
-    font-weight: bold;
-    font-size: 1.1em;
-    font-family: @font-family-sans-serif;
+.vac-filter-all-checkboxes {
+    background-color: silver;
 }
 
-.vac-modified {
-    font-style: italic;
-    font-size: 0.9em;
+.vac-filter-checkbox-list {
+    background-color: lavender;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
 }
 
-.vac-authors {
-    color: DarkSlateGrey;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    margin-bottom: 10px;
+.vac-filter-checkbox-with-label {
+    background-color: yellow;
+    margin-right: 2px;
+    margin-left:10px;
 }
 
-
-
-{
-    .pull-left;
-    margin-right: 10px;
-    font-family: @font-family-sans-serif;
-    color: white;
-    font-size: 0.9em;
-    .external
-
-{
-    .glyphicon;
-    .glyphicon-new-window;
-    margin-right: 10px;
+.vac-filter-bulk-select {
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
 }
 
-}
-}
+    .vac-filter-bulk-select > .clear-all-filters {
+        margin: 2px;
+    }
 
-.vac-category {
-    .alert-c1;
-}
+    .vac-filter-bulk-select > .select-all-catalogs {
+        margin: 2px;
+    }
 
-.vac-announce {
-    .alert-c2;
-}
+    .vac-filter-bulk-select a {
+        color:white;
+    }
 
-.vac-sas {
-    .alert-c3;
-}
+    /* ########### 13. Mouseover tooltips (from https://www.w3schools.com/css/css_tooltip.asp) ######## */
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        /* border-bottom: 1px dotted black;  /* If you want dots under the hoverable text */
+    }
 
-.vac-datamodel {
-    .alert-c4;
-}
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        width: 150px;
+        visibility: hidden;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text - see examples below!
+            width: 200%;
+        */
+        position: absolute;
+        left:-60px;
+        bottom:-40px;
+        opacity:.5;
+        
+        z-index: 1;
+        font-size: small;
+    }
 
-.vac-article {
-    overflow: hidden;
-    //background-color: green;
-}
-}*/
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }

@@ -25,17 +25,27 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			}
 			echo "</font></h1>";
 			$which = explode('/',substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[0];
+			if ($which == 'dr18') {  // if it's a second-level page under dr18 (e.g. VAC page)
+				$which = explode('/',substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[1];
+			}
 			if (preg_match('/(dr\d|data)/i',$which)) {
 				$which = explode("/",substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[1];
 			}
 			if (in_array($which, $sidebar_values)) {
 				$sidebar_to_load = 'sidebar-'.$which;
 			} else {
-				dynamic_sidebar( 'science-sidebar' ); 
+				dynamic_sidebar( 'science-sidebar' );
 				$sidebar_to_load = 'sidebar-1';
 			}
+
+			if ((strpos($this_page_url, 'value-added-catalogs') > 0) & (!strpos($_SERVER['REQUEST_URI'], 'vac_id'))) {  // if this is the VACs index page, show the search widget as a sidebar
+				dynamic_sidebar( 'sidebar-vac-search' );
+			}
+
+
 			dynamic_sidebar( $sidebar_to_load ); 
 
+			
 			/*if (array_reverse(explode('/',$this_page_url))[0] == 'science') { */ ?>
 				<!--<div class='sidebar-toc'>-->
 				<?php /*dynamic_sidebar( 'science-results-sidebar' );*/ ?>

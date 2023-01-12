@@ -139,7 +139,17 @@ function sdss5_register_sidebar(){
              'before_title' => '<h3 class="widget-title">',
              'after_title' => '</h3>',
          ));
-    
+
+    register_sidebar(array(
+             'name' => esc_html__( 'VAC Search Form', 'galaxis' ),
+             'id' => 'sidebar-vac-search',
+             'description' => esc_html__( 'VAC Search Form: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="sidebar-vac widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));    
+
     register_sidebar(array(
              'name' => esc_html__( 'Search widget', 'galaxis' ),
              'id' => 'search-widget',
