@@ -1,4 +1,4 @@
-ar//*
+ar/ /*
  Theme Name: sdss5.org Wordpress theme
  Theme URI: https://example.com/twenty-fifteen-child/
  description: Theme for the website of the Sloan Digital Sky Survey's fifth phase (sdss5.org)
@@ -24,9 +24,8 @@ ar//*
  *** 3.0.1. Added font awesome to header
  *** 3.0.2. Image captions: added gray background, decreased line height
  *** 3.0.3. Added "notlink" class for sidebar menu items that shouldn't be links
+ *** 3.0.4. Styled special message area
  */
-
-
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
@@ -338,10 +337,18 @@ figcaption {
     /* ##################### 3.4. Special message area ##################### */
 
     .site-topbar {
-        background-color: yellow;
-        border: 5px solid red;
-        color: black;
+        background-color: #1291ee;
+        color: white;
+        font-size: larger;
+        padding-left: 20px;
     }
+
+        .site-topbar-text > a {
+            color: lightpink !important;
+            align-content: baseline;
+            font-weight: bold;
+            text-decoration: underline;
+        }
 
     .site-topbar__left {
         text-align: center;
