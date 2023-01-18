@@ -1,4 +1,4 @@
-/*
+ar//*
  Theme Name: sdss5.org Wordpress theme
  Theme URI: https://example.com/twenty-fifteen-child/
  description: Theme for the website of the Sloan Digital Sky Survey's fifth phase (sdss5.org)
@@ -23,6 +23,7 @@
  *** 3.0. Added styling for VAC filtering controls
  *** 3.0.1. Added font awesome to header
  *** 3.0.2. Image captions: added gray background, decreased line height
+ *** 3.0.3. Added "notlink" class for sidebar menu items that shouldn't be links
  */
 
 
@@ -435,6 +436,11 @@ figcaption {
         background-color: purple;
     }
 
+    .notlink {
+        color: #272727;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
 
     /* ##################### 6. Home page ##################### */
