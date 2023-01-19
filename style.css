@@ -28,6 +28,7 @@ ar/ /*
  *** 3.0.5. Styled alphabet links at the top of Glossary
  *** 3.0.5.1. (...but not with underlined links)
  *** 3.0.5.2. Reduced figcaption font size to 87.5%
+ *** 3.0.5.3. And embiggened to 92.5%
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -99,7 +100,7 @@ figcaption {
     line-height: 1.5;
     text-align: left !important;
     padding: 8px;
-    font-size: 0.875rem;
+    font-size: 0.925rem;
 }
 
 
