@@ -25,6 +25,7 @@ ar/ /*
  *** 3.0.2. Image captions: added gray background, decreased line height
  *** 3.0.3. Added "notlink" class for sidebar menu items that shouldn't be links
  *** 3.0.4. Styled special message area
+ *** 3.0.5. Styled alphabet links at the top of Glossary
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -1210,4 +1211,27 @@ figcaption {
     /* Show the tooltip text when you mouse over the tooltip container */
     .tooltip:hover .tooltiptext {
         visibility: visible;
+    }
+
+
+/* ##################### 14. Glossary alphabetical index  #####################  */
+
+.glossaryindex {
+    /*background-color: aqua;*/
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+.glossaryindexitem {
+    /*background-color: cornsilk; */
+    padding: 8px;
+    width: auto;
+}
+    .glossaryindexitem > a {
+        color: #1291ee;
     }
