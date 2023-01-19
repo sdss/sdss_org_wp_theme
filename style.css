@@ -26,6 +26,7 @@ ar/ /*
  *** 3.0.3. Added "notlink" class for sidebar menu items that shouldn't be links
  *** 3.0.4. Styled special message area
  *** 3.0.5. Styled alphabet links at the top of Glossary
+ *** 3.0.5.1. (...but not with underlined links)
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -1234,4 +1235,5 @@ figcaption {
 }
     .glossaryindexitem > a {
         color: #1291ee;
+        text-decoration: none;
     }
