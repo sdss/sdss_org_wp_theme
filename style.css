@@ -28,7 +28,8 @@ ar/ /*
  *** 3.0.5. Styled alphabet links at the top of Glossary
  *** 3.0.5.1. (...but not with underlined links)
  *** 3.0.5.2. Reduced figcaption font size to 87.5%
- *** 3.0.5.3. And embiggened to 92.5%
+ *** 3.0.5.3. (...and embiggened to 92.5%)
+ *** 3.0.5.4. Using same style.css whether in debug mode or not
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
