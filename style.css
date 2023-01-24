@@ -13,8 +13,8 @@
  Version updates (see .versions for older versions):
  *** 3.1. Restyled Filter VAC checkboxes control
  *** 3.1.1. Added autoprefixed and minified files
+ *** 3.1.1.1. Get autoprefixed & minimized stylesheet on test and prod sites
  */
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
