@@ -210,7 +210,13 @@ function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {
     $output .= "</div>";
     return $output;
 }
-
+/*
+function excerpt_read_more($excerpt) {
+    if ( has_excerpt( get_the_ID() ) ) {
+        $excerpt .= '<p><a href="'. esc_url( get_permalink( get_the_ID() ) ) . '">' . esc_html__( 'Read More') . '</a></p>';
+    }
+}*/
 
 add_action( 'widgets_init', 'sdss5_register_sidebar' );
 add_shortcode('load_sidebar_as_page_toc', 'sdss5_load_sidebar_as_page_toc');
+//add_filter('the_excerpt', 'excerpt_read_more');
