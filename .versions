@@ -21,3 +21,4 @@
  *** 3.1.1. Added autoprefixed and minified files
  *** 3.1.1.1. Get autoprefixed & minimized stylesheet on test and prod sites
  *** 3.2. Fixed tooltip classes to sort-of-correctly display Completed Surveys mouseover (but it shouldn't be position: fixed)
+ *** 3.3. Formatting for recent posts for Blog and News pages

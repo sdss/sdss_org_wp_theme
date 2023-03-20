@@ -12,6 +12,7 @@
  Text Domain: sdss5-org
  Version updates (see .versions for older versions):
  *** 3.2. Fixed tooltip classes to sort-of-correctly display Completed Surveys mouseover (but it shouldn't be position: fixed)
+ *** 3.3. Formatting for recent posts for Blog and News pages
  */
 
 /*
@@ -20,6 +21,7 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
+
 
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -1306,3 +1308,49 @@ single-vac {
         color: #1291ee;
         text-decoration: none;
     }
+
+
+
+.sdss-recent-posts {
+    /*background-color: aquamarine;*/
+}
+
+    .sdss-recent-posts div {
+        /*border: 5px dotted black;*/
+    }
+
+    .sdss-recent-posts li {
+        /*background-color: silver;
+        */
+    }
+
+        .sdss-recent-posts li time {
+            /*background-color: tomato;
+            */
+        }
+
+        .sdss-recent-posts li .wp-block-latest-posts__post-excerpt {
+            /*background-color: rosybrown;
+            */
+        }
+
+        .sdss-recent-posts li .more-link-container {
+            /*background-color: orange;
+            */
+        }
+
+            .sdss-recent-posts li .more-link-container .more-link {
+                /*border: 1px solid red;
+                */
+            }
+
+        .sdss-recent-posts li .wp-block-latest-posts__featured-image {
+            /*border: 3px solid navajowhite;
+            background-color: navajowhite;*/
+            float: right;
+            margin-left: 0.5rem;
+        }
+
+            .sdss-recent-posts li .wp-block-latest-posts__featured-image img {
+                /*border: 3px solid yellow;*/
+            }

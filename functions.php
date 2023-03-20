@@ -138,7 +138,24 @@ function sdss5_register_sidebar(){
              'before_title' => '<h3 class="widget-title">',
              'after_title' => '</h3>',
          ));
-
+    register_sidebar(array(
+             'name' => esc_html__( 'News Sidebar', 'galaxis' ),
+             'id' => 'sidebar-news',
+             'description' => esc_html__( 'News sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+    register_sidebar(array(
+             'name' => esc_html__( 'Blog Sidebar', 'galaxis' ),
+             'id' => 'sidebar-blog',
+             'description' => esc_html__( 'Blog sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
     register_sidebar(array(
              'name' => esc_html__( 'VAC Search Form', 'galaxis' ),
              'id' => 'sidebar-vac-search',
@@ -210,13 +227,33 @@ function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {
     $output .= "</div>";
     return $output;
 }
-/*
-function excerpt_read_more($excerpt) {
-    if ( has_excerpt( get_the_ID() ) ) {
-        $excerpt .= '<p><a href="'. esc_url( get_permalink( get_the_ID() ) ) . '">' . esc_html__( 'Read More') . '</a></p>';
-    }
-}*/
 
 add_action( 'widgets_init', 'sdss5_register_sidebar' );
 add_shortcode('load_sidebar_as_page_toc', 'sdss5_load_sidebar_as_page_toc');
-//add_filter('the_excerpt', 'excerpt_read_more');
+
+
+/*add_filter('the_excerpt', function ($excerpt) {
+    return "HELLO WORLD".$excerpt;
+}, 0);*/
+
+/*function wp_trim_all_excerpt($text) {
+  // Creates an excerpt if needed; and shortens the manual excerpt as well
+  global $post;
+  $raw_excerpt = $text;
+  if ( '' == $text ) {
+    $text = get_the_content('');
+    $text = strip_shortcodes( $text );
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]&gt;', $text);
+  }
+
+  $text = strip_tags($text);
+  $excerpt_length = apply_filters('excerpt_length', 55);
+  $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+  $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+
+  return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
+}
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'wp_trim_all_excerpt');*/
