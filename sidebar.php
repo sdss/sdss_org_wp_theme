@@ -24,7 +24,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			foreach ( $GLOBALS['wp_registered_sidebars'] as $this_sidebar ) {
 				array_push($sidebar_values, substr(ucwords($this_sidebar['id']), strpos(ucwords($this_sidebar['id']), '-')+1));
 			}
-			echo "</font></h1>";
+			//echo "</font></h1>";
 			$which = explode('/',substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[0];
 			if ($which == 'dr18') {  // if it's a second-level page under dr18 (e.g. VAC page)
 				$which = explode('/',substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[1];
