@@ -22,7 +22,7 @@ get_header();
 
 			<?php
 			while ( have_posts() ) {
-				echo get_page_template($post->ID);
+				//echo get_page_template($post->ID);
 				the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
