@@ -6,7 +6,7 @@ function my_theme_enqueue_styles() {
     if (WP_DEBUG) {    // if this is a dev site, get the full stylesheet, else get the minified stylesheet
         $link_to_stylesheet = get_stylesheet_directory_uri()."/style.css";
     } else {
-        $link_to_stylesheet = get_stylesheet_directory_uri()."/style.min.css";
+        $link_to_stylesheet = get_stylesheet_directory_uri()."/style.css";
     } 
     wp_enqueue_style( 'child-style', $link_to_stylesheet, 
         array( 'galaxis-style' ), 
