@@ -25,3 +25,4 @@
  *** 4.0. Renamed and moved setup things out of wp-config to here
  *** 4.0.1. Fixed name of breadcrumb baker plugin
  *** 4.0.2. Using non-minified, non-autoprefixed style on prod site for now
+ *** 4.0.3. ACTUALLY Fixed name of breadcrumb baker plugin
