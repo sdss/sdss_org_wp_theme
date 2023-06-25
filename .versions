@@ -23,3 +23,4 @@
  *** 3.2. Fixed tooltip classes to sort-of-correctly display Completed Surveys mouseover (but it shouldn't be position: fixed)
  *** 3.3. Formatting for recent posts for Blog and News pages
  *** 4.0. Renamed and moved setup things out of wp-config to here
+ *** 4.0.1. Fixed name of breadcrumb baker plugin
