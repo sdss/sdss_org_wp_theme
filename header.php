@@ -19,8 +19,8 @@
 	<?php wp_head(); ?>
 <script src="https://kit.fontawesome.com/35ce0f3af3.js" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="/wp-content/plugins/sdss5-shortcodes/authorhider.js"></script>
-<script type="text/javascript" src="/wp-content/plugins/sdss5-shortcodes/vacsearch.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/sdss_wp_shortcodes/authorhider.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/sdss_wp_shortcodes/vacsearch.js"></script>
 </head>
 <body <?php body_class(); ?>>
 

@@ -1,28 +1,6 @@
-*** 2.0.1. Header levels displayed differently in TOC
- *** 2.0.2. Added TOC display for h5 and h6
- *** 2.0.3. Styling of VAC list page
- *** 2.0.4. Styling of single VAC catalog pages
- *** 2.0.5. Styling of single TOC with or without accordion, added arrows for h3 and lower
- *** 2.1. Formatting for back to top button to work with TOC
- *** 2.2. Formatting second-level menu at screen size < 870px (I don't like this solution but meh)
- *** 2.2.1. Show/hide full author list for publications pages
- *** 2.2.2. Created "new for DR18" and "updated for dr18" classes
- *** 3.0. Added styling for VAC filtering controls
- *** 3.0.1. Added font awesome to header
- *** 3.0.2. Image captions: added gray background, decreased line height
- *** 3.0.3. Added "notlink" class for sidebar menu items that shouldn't be links
- *** 3.0.4. Styled special message area
- *** 3.0.5. Styled alphabet links at the top of Glossary
- *** 3.0.5.1. (...but not with underlined links)
- *** 3.0.5.2. Reduced figcaption font size to 87.5%
- *** 3.0.5.3. (...and embiggened to 92.5%)
- *** 3.0.5.4. Using same style.css whether in debug mode or not
- *** 3.1. Restyled Filter VAC checkboxes control
- *** 3.1.1. Added autoprefixed and minified files
- *** 3.1.1.1. Get autoprefixed & minimized stylesheet on test and prod sites
- *** 3.2. Fixed tooltip classes to sort-of-correctly display Completed Surveys mouseover (but it shouldn't be position: fixed)
- *** 3.3. Formatting for recent posts for Blog and News pages
+ Version updates
  *** 4.0. Renamed and moved setup things out of wp-config to here
  *** 4.0.1. Fixed name of breadcrumb baker plugin
  *** 4.0.2. Using non-minified, non-autoprefixed style on prod site for now
  *** 4.0.3. ACTUALLY Fixed name of breadcrumb baker plugin
+ *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded

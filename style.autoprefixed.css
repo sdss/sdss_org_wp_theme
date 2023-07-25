@@ -1,19 +1,20 @@
+
 /*
- Theme Name: sdss5.org Wordpress theme
- Theme URI: https://example.com/twenty-fifteen-child/
- description: Theme for the website of the Sloan Digital Sky Survey's fifth phase (sdss5.org)
+ Theme Name: sdss.org Wordpress theme
+ Theme URI: https://github.com/sdss/sdss_org_wp_theme
+ description: Theme for the website of the Sloan Digital Sky Survey (www.sdss.org)
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 3.3
+ Version: 5.0
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
- Text Domain: sdss5-org
+ Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
- *** 3.2. Fixed tooltip classes to sort-of-correctly display Completed Surveys mouseover (but it shouldn't be position: fixed)
- *** 3.3. Formatting for recent posts for Blog and News pages
+  *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
  */
+
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
