@@ -5,13 +5,14 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.0
+ Version: 5.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
   *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
+  *** 5.1. Moved CURRENT_DR variable (defines what DR is most current) out of theme and into site wp-config.php
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 

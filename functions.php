@@ -18,10 +18,6 @@ function my_theme_enqueue_styles() {
 // turn off autocomplete of URLs (e.g. APOGEE -> instruments/apogee-spectrographs)
 remove_filter('template_redirect', 'redirect_canonical');  
 
-// current data release
-define('CURRENT_DR', 18);
-
-
 function register_secondary_menu() {
     register_nav_menu('menu-2',__( 'Secondary Menu' ));
 }

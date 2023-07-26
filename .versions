@@ -4,3 +4,4 @@
  *** 4.0.2. Using non-minified, non-autoprefixed style on prod site for now
  *** 4.0.3. ACTUALLY Fixed name of breadcrumb baker plugin
  *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
+ *** 5.1. Moved CURRENT_DR variable (defines what DR is most current) out of theme and into site wp-config.php

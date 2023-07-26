@@ -1,4 +1,3 @@
-
 /*
  Theme Name: sdss.org Wordpress theme
  Theme URI: https://github.com/sdss/sdss_org_wp_theme
@@ -6,22 +5,15 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.0
+ Version: 5.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
   *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
+  *** 5.1. Moved CURRENT_DR variable (defines what DR is most current) out of theme and into site wp-config.php
  */
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
@@ -123,13 +115,8 @@ figcaption {
 ## Embiggened branding, takes up only 20% of width
 -------------------------------------------------------------- */
 .site-branding {
-    -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-width: 81%;
     margin-right: 0;
@@ -146,7 +133,6 @@ figcaption {
 @media screen and (min-width: 1025px) {
     .site-branding {
         max-width: 20%;
-        -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
         margin-right: 1.5rem;
     }
@@ -163,15 +149,12 @@ figcaption {
 /* ##################### 3.2. Main nav menu (takes up 75% of width)  ##################### */
 
 .main-navigation {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     text-align: right;
 }
 
 @media screen and (min-width: 1025px) {
     .main-navigation {
-        -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
         text-align: center;
     }
@@ -220,15 +203,8 @@ figcaption {
 
 @media screen and (min-width: 870px) {
     .secondary-menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: flex-end;
         height: auto;
         overflow-x: hidden;
@@ -369,10 +345,7 @@ figcaption {
 .site-topbar__left {
     text-align: center;
     padding: .3rem 0;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
 }
 
@@ -815,14 +788,8 @@ figcaption {
 /* ##################### 11. Value-added catalogs #####################  */
 
 .vaclist {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     /*border: 1px solid blue;*/
 }
@@ -914,12 +881,7 @@ single-vac {
 
 
 .vac-tags {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -1039,8 +1001,6 @@ single-vac {
 }
 
 .vac-tags-cas-info {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
     /*background-color: dodgerblue;*/
     height: 100%;
@@ -1063,7 +1023,6 @@ single-vac {
     border-radius: 9999px;
     color: #fff;
     background-color: #32373c;
-    -webkit-box-shadow: none;
     box-shadow: none;
     font-size: 1.125em;
     padding: calc(0.667em + 2px) calc(1.333em + 2px);
@@ -1073,7 +1032,6 @@ single-vac {
         display: inline-block;
         text-align: center;
         word-break: break-word;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         text-decoration: none;
         color: #fff;
@@ -1142,14 +1100,8 @@ single-vac {
 
 .vac-filter {
     /*background-color: gold; */
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     padding: 5px;
     margin: 5px 5px 10px 5px;
@@ -1170,14 +1122,8 @@ single-vac {
 .vac-filter-checkbox-list {
     /*background-color: lavender;*/
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 
@@ -1210,14 +1156,8 @@ single-vac {
 
 
 .vac-filter-bulk-select {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     min-width: 50%;
     max-width: 100%;
@@ -1279,18 +1219,10 @@ single-vac {
 
 .glossaryindex {
     /*background-color: aqua;*/
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: auto;
     flex-basis: auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-line-pack: center;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
