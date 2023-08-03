@@ -5,3 +5,4 @@
  *** 4.0.3. ACTUALLY Fixed name of breadcrumb baker plugin
  *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
  *** 5.1. Moved CURRENT_DR variable (defines what DR is most current) out of theme and into site wp-config.php
+ *** 5.2. DR19 sidebars with new pages show up for logged-in users

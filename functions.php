@@ -181,6 +181,55 @@ function sdss5_register_sidebar(){
              'after_title' => '</h3>',
          ));
 
+       register_sidebar(array(
+             'name' => esc_html__( 'DR19 MWM Data Sidebar (private)', 'galaxis' ),
+             'id' => 'sidebar-mwm-dr19',
+             'description' => esc_html__( 'DR19 MWM Data sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+
+       register_sidebar(array(
+             'name' => esc_html__( 'DR19 BHM Data Sidebar (private)', 'galaxis' ),
+             'id' => 'sidebar-bhm-dr19',
+             'description' => esc_html__( 'DR19 BHM Data sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+
+       register_sidebar(array(
+             'name' => esc_html__( 'DR19 Data Access Sidebar (private)', 'galaxis' ),
+             'id' => 'sidebar-data_access-dr19',
+             'description' => esc_html__( 'DR19 Data Access sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+
+       register_sidebar(array(
+             'name' => esc_html__( 'DR19 Software Sidebar (private)', 'galaxis' ),
+             'id' => 'sidebar-software-dr19',
+             'description' => esc_html__( 'DR19 Data Access sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
+
+   register_sidebar(array(
+             'name' => esc_html__( 'DR19 Targeting Sidebar (private)', 'galaxis' ),
+             'id' => 'sidebar-targeting-dr19',
+             'description' => esc_html__( 'DR19 Targeting sidebar: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));
 }
 
 function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {
