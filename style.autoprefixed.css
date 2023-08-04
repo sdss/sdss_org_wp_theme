@@ -1,31 +1,30 @@
 /*
- Theme Name: sdss.org Wordpress theme
- Theme URI: https://github.com/sdss/sdss_org_wp_theme
- description: Theme for the website of the Sloan Digital Sky Survey (www.sdss.org)
- Author: Jordan Raddick
- Author URI: https://www.jordanraddick.com
- Template: galaxis
- Version: 5.1
- License: GNU General Public License v2 or later
- License URI: https://www.gnu.org/licenses/gpl-2.0.html
- Tags: 
- Text Domain: sdss_org_wp_theme
- Version updates (see .versions for older versions):
-  *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
-  *** 5.2. DR19 sidebars with new pages show up for logged-in users
-  *** 5.2.1. Narrowed back to top control so it doesn't overlap rhs menu
- */
+ *  Theme Name: sdss.org Wordpress theme
+ *   Theme URI: https://github.com/sdss/sdss_org_wp_theme
+ *    description: Theme for the website of the Sloan Digital Sky Survey (www.sdss.org)
+ *     Author: Jordan Raddick
+ *      Author URI: https://www.jordanraddick.com
+ *       Template: galaxis
+ *        Version: 5.1
+ *         License: GNU General Public License v2 or later
+ *          License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ *           Tags: 
+ *            Text Domain: sdss_org_wp_theme
+ *             Version updates (see .versions for older versions):
+ *               *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
+ *                 *** 5.2. DR19 sidebars with new pages show up for logged-in users
+ *                   *** 5.2.2. Return to default blue/purple link colors
+ *                    */
 
 /*
-* prefixed by https://autoprefixer.github.io
-* postcss: v8.4.14,
-* autoprefixer: v10.4.7
-* browsers: last 4 version
-*/
+ * * Prefixed by https://autoprefixer.github.io
+ * * PostCSS: v8.4.14,
+ * * Autoprefixer: v10.4.7
+ * * Browsers: last 4 version
+ * */
 
-/*
 /* ##################### 1. Fonts ##################### 
-/*-------------------------------------------------------------- 
+ */*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
 -------------------------------------------------------------- */
 /* vietnamese */
@@ -63,7 +62,7 @@ p, ul {
 .entry-title {
     
     /*    background-color: blue;
-    margin-bottom: 0.1em !important;*/
+ *        margin-bottom: 0.1em !important;*/
 }
 
 .entry-content {
@@ -75,9 +74,11 @@ h2 {
         margin-top: 0.1em;
     }
 
-a {
-    color: #6256A3;
+/* Keep default link color as blue but make visited links purple */
+a:visited {
+    color: #551A8B;
 }
+
 .explore-button { /* Used for the "Explore X" buttons on Mappers page  */
     text-align: center;
     width: 100%;
@@ -99,8 +100,8 @@ figcaption {
 
 
 /*--------------------------------------------------------------
-# 2.1. Utilities: change top and bottom margins of content container, and clear floats
---------------------------------------------------------------*/
+ * # 2.1. Utilities: change top and bottom margins of content container, and clear floats
+ * --------------------------------------------------------------*/
 .u-b-margin {
     margin-bottom: 0.25rem;
 }
@@ -121,8 +122,8 @@ figcaption {
 
 /* ##################### 3.1. Logo branding ##################### */
 /*--------------------------------------------------------------
-## Embiggened branding, takes up only 20% of width
--------------------------------------------------------------- */
+ * ## Embiggened branding, takes up only 20% of width
+ * -------------------------------------------------------------- */
 .site-branding {
     -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -361,9 +362,9 @@ figcaption {
 .site-topbar-text > a {
     font-weight: bold;
     /*color: lightpink !important;
-    align-content: baseline;
-    
-    text-decoration: underline;*/
+ *     align-content: baseline;
+ *         
+ *             text-decoration: underline;*/
 }
 
     .site-topbar__left {
@@ -549,7 +550,7 @@ figcaption {
         .slidercaption {
             max-height: 118px !important;
             /*border: 5px solid red;
-    vertical-align: text-bottom;*/
+ *     vertical-align: text-bottom;*/
         }
 
             .slidercaption .caption {
@@ -593,8 +594,8 @@ figcaption {
             }
 
     /*        .mapper-summary .mapper-info .program-head-name {
-        background-color: orange;
-    }*/
+ *                background-color: orange;
+ *                    }*/
 
 
     /* ##################### 8. Data pages (DR18 and beyond) ##################### */
@@ -722,9 +723,9 @@ figcaption {
         border-radius: 15px;
         float: right;
         /*    position: absolute;
-    right: 0;
-    
-    transform: translateY(-50%);*/
+ *        right: 0;
+ *            
+ *                transform: translateY(-50%);*/
     }
 
         .sdss-to-top:hover {
@@ -861,14 +862,14 @@ figcaption {
         }
 
 /*    .vac-left {
-        width: 48%;
-        float: left;
-    }
-
-    .vac-right {
-        width: 48%;
-        float: right;
-    }*/
+ *            width: 48%;
+ *                    float: left;
+ *                        }
+ *
+ *                            .vac-right {
+ *                                    width: 48%;
+ *                                            float: right;
+ *                                                }*/
 
     .vac-description {
         /*margin: 10px;*/
@@ -897,20 +898,20 @@ figcaption {
 
     .vac-authors {
         /*    background-color:yellow;
-    color: DarkSlateGrey;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+ *        color: DarkSlateGrey;
+ *            font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
         /* margin-left: 10px;
-    margin-top: 10px; */
+ *     margin-top: 10px; */
         font-style: italic;
         /*margin-bottom: 10px;*/
     }
 
     .vac-authors-full {
         /*background-color: yellow;
-    /*    color: DarkSlateGrey;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+ *     /*    color: DarkSlateGrey;
+ *         font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
         /* margin-left: 10px;
-    margin-top: 10px; */
+ *     margin-top: 10px; */
         font-style: italic;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -928,13 +929,13 @@ figcaption {
         margin-top: 5px;
         margin-bottom: 5px;
         /*border: 1px solid green;
-    width: 100%;
-    display: inline-block;*/
+ *     width: 100%;
+ *         display: inline-block;*/
     }
 
     /*.vac-tags-row {
-    margin-top: 0;
-}*/
+ *     margin-top: 0;
+ *     }*/
 
 
 
@@ -1104,7 +1105,7 @@ figcaption {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
     /*background-color: purple;
-    background-color: red;*/
+ *     background-color: red;*/
 }
 
 .vac-counts {
@@ -1118,24 +1119,24 @@ figcaption {
 }
 
 /*.vac-search-textbox-and-label {
-    color: white;
-    display: flex;
-    flex-basis: 100%;
-    flex-flow: row wrap;
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
-}
-
-    .vac-search-textbox-and-label > label {
-        margin-left: 0.5rem;
-        background-color: #2A516E;
-        padding: 0.4rem;
-        border-radius: 1rem;
-    }
-
-    .vac-search-textbox-and-label > input {
-    }
-*/
+ *     color: white;
+ *         display: flex;
+ *             flex-basis: 100%;
+ *                 flex-flow: row wrap;
+ *                     margin-top: 0.25rem;
+ *                         margin-bottom: 0.5rem;
+ *                         }
+ *
+ *                             .vac-search-textbox-and-label > label {
+ *                                     margin-left: 0.5rem;
+ *                                             background-color: #2A516E;
+ *                                                     padding: 0.4rem;
+ *                                                             border-radius: 1rem;
+ *                                                                 }
+ *
+ *                                                                     .vac-search-textbox-and-label > input {
+ *                                                                         }
+ *                                                                         */
 
 .vac-filter-all-checkboxes {
     /*background-color: green;*/
@@ -1322,31 +1323,31 @@ figcaption {
 
     .sdss-recent-posts li {
         /*background-color: silver;
-        */
+ *         */
     }
 
         .sdss-recent-posts li time {
             /*background-color: tomato;
-            */
+ *             */
         }
 
         .sdss-recent-posts li .wp-block-latest-posts__post-excerpt {
             /*background-color: rosybrown;
-            */
+ *             */
         }
 
         .sdss-recent-posts li .more-link-container {
             /*background-color: orange;
-            */
+ *             */
         }
             .sdss-recent-posts li .more-link-container .more-link {
                 /*border: 1px solid red;
-                */
+ *                 */
             }
 
         .sdss-recent-posts li .wp-block-latest-posts__featured-image {
             /*border: 3px solid navajowhite;
-            background-color: navajowhite;*/
+ *             background-color: navajowhite;*/
             float: right;
             margin-left: 0.5rem;
         }

@@ -13,7 +13,7 @@
  Version updates (see .versions for older versions):
   *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
   *** 5.2. DR19 sidebars with new pages show up for logged-in users
-  *** 5.2.1. Narrowed back to top control so it doesn't overlap rhs menu
+  *** 5.2.2. Return to default blue/purple link colors
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -66,9 +66,11 @@ h2 {
         margin-top: 0.1em;
     }
 
-a {
-    color: #6256A3;
+/* Keep default link color as blue but make visited links purple */
+a:visited {
+    color: #551A8B;
 }
+
 .explore-button { /* Used for the "Explore X" buttons on Mappers page  */
     text-align: center;
     width: 100%;
