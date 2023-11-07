@@ -230,6 +230,16 @@ function sdss5_register_sidebar(){
              'before_title' => '<h3 class="widget-title">',
              'after_title' => '</h3>',
          ));
+
+    register_sidebar(array(
+             'name' => esc_html__( 'People', 'galaxis' ),
+             'id' => 'sidebar-people',
+             'description' => esc_html__( 'SDSS People List: Add widgets here.', 'galaxis' ),
+             'before_widget' => '<section id="%1$s" class="sidebar-vac widget gx-card-content u-b-margin %2$s">',
+             'after_widget' => '</aside>',
+             'before_title' => '<h3 class="widget-title">',
+             'after_title' => '</h3>',
+         ));  
 }
 
 function sdss5_load_sidebar_as_page_toc( $attrs = '' ) {

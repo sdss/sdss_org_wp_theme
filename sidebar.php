@@ -31,6 +31,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			if (preg_match('/(dr\d|data)/i',$which)) {
 				$which = explode("/",substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[1];
 			}
+			//echo "<h1 style='color:orange;'>Sidebar = ".$which."</h1>";
 
 			//echo "<h1><font color='green'>".$which."</font></h1>";
 			if (in_array($which, $sidebar_values)) {
@@ -50,7 +51,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			if ((strpos($this_page_url, 'value-added-catalogs') > 0) & (!strpos($_SERVER['REQUEST_URI'], 'vac_id'))) {  // if this is the VACs index page, show the search widget as a sidebar
 				dynamic_sidebar( 'sidebar-vac-search' );
 			}
-	//		echo "<h1><font color='purple'>".$sidebar_to_load."</font></h1>";
+			//echo "<h1><font color='purple'>".$sidebar_to_load."</font></h1>";
 			dynamic_sidebar( $sidebar_to_load ); 
 
 			
