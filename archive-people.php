@@ -25,20 +25,18 @@ get_header();
 				<main id="main" class="site-main">
 
 					<?php
-					if ( have_posts() ) {
+					if ( have_posts('people') ) {
 						?>
 
 						<header class="page-header gx-card-content gx-card-content--same-md-y u-b-margin">
-							<?php
-							the_archive_title( '<h1 class="page-title archive-title">', '</h1>' );
-							the_archive_description( '<div class="archive-description">', '</div>' );
-							?>
+							<h1 class='page-title archive-title'>Get to know SDSS people</h1>
+							<div class='archive-description'>In this space, you can meet the great people of the Sloan Digital Sky Survey (SDSS)</div>
 						</header><!-- .page-header -->
 
 						<?php
-						while ( have_posts() ) {
+						while ( have_posts('people') ) {
 							the_post();
-							get_template_part( 'template-parts/content', get_post_type() );
+							get_template_part( 'template-parts/content-archive-people' );
 						}
 
 						the_posts_pagination();
