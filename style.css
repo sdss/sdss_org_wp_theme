@@ -5,7 +5,7 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.3
+ Version: 5.3.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
@@ -13,6 +13,7 @@
  Version updates (see .versions for older versions):
   *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
   *** 5.3. Added basic formatting for archive page for SDSS people
+  *** 5.3.1. Starting on flex layout for people archive page
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -1297,4 +1298,18 @@ figcaption {
     height: auto;
     float: right;
     margin-left: 1rem;
+}
+
+#people-flex-container {
+    border: 5px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.people-flex {
+    flex-basis: 25%;
 }

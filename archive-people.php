@@ -32,7 +32,7 @@ get_header();
 							<h1 class='page-title archive-title'>Get to know SDSS people</h1>
 							<div class='archive-description'>In this space, you can meet the great people of the Sloan Digital Sky Survey (SDSS)</div>
 						</header><!-- .page-header -->
-
+						<div id='people-flex-container'>
 						<?php
 						while ( have_posts('people') ) {
 							the_post();
@@ -40,6 +40,7 @@ get_header();
 						}
 
 						the_posts_pagination();
+						?> </div> <?php 
 					} else {
 						get_template_part( 'template-parts/content', 'none' );
 					}

@@ -9,30 +9,28 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'gx-card u-b-margin' ); ?>>
+<div class='people-flex'>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'gx-card u-b-margin' ); ?>>
 
-	
+		<div class="gx-card-content">
 
-	<div class="gx-card-content">
-
-		<header class="entry-header">
-		<div class='personphoto'>
+			<header class="entry-header">
 			<?php galaxis_post_thumbnail(); ?>		
-		</div>
-		</header><!-- .entry-header -->
+			</header><!-- .entry-header -->
 
-		<div class="entry-content">
-		<?php
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		?>
-		</div><!-- .entry-content -->
+			<div class="entry-content">
+			<?php
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			?>
+			</div><!-- .entry-content -->
 
-		<?php if ( get_edit_post_link() ) { ?>
-		<footer class="entry-footer">
-			<?php galaxis_edit_post_link(); ?>
-		</footer><!-- .entry-footer -->
-		<?php } ?>
+			<?php if ( get_edit_post_link() ) { ?>
+			<footer class="entry-footer">
+				<?php galaxis_edit_post_link(); ?>
+			</footer><!-- .entry-footer -->
+			<?php } ?>
 
-	</div><!-- .gx-card-content -->
+		</div><!-- .gx-card-content -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+	</article><!-- #post-<?php the_ID(); ?> -->
+</div>
