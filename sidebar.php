@@ -37,11 +37,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			if (in_array($which, $sidebar_values)) {
 				$sidebar_to_load = 'sidebar-'.$which;
 				// show dr19 sidebar if one exists and user is logged in
-				$dr19_sidebar_options = array('mwm', 'bhm', 'data_access', 'software', 'targeting');
-				//if ( (in_array($which, $dr19_sidebar_options)) & (strtolower(substr($this_page_url, strlen($this_page_url)-5, 5)) == '-dr19') & (is_user_logged_in()) ) {
-				if ( (in_array($which, $dr19_sidebar_options)) & (is_user_logged_in()) ) {
+				//$dr19_sidebar_options = array('mwm', 'bhm', 'data_access', 'software', 'targeting');
+/*				if ( (in_array($which, $dr19_sidebar_options)) & (is_user_logged_in()) ) {
 					$sidebar_to_load .= '-dr19';
-				}
+				} */
 			//echo "<h1><font color='green'>".$sidebar_to_load."</font></h1>";
 			} else {
 				dynamic_sidebar( 'science-sidebar' );
