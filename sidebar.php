@@ -19,7 +19,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<aside id="secondary" class="widget-area sidebar-1 h-center-upto-md" aria-label="<?php esc_attr_e( 'Sidebar', 'galaxis' ); ?>">
 			<?php 
 			$this_page_url = home_url($wp -> request);
-			//echo "<h1><font color='red'>".substr($this_page_url, strlen($this_page_url)-5, 5)."</font></h1>";
 			$sidebar_values = array();
 			foreach ( $GLOBALS['wp_registered_sidebars'] as $this_sidebar ) {
 				array_push($sidebar_values, substr(ucwords($this_sidebar['id']), strpos(ucwords($this_sidebar['id']), '-')+1));
@@ -31,17 +30,14 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			if (preg_match('/(dr\d|data)/i',$which)) {
 				$which = explode("/",substr($this_page_url,strpos($this_page_url, get_site_url())+strlen(get_site_url())+1))[1];
 			}
-			//echo "<h1 style='color:orange;'>Sidebar = ".$which."</h1>";
 
-			//echo "<h1><font color='green'>".$which."</font></h1>";
 			if (in_array($which, $sidebar_values)) {
 				$sidebar_to_load = 'sidebar-'.$which;
 				// show dr19 sidebar if one exists and user is logged in
-				//$dr19_sidebar_options = array('mwm', 'bhm', 'data_access', 'software', 'targeting');
-/*				if ( (in_array($which, $dr19_sidebar_options)) & (is_user_logged_in()) ) {
+				$dr19_sidebar_options = array('mwm', 'bhm', 'data_access', 'software', 'targeting');
+				if ( (in_array($which, $dr19_sidebar_options)) & (is_user_logged_in()) ) {
 					$sidebar_to_load .= '-dr19';
-				} */
-			//echo "<h1><font color='green'>".$sidebar_to_load."</font></h1>";
+				}
 			} else {
 				dynamic_sidebar( 'science-sidebar' );
 				$sidebar_to_load = 'sidebar-1';
@@ -50,7 +46,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 			if ((strpos($this_page_url, 'value-added-catalogs') > 0) & (!strpos($_SERVER['REQUEST_URI'], 'vac_id'))) {  // if this is the VACs index page, show the search widget as a sidebar
 				dynamic_sidebar( 'sidebar-vac-search' );
 			}
-			//echo "<h1><font color='purple'>".$sidebar_to_load."</font></h1>";
 			dynamic_sidebar( $sidebar_to_load ); 
 
 			

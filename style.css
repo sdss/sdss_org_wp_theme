@@ -12,18 +12,8 @@
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
   *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
-  *** 5.3. Added basic formatting for archive page for SDSS people
-  *** 5.3.1. Starting on flex layout for people archive page
-  *** 5.4. Reverting DR19 sidebars temporarily for push to live site so they don't show up there - also creating branch
+  *** 5.5. Restored DR19 sidebars
  */
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
@@ -61,16 +51,16 @@ p, ul {
 }
 
 .entry-title {
+    
     /*    background-color: blue;
     margin-bottom: 0.1em !important;*/
 }
 
 .entry-content {
+    
 }
-
 h2 {
 }
-
     h2:first-child {
         margin-top: 0.1em;
     }
@@ -126,13 +116,8 @@ figcaption {
 ## Embiggened branding, takes up only 20% of width
 -------------------------------------------------------------- */
 .site-branding {
-    -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-width: 81%;
     margin-right: 0;
@@ -149,12 +134,10 @@ figcaption {
 @media screen and (min-width: 1025px) {
     .site-branding {
         max-width: 20%;
-        -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
         margin-right: 1.5rem;
     }
 }
-
 .site-branding .custom-logo-link img {
     display: block;
     max-height: 82px;
@@ -166,15 +149,11 @@ figcaption {
 /* ##################### 3.2. Main nav menu (takes up 75% of width)  ##################### */
 
 .main-navigation {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
     text-align: right;
 }
-
 @media screen and (min-width: 1025px) {
     .main-navigation {
-        -ms-flex-preferred-size: 75%;
         flex-basis: 75%;
         text-align: center;
     }
@@ -216,22 +195,16 @@ figcaption {
             text-align: center;
         }
 
-            .secondary-menu > li:last-child {
-                border-bottom: none;
-            }
+        .secondary-menu > li:last-child {
+            border-bottom: none;
+        }
+
 }
 
 @media screen and (min-width: 870px) {
     .secondary-menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: flex-end;
         height: auto;
         overflow-x: hidden;
@@ -245,121 +218,121 @@ figcaption {
             text-align: center;
         }
 }
-/* ##################### 3.4. Breadcrumbs and search bar ##################### */
-#breadsearch {
-}
+    /* ##################### 3.4. Breadcrumbs and search bar ##################### */
+    #breadsearch {
+    }
 
-    #breadsearch .gx-card-content {
-        min-height: 65px;
-        padding: 0;
-        margin-top: 5px;
+        #breadsearch .gx-card-content {
+            min-height: 65px;
+            padding: 0;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        #breadsearch .crumbs {
+            width: 50%;
+            float: left;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-top: 2px;
+            padding-top: 8px;
+        }
+
+    @media screen and (max-width: 550px) {
+        #breadsearch .crumbs {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    #breadsearch .crumbs .pr-breadcrumb {
+        padding-left: 15px;
+        font-size: 18px;
+    }
+
+    #breadsearch .crumbs ul {
+        margin-top: 10px;
+        margin-left: 0;
+        list-style: none;
+        padding-left: 15px;
         margin-bottom: 0;
     }
 
-    #breadsearch .crumbs {
-        width: 50%;
-        float: left;
-        margin-top: auto;
-        margin-bottom: auto;
-        margin-top: 2px;
-        padding-top: 8px;
+    @media screen and (max-width: 700px) {
+        #breadsearch .crumbs ul {
+            padding-top: 0px;
+        }
     }
 
-@media screen and (max-width: 550px) {
-    #breadsearch .crumbs {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-    }
-}
-
-#breadsearch .crumbs .pr-breadcrumb {
-    padding-left: 15px;
-    font-size: 18px;
-}
-
-#breadsearch .crumbs ul {
-    margin-top: 10px;
-    margin-left: 0;
-    list-style: none;
-    padding-left: 15px;
-    margin-bottom: 0;
-}
-
-@media screen and (max-width: 700px) {
-    #breadsearch .crumbs ul {
-        padding-top: 0px;
-    }
-}
-
-#breadsearch .crumbs ul li {
-    display: inline;
-    font-size: 18px;
-}
-
-@media screen and (max-width: 700px) {
     #breadsearch .crumbs ul li {
-        font-size: 14px;
-    }
-}
-
-
-
-
-/* Add a slash symbol (/) before/behind each list item   */
-#breadsearch .crumbs ul li + li:before {
-    padding: 8px;
-    color: black;
-    content: " >> ";
-}
-
-/* Add a color to all links inside the list  */
-#breadsearch .crumbs ul li a {
-    color: #0275d8;
-    text-decoration: none;
-}
-
-    /* Add a color on mouse-over  */
-    #breadsearch .crumbs ul li a :hover {
-        color: #01447e;
-        text-decoration: underline;
+        display: inline;
+        font-size: 18px;
     }
 
-#breadsearch .searcher {
-    width: 50%;
-    margin: 2px 0px 0px auto;
-}
-
-@media screen and (max-width: 550px) {
-    #breadsearch .searcher {
-        width: 100%;
-    }
-}
-
-#breadsearch .searcher .widget_search {
-    height: inherit;
-}
-
-
-    #breadsearch .searcher .widget_search .wp-block-search {
-        margin: 0px 0px 0px 0px;
-        max-width: 100%;
+    @media screen and (max-width: 700px) {
+        #breadsearch .crumbs ul li {
+            font-size: 14px;
+        }
     }
 
-        #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
-            padding: 10px;
-            border: none;
-            margin: 0px 0px 0px 0px;
+
+
+
+    /* Add a slash symbol (/) before/behind each list item   */
+    #breadsearch .crumbs ul li + li:before {
+        padding: 8px;
+        color: black;
+        content: " >> ";
+    }
+
+    /* Add a color to all links inside the list  */
+    #breadsearch .crumbs ul li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+        /* Add a color on mouse-over  */
+        #breadsearch .crumbs ul li a :hover {
+            color: #01447e;
+            text-decoration: underline;
         }
 
-/* ##################### 3.4. Special message area ##################### */
+    #breadsearch .searcher {
+        width: 50%;
+        margin: 2px 0px 0px auto;
+    }
 
-.site-topbar {
-    background-color: #1291ee;
-    color: white;
-    font-size: larger;
-    padding-left: 20px;
-}
+    @media screen and (max-width: 550px) {
+        #breadsearch .searcher {
+            width: 100%;
+        }
+    }
+
+    #breadsearch .searcher .widget_search {
+        height: inherit;
+    }
+
+
+        #breadsearch .searcher .widget_search .wp-block-search {
+            margin: 0px 0px 0px 0px;
+            max-width: 100%;
+        }
+
+            #breadsearch .searcher .widget_search .wp-block-search .wp-block-search__inside-wrapper {
+                padding: 10px;
+                border: none;
+                margin: 0px 0px 0px 0px;
+            }
+
+    /* ##################### 3.4. Special message area ##################### */
+
+    .site-topbar {
+        background-color: #1291ee;
+        color: white;
+        font-size: larger;
+        padding-left: 20px;
+    }
 
 .site-topbar-text > a {
     font-weight: bold;
@@ -369,380 +342,377 @@ figcaption {
     text-decoration: underline;*/
 }
 
-.site-topbar__left {
-    text-align: center;
-    padding: .3rem 0;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-}
-
-@media screen and (min-width: 530px) {
     .site-topbar__left {
-        text-align: left;
-    }
-}
-
-
-/* ##################### 4. Footer #####################  */
-.site-footer {
-    background-color: white;
-}
-
-    .site-footer .footmenu {
+        text-align: center;
+        padding: .3rem 0;
+        flex-basis: 100%;
+        flex-grow: 0;
     }
 
-        .site-footer .footmenu .footmenu-label {
-            margin-bottom: 0;
+    @media screen and (min-width: 530px) {
+        .site-topbar__left {
+            text-align: left;
+        }
+    }
+
+
+    /* ##################### 4. Footer #####################  */
+    .site-footer {
+        background-color: white;
+    }
+
+        .site-footer .footmenu {
         }
 
-        .site-footer .footmenu a {
-            color: #6256A3;
+            .site-footer .footmenu .footmenu-label {
+                margin-bottom: 0;
+            }
+
+            .site-footer .footmenu a {
+                color: #6256A3;
+                text-decoration: none;
+            }
+
+        .site-footer .footlogos {
+            margin-top: 20px;
+        }
+
+            .site-footer .footlogos p {
+                color: #6256A3;
+                text-transform: uppercase;
+                font-size: larger;
+                letter-spacing: .5px;
+            }
+
+        .site-footer .toc {
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+
+    .site-footer__text {
+        background-color: #333;
+    }
+
+
+
+    /* ##################### 5. Sidebars ##################### */
+
+
+    .sidebar__inner .widget_block .gx-card-content {
+        border: none;
+        padding: 0;
+    }
+
+    .sidebar-newslist {
+    }
+
+        .sidebar-newslist:before {
+            content: "News";
+            font-family: inherit;
+            font-family: Poppins, sans-serif;
+            font-size: 1.2em;
+            line-height: 1.5;
+            font-weight: 600;
+            clear: both;
+            word-break: break-word;
+            word-wrap: break-word;
+        }
+
+        .sidebar-newslist li {
+        }
+
+            .sidebar-newslist li:first-child {
+                margin-top: 0.3em;
+                padding-top: 0.7em;
+                border-top: 1px solid #ebebeb;
+            }
+
+    .sidebar-science-results {
+    }
+
+    .sidebar-science-results-in-page {
+        background-color: purple;
+    }
+
+    .notlink {
+        color: #272727;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .private {
+        background-color: pink;
+    }
+
+
+    /* ##################### 6. Home page ##################### */
+    .home-spacer {
+        background-color: #867dba;
+        margin-left: -50px;
+        margin-right: -50px;
+        height: 40px !important;
+    }
+
+    .homeslidertext {
+        color: #FFF !important;
+        font-family: 'Monda', sans-serif;
+        text-transform: uppercase;
+        font-size: 44px;
+        font-weight: bold;
+        line-height: 1.1em;
+        text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
+    }
+
+
+    @media screen and (max-width: 800px) {
+        .homeslidertext {
+            max-height: 118px !important;
+            font-size: large;
+        }
+    }
+
+
+    #home-summary {
+        text-align: center;
+        line-height: 1.45;
+    }
+
+    .press-releases-header {
+        color: #663399;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+        .press-releases-header a {
+            font-family: inherit;
+            text-transform: inherit;
+            color: inherit;
             text-decoration: none;
         }
 
-    .site-footer .footlogos {
-        margin-top: 20px;
+    .joinus-title {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
-        .site-footer .footlogos p {
-            color: #6256A3;
-            text-transform: uppercase;
-            font-size: larger;
-            letter-spacing: .5px;
-        }
-
-    .site-footer .toc {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-    }
-
-.site-footer__text {
-    background-color: #333;
-}
-
-
-
-/* ##################### 5. Sidebars ##################### */
-
-
-.sidebar__inner .widget_block .gx-card-content {
-    border: none;
-    padding: 0;
-}
-
-.sidebar-newslist {
-}
-
-    .sidebar-newslist:before {
-        content: "News";
-        font-family: inherit;
-        font-family: Poppins, sans-serif;
-        font-size: 1.2em;
+    .joinus-text {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 0;
         line-height: 1.5;
-        font-weight: 600;
-        clear: both;
-        word-break: break-word;
-        word-wrap: break-word;
     }
 
-    .sidebar-newslist li {
+
+    .slidercaption p, h3 {
+        font-family: 'Monda', sans-serif;
+        letter-spacing: .5px;
     }
 
-        .sidebar-newslist li:first-child {
-            margin-top: 0.3em;
-            padding-top: 0.7em;
-            border-top: 1px solid #ebebeb;
-        }
-
-.sidebar-science-results {
-}
-
-.sidebar-science-results-in-page {
-    background-color: purple;
-}
-
-.notlink {
-    color: #272727;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.private {
-    background-color: pink;
-}
-
-
-/* ##################### 6. Home page ##################### */
-.home-spacer {
-    background-color: #867dba;
-    margin-left: -50px;
-    margin-right: -50px;
-    height: 40px !important;
-}
-
-.homeslidertext {
-    color: #FFF !important;
-    font-family: 'Monda', sans-serif;
-    text-transform: uppercase;
-    font-size: 44px;
-    font-weight: bold;
-    line-height: 1.1em;
-    text-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
-}
-
-
-@media screen and (max-width: 800px) {
-    .homeslidertext {
-        max-height: 118px !important;
-        font-size: large;
-    }
-}
-
-
-#home-summary {
-    text-align: center;
-    line-height: 1.45;
-}
-
-.press-releases-header {
-    color: #663399;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-    .press-releases-header a {
+    .slidercaption a {
+        text-decoration: none !important;
         font-family: inherit;
         text-transform: inherit;
         color: inherit;
         text-decoration: none;
+        letter-spacing: .5px;
     }
 
-.joinus-title {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.joinus-text {
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 0;
-    line-height: 1.5;
-}
-
-
-.slidercaption p, h3 {
-    font-family: 'Monda', sans-serif;
-    letter-spacing: .5px;
-}
-
-.slidercaption a {
-    text-decoration: none !important;
-    font-family: inherit;
-    text-transform: inherit;
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: .5px;
-}
-
-@media screen and (max-width: 800px) {
-    .slidercaption {
-        max-height: 118px !important;
-        /*border: 5px solid red;
+    @media screen and (max-width: 800px) {
+        .slidercaption {
+            max-height: 118px !important;
+            /*border: 5px solid red;
     vertical-align: text-bottom;*/
-    }
-
-        .slidercaption .caption {
-            height: 100%;
-            padding: 0 !important;
-            vertical-align: bottom !important;
         }
 
-        .slidercaption p {
-            visibility: hidden;
-            max-height: 0;
-        }
-}
-
-
-/* ##################### 7. Mapper Summary reusable block ##################### */
-.mapper-summary {
-}
-
-    .mapper-summary .mapper-info {
-        padding: 10px;
-        text-align: center;
-    }
-
-
-        .mapper-summary .mapper-info .title {
-            color: #6051A2;
-            text-transform: uppercase;
-            letter-spacing: .8px;
-            padding-bottom: 0px;
-            margin-bottom: 5px;
-        }
-
-            .mapper-summary .mapper-info .title a {
-                text-decoration: none;
-                color: inherit;
+            .slidercaption .caption {
+                height: 100%;
+                padding: 0 !important;
+                vertical-align: bottom !important;
             }
 
-        .mapper-summary .mapper-info .program-head-label {
-            margin-bottom: 0;
+            .slidercaption p {
+                visibility: hidden;
+                max-height: 0;
+            }
+    }
+
+
+    /* ##################### 7. Mapper Summary reusable block ##################### */
+    .mapper-summary {
+    }
+
+        .mapper-summary .mapper-info {
+            padding: 10px;
+            text-align: center;
         }
 
-/*        .mapper-summary .mapper-info .program-head-name {
+
+            .mapper-summary .mapper-info .title {
+                color: #6051A2;
+                text-transform: uppercase;
+                letter-spacing: .8px;
+                padding-bottom: 0px;
+                margin-bottom: 5px;
+            }
+
+                .mapper-summary .mapper-info .title a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+            .mapper-summary .mapper-info .program-head-label {
+                margin-bottom: 0;
+            }
+
+    /*        .mapper-summary .mapper-info .program-head-name {
         background-color: orange;
     }*/
 
 
-/* ##################### 8. Data pages (DR18 and beyond) ##################### */
+    /* ##################### 8. Data pages (DR18 and beyond) ##################### */
 
 
-.helpbox {
-    border: 1px solid black;
-    padding: 10px;
-}
-
-/* ##################### 9. Back to top control ##################### */
-.back-to-top {
-    background-color: #5f52a2;
-    width: 100px;
-}
-
-    .back-to-top:hover {
-        background-color: #999;
+    .helpbox {
+        border: 1px solid black;
+        padding: 10px;
     }
 
-    .back-to-top:active {
-        background-color: #fff;
+    /* ##################### 9. Back to top control ##################### */
+    .back-to-top {
+        background-color: #5f52a2;
+        width: 100px;
     }
 
+        .back-to-top:hover {
+            background-color: #999;
+        }
 
-/* ##################### 10. Within-page TOC #####################  */
+        .back-to-top:active {
+            background-color: #fff;
+        }
 
-.toc {
-    border: 2px solid black;
-    border-radius: 8px;
-    width: 30%;
-    margin: 0 10px 10px 10px;
-    /*background-color: #ecf0f1;*/
-}
 
-.toc-left {
-    float: left;
-}
+    /* ##################### 10. Within-page TOC #####################  */
 
-.toc-right {
-    float: right;
-}
+    .toc {
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 30%;
+        margin: 0 10px 10px 10px;
+        /*background-color: #ecf0f1;*/
+    }
 
-.toc-label {
-    color: #3d0096;
-    font-size: large;
-    font-weight: bold;
-    height: 100%;
-    padding: 0 5px 1px 10px;
-}
+    .toc-left {
+        float: left;
+    }
 
-.toc-label-accordion, .toc-label-inner {
-    border-bottom: 2px solid black;
-}
+    .toc-right {
+        float: right;
+    }
 
-    .toc-label-accordion:after {
-        color: black;
-        content: "+";
+    .toc-label {
+        color: #3d0096;
+        font-size: large;
         font-weight: bold;
-        font-size: larger;
+        height: 100%;
+        padding: 0 5px 1px 10px;
     }
 
-
-.toc ul {
-    list-style-type: none;
-    margin: 5px 10px 5px 10px;
-}
-
-    .toc ul li {
-        padding-top: 3px;
-        padding-bottom: 5px;
-        margin-left: 0;
+    .toc-label-accordion, .toc-label-inner {
+        border-bottom: 2px solid black;
     }
 
-        .toc ul li:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+        .toc-label-accordion:after {
+            color: black;
+            content: "+";
+            font-weight: bold;
+            font-size: larger;
         }
 
-        .toc ul li a {
-            color: #0275d8;
-            text-decoration: none;
-            font-weight: normal;
+
+    .toc ul {
+        list-style-type: none;
+        margin: 5px 10px 5px 10px;
+    }
+
+        .toc ul li {
+            padding-top: 3px;
+            padding-bottom: 5px;
+            margin-left: 0;
         }
 
-.forh2 {
-    margin-left: 20px;
-    margin-bottom: 0;
-    border-bottom: 1px solid black;
-}
+            .toc ul li:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
 
-.forh3 {
-    list-style-type: ">";
-    margin-left: 9px !important;
-    padding-left: 5px;
-    font-size: small;
-}
+            .toc ul li a {
+                color: #0275d8;
+                text-decoration: none;
+                font-weight: normal;
+            }
 
-.forh4 {
-    list-style-type: ">>";
-    margin-left: 20px !important;
-    padding-left: 4px;
-    font-size: smaller;
-}
+    .forh2 {
+        margin-left: 20px;
+        margin-bottom: 0;
+        border-bottom: 1px solid black;
+    }
 
-.forh5 {
-    list-style-type: ">>>";
-    margin-left: 14px !important;
-    padding-left: 4px;
-    font-size: x-small;
-}
+    .forh3 {
+        list-style-type: ">";
+        margin-left: 9px !important;
+        padding-left: 5px;
+        font-size: small;
+    }
 
-.forh6 {
-    list-style-type: ">>>>";
-    margin-left: 9px !important;
-    padding-left: 4px;
-    font-size: xx-small;
-}
+    .forh4 {
+        list-style-type: ">>";
+        margin-left: 20px !important;
+        padding-left: 4px;
+        font-size: smaller;
+    }
 
-.sdss-to-top { /* not to be confused with back-to-top class */
-    background-color: #5f52a2;
-    padding: 10px 20px 10px 20px;
-    display: inline;
-    font-size: 1.1em;
-    border-radius: 15px;
-    float: right;
-    /*    position: absolute;
+    .forh5 {
+        list-style-type: ">>>";
+        margin-left: 14px !important;
+        padding-left: 4px;
+        font-size: x-small;
+    }
+
+    .forh6 {
+        list-style-type: ">>>>";
+        margin-left: 9px !important;
+        padding-left: 4px;
+        font-size: xx-small;
+    }
+
+    .sdss-to-top { /* not to be confused with back-to-top class */
+        background-color: #5f52a2;
+        padding: 10px 20px 10px 20px;
+        display: inline;
+        font-size: 1.1em;
+        border-radius: 15px;
+        float: right;
+        /*    position: absolute;
     right: 0;
     
     transform: translateY(-50%);*/
-}
-
-    .sdss-to-top:hover {
-        background-color: #999;
     }
 
-
-    .sdss-to-top a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-        .sdss-to-top a:active {
+        .sdss-to-top:hover {
             background-color: #999;
         }
+
+
+        .sdss-to-top a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+            .sdss-to-top a:active {
+                background-color: #999;
+            }
 
 
 /* ##################### 11. Publications #####################  */
@@ -790,49 +760,43 @@ figcaption {
         border-radius: 4px;
     }
 
-/* ##################### 10. Press Releases ##################### */
-.contacts {
-    border: 2px solid #867dba;
-    width: 30%;
-    float: right;
-    margin: 10px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-bottom: 0;
-}
-
-    .contacts h2 {
-        margin-top: 5px;
+    /* ##################### 10. Press Releases ##################### */
+    .contacts {
+        border: 2px solid #867dba;
+        width: 30%;
+        float: right;
+        margin: 10px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-bottom: 0;
     }
 
-    .contacts p {
-        /*line-height: 1.6;*/
+        .contacts h2 {
+            margin-top: 5px;
+        }
+
+        .contacts p {
+            /*line-height: 1.6;*/
+        }
+
+    .pr-date {
+        font-weight: bold;
     }
 
-.pr-date {
-    font-weight: bold;
-}
-
-.pr-caption {
-    background-color: orange;
-    line-height: 1.5;
-}
+    .pr-caption {
+        background-color: orange;
+        line-height: 1.5;
+    }
 
 
-/* ##################### 11. Value-added catalogs #####################  */
+    /* ##################### 11. Value-added catalogs #####################  */
 
-.vaclist {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    /*border: 1px solid blue;*/
-}
+    .vaclist {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 100%;
+        /*border: 1px solid blue;*/
+    }
 
 .vac {
     /*display: inline-block;*/
@@ -847,21 +811,21 @@ figcaption {
 }
 
 
-@media screen and (max-width: 900px) {
-    .vac {
-        width: 100%;
+    @media screen and (max-width: 900px) {
+        .vac {
+            width: 100%;
+        }
     }
-}
 
 
-.vac h2 {
-    font-size: 1.37em; /* make vac h2 the size of h3 without changing semantic structure */
-    margin-bottom: 0;
-}
+        .vac h2 {
+            font-size: 1.37em; /* make vac h2 the size of h3 without changing semantic structure */
+            margin-bottom: 0;
+        }
 
-.vac a {
-    text-decoration: none;
-}
+        .vac a {
+            text-decoration: none;
+        }
 
 /*    .vac-left {
         width: 48%;
@@ -873,218 +837,209 @@ figcaption {
         float: right;
     }*/
 
-.vac-description {
-    /*margin: 10px;*/
-}
+    .vac-description {
+        /*margin: 10px;*/
+    }
 
-single-vac {
-}
+    single-vac {
+    }
 
-.single-vac h2 {
-    margin-bottom: 0;
-}
-
-.single-vac h3 {
-    margin-bottom: 5px;
-}
-
-
-.single-vac-description {
-    font-weight: bold;
-}
-
-    .single-vac-description p {
+    .single-vac h2 {
         margin-bottom: 0;
     }
 
+    .single-vac h3 {
+        margin-bottom: 5px;
+    }
 
-.vac-authors {
-    /*    background-color:yellow;
+
+    .single-vac-description {
+        font-weight: bold;
+    }
+
+        .single-vac-description p {
+            margin-bottom: 0;
+        }
+
+
+    .vac-authors {
+        /*    background-color:yellow;
     color: DarkSlateGrey;
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    /* margin-left: 10px;
+        /* margin-left: 10px;
     margin-top: 10px; */
-    font-style: italic;
-    /*margin-bottom: 10px;*/
-}
+        font-style: italic;
+        /*margin-bottom: 10px;*/
+    }
 
-.vac-authors-full {
-    /*background-color: yellow;
+    .vac-authors-full {
+        /*background-color: yellow;
     /*    color: DarkSlateGrey;
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    /* margin-left: 10px;
+        /* margin-left: 10px;
     margin-top: 10px; */
-    font-style: italic;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+        font-style: italic;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
 
-.vac-tags {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    /*border: 1px solid green;
+    .vac-tags {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        /*border: 1px solid green;
     width: 100%;
     display: inline-block;*/
-}
+    }
 
-/*.vac-tags-row {
+    /*.vac-tags-row {
     margin-top: 0;
 }*/
 
 
 
-.vac-tag {
-    background-color: #cccccc;
-    vertical-align: central;
-    display: inline;
-    padding: 0.2em 0.6em 0.3em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    border-radius: 0.25em;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-}
-
-.vac-dr {
-    /*.label-primary;*/
-    background-color: #2C3E50;
-}
-
-.vac-dr-latest {
-    background-color: #6256a3;
-}
-
-.vac-survey {
-    background-color: #f0ad4e;
-}
-
-.vac-cas-marvin {
-    background-color: #5cb85c;
-}
-
-.vac-category {
-    background-color: #5bc0de;
-}
-
-.vac-object {
-    background-color: #d9534f;
-}
-
-.vac-table {
-}
-
-    .vac-table a {
-        color: white;
-    }
-
-.vac-box {
-    background-color: #396c8f;
-    border-radius: 6px; /*0 6px 0 6px;*/
-    padding: 6px;
-    margin-bottom: 6px;
-}
-
-    .vac-box a {
-        color: white;
-    }
-
-.vac-sas {
-    background-color: #336699;
-    color: white;
-    overflow: auto;
-    padding-left: 10px;
-    margin-bottom: 10px;
-    /*padding: 5px;*/
-}
-
-.vac-datamodel {
-    background-color: #993399;
-    color: white;
-    overflow: auto;
-    padding-left: 10px;
-    margin-bottom: 10px;
-}
-
-
-.vac-cas-info {
-    /* background-color: pink;*/
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.vac-cas-info-title {
-    /*background-color: yellow;*/
-    vertical-align: middle;
-    margin: 0;
-}
-
-    .vac-cas-info-title h3 {
+    .vac-tag {
+        background-color: #cccccc;
+        vertical-align: central;
         display: inline;
-        /*background-color: silver;*/
+        padding: 0.2em 0.6em 0.3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: 0.25em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+    .vac-dr {
+        /*.label-primary;*/
+        background-color: #2C3E50;
+    }
+
+    .vac-dr-latest {
+        background-color: #6256a3;
+    }
+
+    .vac-survey {
+        background-color: #f0ad4e;
+    }
+
+    .vac-cas-marvin {
+        background-color: #5cb85c;
+    }
+
+    .vac-category {
+        background-color: #5bc0de;
+    }
+
+    .vac-object {
+        background-color: #d9534f;
+    }
+
+    .vac-table {
+    }
+
+        .vac-table a {
+            color: white;
+        }
+
+    .vac-box {
+        background-color: #396c8f;
+        border-radius: 6px; /*0 6px 0 6px;*/
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+        .vac-box a {
+            color: white;
+        }
+
+    .vac-sas {
+        background-color: #336699;
+        color: white;
+        overflow: auto;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        /*padding: 5px;*/
+    }
+
+    .vac-datamodel {
+        background-color: #993399;
+        color: white;
+        overflow: auto;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .vac-cas-info {
+        /* background-color: pink;*/
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .vac-cas-info-title {
+        /*background-color: yellow;*/
+        vertical-align: middle;
+        margin: 0;
+    }
+
+        .vac-cas-info-title h3 {
+            display: inline;
+            /*background-color: silver;*/
+            vertical-align: middle;
+        }
+
+    .vac-cas-info ul {
+        /*background-color: orange;*/
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .vac-tags-cas-info {
+        display: inline-flex;
+        /*background-color: dodgerblue;*/
+        height: 100%;
+        margin-left: 5px;
         vertical-align: middle;
     }
 
-.vac-cas-info ul {
-    /*background-color: orange;*/
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.vac-tags-cas-info {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    /*background-color: dodgerblue;*/
-    height: 100%;
-    margin-left: 5px;
-    vertical-align: middle;
-}
-
-.vac-www {
-    font-weight: bold;
-    font-size: 1.1em;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    overflow-wrap: break-word;
-    padding: 10px;
-    line-height: 1.25;
-}
-
-.vac-back-to-list {
-    border-radius: 9999px;
-    color: #fff;
-    background-color: #32373c;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-size: 1.125em;
-    padding: calc(0.667em + 2px) calc(1.333em + 2px);
-}
-
-    .vac-back-to-list a {
-        display: inline-block;
+    .vac-www {
+        font-weight: bold;
+        font-size: 1.1em;
         text-align: center;
-        word-break: break-word;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        text-decoration: none;
-        color: #fff;
+        border: 2px solid black;
+        border-radius: 10px;
+        overflow-wrap: break-word;
+        padding: 10px;
+        line-height: 1.25;
     }
+
+    .vac-back-to-list {
+        border-radius: 9999px;
+        color: #fff;
+        background-color: #32373c;
+        box-shadow: none;
+        font-size: 1.125em;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    }
+
+        .vac-back-to-list a {
+            display: inline-block;
+            text-align: center;
+            word-break: break-word;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: #fff;
+        }
 
 
 /* ##################### 11.1. VAC Search controls #####################  */
@@ -1102,6 +1057,7 @@ single-vac {
     color: white;
     text-align: center;
     line-height: 1.3;
+
     margin-bottom: 0.1rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
@@ -1148,15 +1104,9 @@ single-vac {
 }
 
 .vac-filter {
-    /*background-color: gold; */
-    display: -webkit-box;
-    display: -ms-flexbox;
+    /*background-color: gold; */ 
     display: flex;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     padding: 5px;
     margin: 5px 5px 10px 5px;
@@ -1177,14 +1127,8 @@ single-vac {
 .vac-filter-checkbox-list {
     /*background-color: lavender;*/
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 
@@ -1195,36 +1139,29 @@ single-vac {
     padding-left: 5px;
     accent-color: white;
 }
-
     .vac-filter-checkbox-with-label > label {
         /*background-color: peachpuff;*/
         padding-left: 8px;
     }
 
 
-.vac-filter-checkbox-with-label-survey {
-    min-width: 50%;
-    max-width: 100%;
-}
+    .vac-filter-checkbox-with-label-survey {
+        min-width: 50%;
+        max-width: 100%;
+    }
 
-.vac-filter-checkbox-with-label-objclass {
-    min-width: 33%;
-    max-width: 100%;
-    text-align: center;
-    margin: auto;
-}
+    .vac-filter-checkbox-with-label-objclass {
+        min-width: 33%;
+        max-width: 100%;
+        text-align: center;
+        margin:auto;
+    }
 
 
 
 .vac-filter-bulk-select {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     min-width: 50%;
     max-width: 100%;
@@ -1242,7 +1179,7 @@ single-vac {
     }
 
     .vac-filter-bulk-select a {
-        color: black;
+        color:black;
     }
 
         .vac-filter-bulk-select a:hover {
@@ -1286,30 +1223,20 @@ single-vac {
 
 .glossaryindex {
     /*background-color: aqua;*/
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: auto;
     flex-basis: auto;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-line-pack: center;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
 }
-
 .glossaryindexitem {
     /*background-color: cornsilk; */
     padding: 8px;
     width: auto;
 }
-
     .glossaryindexitem > a {
         color: #1291ee;
         text-decoration: none;
@@ -1344,7 +1271,6 @@ single-vac {
             /*background-color: orange;
             */
         }
-
             .sdss-recent-posts li .more-link-container .more-link {
                 /*border: 1px solid red;
                 */
@@ -1366,6 +1292,7 @@ single-vac {
 
 
 .personphoto {
+    
     width: 33%;
     height: auto;
     float: right;
@@ -1374,26 +1301,14 @@ single-vac {
 
 #people-flex-container {
     border: 5px solid red;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
-    -ms-flex-line-pack: start;
     align-content: flex-start;
 }
 
 .people-flex {
-    -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
 }
