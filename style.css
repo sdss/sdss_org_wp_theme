@@ -5,7 +5,7 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.4
+ Version: 5.6
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
@@ -13,6 +13,7 @@
  Version updates (see .versions for older versions):
   *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
   *** 5.5. Restored DR19 sidebars
+  *** 5.6. Added paragraph breaks to VAC abstracts
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -861,6 +862,10 @@ figcaption {
             margin-bottom: 0;
         }
 
+    .single-vac-abstract {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
 
     .vac-authors {
         /*    background-color:yellow;

@@ -1,29 +1,27 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 8 version
+*/
+
+/*
  Theme Name: sdss.org Wordpress theme
  Theme URI: https://github.com/sdss/sdss_org_wp_theme
  description: Theme for the website of the Sloan Digital Sky Survey (www.sdss.org)
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.4
+ Version: 5.6
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
   *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
-  *** 5.3. Added basic formatting for archive page for SDSS people
-  *** 5.3.1. Starting on flex layout for people archive page
-  *** 5.4. Reverting DR19 sidebars temporarily for push to live site so they don't show up there - also creating branch
+  *** 5.5. Restored DR19 sidebars
+  *** 5.6. Added paragraph breaks to VAC abstracts
  */
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
@@ -897,6 +895,10 @@ single-vac {
         margin-bottom: 0;
     }
 
+.single-vac-abstract {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
 
 .vac-authors {
     /*    background-color:yellow;
