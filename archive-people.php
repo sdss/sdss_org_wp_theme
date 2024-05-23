@@ -25,7 +25,16 @@ get_header();
 				<main id="main" class="site-main">
 
 					<?php
-					if ( have_posts('people') ) {
+					$people_options = array(
+										'post_type' => 'people',
+										'orderby' => 'menu_order',
+										'order' => 'ASC'
+									);
+
+
+					query_posts($people_options);
+
+					if ( have_posts() ) {
 						?>
 
 						<header class="page-header gx-card-content gx-card-content--same-md-y u-b-margin">
@@ -34,7 +43,7 @@ get_header();
 						</header><!-- .page-header -->
 						<div id='people-flex-container'>
 						<?php
-						while ( have_posts('people') ) {
+						while ( have_posts()  ) {
 							the_post();
 							get_template_part( 'template-parts/content-archive-people' );
 						}

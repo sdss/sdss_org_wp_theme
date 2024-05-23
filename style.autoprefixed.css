@@ -1,27 +1,27 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 8 version
-*/
-
-/*
  Theme Name: sdss.org Wordpress theme
  Theme URI: https://github.com/sdss/sdss_org_wp_theme
  description: Theme for the website of the Sloan Digital Sky Survey (www.sdss.org)
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.6
+ Version: 5.7
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
-  *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
-  *** 5.5. Restored DR19 sidebars
-  *** 5.6. Added paragraph breaks to VAC abstracts
+  *** 5.7. Enabled display order for People entries in people archive page
  */
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
@@ -1375,7 +1375,7 @@ single-vac {
 }
 
 #people-flex-container {
-    border: 5px solid red;
+    border: 5px solid green;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1396,6 +1396,13 @@ single-vac {
 }
 
 .people-flex {
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    .people-flex {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
 }
