@@ -27,7 +27,7 @@ get_header();
 					<?php
 					$people_options = array(
 										'post_type' => 'people',
-										'orderby' => 'menu_order',
+										'orderby' => 'title',
 										'order' => 'ASC'
 									);
 

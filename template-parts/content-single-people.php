@@ -32,9 +32,6 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
-			<div class='personphoto'>
-				<?php  galaxis_post_thumbnail(); ?>
-			</div>
 		<?php
 			the_content();
 

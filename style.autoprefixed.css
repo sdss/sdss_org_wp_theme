@@ -5,14 +5,16 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.7
+ Version: 5.8
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
   *** 5.7. Enabled display order for People entries in people archive page
+  *** 5.8. Removed thumbnails from single people pages, formatted archive page (still need to change thumbnails)
  */
+/* ##################### 1. Fonts ##################### 
 
 /*
 * Prefixed by https://autoprefixer.github.io
@@ -21,8 +23,6 @@
 * Browsers: last 4 version
 */
 
-
-/* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
 -------------------------------------------------------------- */
@@ -1375,7 +1375,6 @@ single-vac {
 }
 
 #people-flex-container {
-    border: 5px solid green;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1385,14 +1384,12 @@ single-vac {
     flex-direction: row;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
 }
 
 .people-flex {
@@ -1405,4 +1402,10 @@ single-vac {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
+}
+
+.people-flex a {
+    font-size: 1.37rem; /* make vac h2 the size of h3 without changing semantic structure */
+    text-decoration: none;
+    text-align: center;
 }
