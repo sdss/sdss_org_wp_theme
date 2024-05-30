@@ -5,7 +5,7 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.8
+ Version: 5.8.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
@@ -13,8 +13,8 @@
  Version updates (see .versions for older versions):
   *** 5.7. Enabled display order for People entries in people archive page
   *** 5.8. Removed thumbnails from single people pages, formatted archive page (still need to change thumbnails)
+  *** 5.8.1 Fixed padding and breakpoints for smooth 2-column display on archive page
  */
-/* ##################### 1. Fonts ##################### 
 
 /*
 * Prefixed by https://autoprefixer.github.io
@@ -23,6 +23,7 @@
 * Browsers: last 4 version
 */
 
+/* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
 ## Add font: Monda from Google Fonts (https://fonts.googleapis.com/css2?family=Monda)
 -------------------------------------------------------------- */
@@ -1366,14 +1367,6 @@ single-vac {
 
 /* ##################### 14. SDSS People  #####################  */
 
-
-.personphoto {
-    width: 33%;
-    height: auto;
-    float: right;
-    margin-left: 1rem;
-}
-
 #people-flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1390,11 +1383,16 @@ single-vac {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    gap: 1em;
 }
 
 .people-flex {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 48%;
+    flex-basis: 48%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 4px solid #ffffff;
+    border-radius: 4px;
 }
 
 @media screen and (max-width: 700px) {
@@ -1404,8 +1402,25 @@ single-vac {
     }
 }
 
+.people-flex img {
+    width: 100%;
+    height: auto;
+}
+
 .people-flex a {
-    font-size: 1.37rem; /* make vac h2 the size of h3 without changing semantic structure */
+    font-size: 1rem;
     text-decoration: none;
     text-align: center;
+}
+
+.people-flex .gx-card-content {
+    border: none;
+    padding: 0.6rem;
+}
+
+.personphoto {
+    width: 33%;
+    height: auto;
+    float: right;
+    margin-left: 1rem;
 }
