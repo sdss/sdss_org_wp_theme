@@ -15,4 +15,5 @@
  *** 5.6. Added paragraph breaks to VAC abstracts
  *** 5.7. Enabled display order for People entries in people archive page
  *** 5.8. Removed thumbnails from single people pages, formatted archive page (still need to change thumbnails)
- *** 5.8.1 Fixed padding and breakpoints for smooth 2-column display on archive page
+ *** 5.8.1. Fixed padding and breakpoints for smooth 2-column display on archive page
+ *** 5.8.2. Added "todo" class for to-do items
