@@ -5,15 +5,14 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 5.8.1
+ Version: 1.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
-  *** 5.7. Enabled display order for People entries in people archive page
-  *** 5.8. Removed thumbnails from single people pages, formatted archive page (still need to change thumbnails)
-  *** 5.8.1 Fixed padding and breakpoints for smooth 2-column display on archive page
+  *** 1.0. Created "dr19" branch to work on DR19 development
+  *** 1.1. Secondary menu for previous data releases
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 

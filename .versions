@@ -1,18 +1,3 @@
- Version updates
- *** 4.0. Renamed and moved setup things out of wp-config to here
- *** 4.0.1. Fixed name of breadcrumb baker plugin
- *** 4.0.2. Using non-minified, non-autoprefixed style on prod site for now
- *** 4.0.3. ACTUALLY Fixed name of breadcrumb baker plugin
- *** 5.0. Moved to pantheon, fixed name of plugin where JS files are loaded
- *** 5.1. Moved CURRENT_DR variable (defines what DR is most current) out of theme and into site wp-config.php
- *** 5.2. DR19 sidebars with new pages show up for logged-in users
- *** 5.2.1. Narrowed back to top control so it doesn't overlap rhs menu
- *** 5.2.2. Return to default blue/purple link colors
- *** 5.3. Added basic formatting for archive page for SDSS people
- *** 5.3.1. Starting on flex layout for people archive page
- *** 5.4. Reverting DR19 sidebars temporarily for push to live site so they don't show up there - also creating branch
- *** 5.5. Restored DR19 sidebars
- *** 5.6. Added paragraph breaks to VAC abstracts
- *** 5.7. Enabled display order for People entries in people archive page
- *** 5.8. Removed thumbnails from single people pages, formatted archive page (still need to change thumbnails)
- *** 5.8.1 Fixed padding and breakpoints for smooth 2-column display on archive page
+Version updates
+ *** 1.0. Created "dr19" branch to work on DR19 development
+ *** 1.1. Secondary menu for previous data releases
