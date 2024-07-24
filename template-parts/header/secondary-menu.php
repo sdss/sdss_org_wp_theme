@@ -18,42 +18,21 @@
 		} else {
 	?>
 		<div class="secondary-menu-container">
-			<ul id="menu-data-release-19" class="secondary-menu">
-				<li id="menu-item-4010" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-4010">
-					<a href="/dr<?php echo $this_dr; ?>/" aria-current="page"><strong>DR<?php echo $this_dr; ?></strong></a>
+			<ul id="menu-data-release" class="secondary-menu">
+				<li id="menu-item-4296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4296"><a href="/dr<?php echo $this_dr; ?>/"><strong>DR<?php echo $this_dr; ?></strong></a>
 				</li>
-				<li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550">
-					<a href="/dr<?php echo $this_dr; ?>/data_access/">Data Access</a>
-				</li>
-				<li id="menu-item-543" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-543">
-					<a href="/dr<?php echo $this_dr; ?>/bhm/">BHM</a>
-				</li>
-				<li id="menu-item-541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-541">
-					<a href="/dr<?php echo $this_dr; ?>/mwm/">MWM</a>
-				</li>
-				<li id="menu-item-2403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2403">
-					<a href="/dr<?php echo $this_dr; ?>/lvm/about/">LVM</a>
-				</li>
-				<li id="menu-item-548" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-548">
-					<a href="/dr<?php echo $this_dr; ?>/imaging/">Imaging</a>
-				</li>
-				<li id="menu-item-549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-549">
-					<a href="/dr<?php echo $this_dr; ?>/completed_surveys/"><span class="tooltip"><span class="anchortext">Completed Surveys</span><div class="tooltiptext" id="completed">APOGEE, (e)BOSS,<br>MaNGA, SDSS-I/-II</div></span></a>
-				</li>
-				<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544">
-					<a href="/dr<?php echo $this_dr; ?>/targeting/">Targeting</a>
-				</li>
-				<li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545">
-					<a href="/dr<?php echo $this_dr; ?>/software/">Software</a>
-				</li>
-				<li id="menu-item-547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-547">
-					<a href="/dr<?php echo $this_dr; ?>/tutorials/">Tutorials</a>
-				</li>
-				<li id="menu-item-546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-546">
-					<a href="/dr<?php echo $this_dr; ?>/help/">Help</a>
-				</li>
+				<li id="menu-item-4288" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3579 current_page_item menu-item-4288"><a href="/dr<?php echo $this_dr; ?>/data_access/" aria-current="page">Data Access</a></li>
+				<li id="menu-item-4289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4289"><a href="/dr<?php echo $this_dr; ?>/bhm/">BHM</a></li>
+				<li id="menu-item-4291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4291"><a href="/dr<?php echo $this_dr; ?>/mwm/">MWM</a></li>
+				<li id="menu-item-4549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4549"><a href="/dr<?php echo $this_dr; ?>/lvm/about/">LVM</a></li>
+				<li id="menu-item-4293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4293"><a href="/dr<?php echo $this_dr; ?>/imaging/">Imaging</a></li>
+				<li id="menu-item-4294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4294"><a href="/dr<?php echo $this_dr; ?>/completed_surveys/"><span class="tooltip"><span class="anchortext">Completed Surveys</span><div class="tooltiptext" id="completed">APOGEE, (e)BOSS,<br />MaNGA, SDSS-I/-II</div></span></a></li>
+				<li id="menu-item-4290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4290"><a href="/dr<?php echo $this_dr; ?>/targeting/">Targeting</a></li>
+				<li id="menu-item-4295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4295"><a href="/dr<?php echo $this_dr; ?>/software/">Software</a></li>
+				<li id="menu-item-4287" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4287"><a href="/dr<?php echo $this_dr; ?>/tutorials/">Tutorials</a></li>
+				<li id="menu-item-4286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4286"><a href="/dr<?php echo $this_dr; ?>/help/">Help</a></li>
 			</ul>
 		</div>	
-	<?php } ?>
+<?php } ?>
 	</nav><!-- #site-navigation -->
 <?php } ?>
