@@ -5,17 +5,13 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 1.2
+ Version: 1.4
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
-  *** 1.0. Created "dr19" branch to work on DR19 development
-  *** 1.1. Secondary menu for previous data releases
-  *** 1.1.1. Added todo class (merged from main)
-  *** 1.1.2. Changed links to point within old data release pages
-  *** 1.2. Display dynamic secondary & sidebar menus for DR19 pages, static for DR18
+  *** 1.4. Added "New for DR19" and "Updated for DR19" and coded TODO samely
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -731,43 +727,87 @@ figcaption {
 
 /* #################### 12. New/updated/todo ######################## */
 
-.newdr18 {
-    margin: 2px 2px 2px 10px;
-}
-
-    .newdr18::before {
-        padding: 4px;
-        content: "New for DR18";
-        font-size: .8em;
-        font-weight: bold;
-        vertical-align: middle;
-        color: white;
-        background-color: #ED7014;
-        border: solid 1px black;
-        border-radius: 4px;
+    /* DR19 */
+    .newdr19 {
+        margin: 2px 2px 2px 10px;
     }
 
-.updatedr18 {
-    margin: 2px 2px 2px 10px;
-}
+        .newdr19::before {
+            padding: 4px;
+            content: "New for DR19";
+            font-size: .8em;
+            font-weight: bold;
+            vertical-align: middle;
+            color: white;
+            background-color: #ED7014;
+            border: solid 1px black;
+            border-radius: 4px;
+        }
 
-    .updatedr18::before {
-        padding: 4px;
-        content: "Updated for DR18";
-        font-size: .8em;
-        font-weight: bold;
-        vertical-align: middle;
-        color: white;
-        background-color: #EC9706;
-        border: solid 1px black;
-        border-radius: 4px;
+    .updatedr19 {
+        margin: 2px 2px 2px 10px;
     }
+    
+        .updatedr19::before {
+            padding: 4px;
+            content: "Updated for DR19";
+            font-size: .8em;
+            font-weight: bold;
+            vertical-align: middle;
+            color: white;
+            background-color: #EC9706;
+            border: solid 1px black;
+            border-radius: 4px;
+        }
 
-.todo {
-    padding-left: 5px;
-    color: white;
-    background-color: purple;
-}
+    .todo {
+        margin: 2px 2px 2px 10px;
+    }    
+
+        .todo::before {
+            padding: 4px;
+            content: "TO DO:";
+            font-size: .8em;
+            font-weight: bold;
+            vertical-align: middle;
+            color: white;
+            background-color: purple;
+            border: solid 1px black;
+            border-radius: 4px;
+        }    
+
+/* old for dr18 */
+    .newdr18 {
+        margin: 2px 2px 2px 10px;
+    }
+    
+        .newdr18::before {
+            padding: 4px;
+            content: "New for DR18";
+            font-size: .8em;
+            font-weight: bold;
+            vertical-align: middle;
+            color: white;
+            background-color: #ED7014;
+            border: solid 1px black;
+            border-radius: 4px;
+        }
+    
+    .updatedr18 {
+        margin: 2px 2px 2px 10px;
+    }
+    
+        .updatedr18::before {
+            padding: 4px;
+            content: "Updated for DR18";
+            font-size: .8em;
+            font-weight: bold;
+            vertical-align: middle;
+            color: white;
+            background-color: #EC9706;
+            border: solid 1px black;
+            border-radius: 4px;
+        }
 
     /* ##################### 10. Press Releases ##################### */
     .contacts {
