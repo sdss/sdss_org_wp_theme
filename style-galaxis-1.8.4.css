@@ -4,9 +4,9 @@ Theme URI: https://scriptstown.com/wordpress-themes/galaxis-wordpress-theme/
 Author: ScriptsTown
 Author URI: https://scriptstown.com/
 Description: Galaxis is a lightweight WordPress theme built with a focus on speed, usability, and performance. It offers a minimalistic, clean, and fresh look. Say hello to Galaxis, a great and unique theme for professional blogging, news, affiliate, movie, entertainment, media, magazine, educational, business, or eCommerce websites. The theme is designed for the best readability with great typography and clarity of each section on your website. Setting up a theme has never been this simple. The theme supports RTL layout and is fully responsive that looks nice on any screen-size device like mobile, tablet, desktop, etc. It comes with a sticky menu with multi-level accessible dropdown menu items, social links menu, a top header bar, a sticky sidebar widget area that floats on scrolling, a background image, and various theme options. The theme supports WooCommerce for building an eCommerce site, Jetpack's load more and infinite scrolling, and is also fully compatible with popular page builder plugins like Elementor, Divi, Visual Composer, etc. Also, it offers multiple page templates and block area for Gutenberg blocks in order to insert any custom content.
-Version: 1.8.3
+Version: 1.8.4
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -2570,6 +2570,25 @@ a.button--rounded,
 
 .wp-block-latest-comments__comment {
 	line-height: inherit;
+}
+
+.wp-block-cover.wp-block-cover .wp-block-cover__background,
+.wp-block-cover.wp-block-cover .wp-block-cover__gradient-background,
+.wp-block-cover.wp-block-cover-image .wp-block-cover__background,
+.wp-block-cover.wp-block-cover-image .wp-block-cover__gradient-background,
+.wp-block-cover.wp-block-cover-image.has-background-dim:not(.has-background-gradient):before,
+.wp-block-cover.wp-block-cover.has-background-dim:not(.has-background-gradient):before {
+	z-index: 1;
+}
+
+.wp-block-cover.wp-block-cover .wp-block-cover__inner-container,
+.wp-block-cover-image.wp-block-cover-image .wp-block-cover__inner-container {
+	z-index: 1;
+}
+
+.wp-block-cover__image-background.wp-block-cover__image-background,
+.wp-block-cover__video-background.wp-block-cover__video-background {
+	z-index: 0;
 }
 
 /*--------------------------------------------------------------
