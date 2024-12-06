@@ -5,14 +5,13 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 2.0
+ Version: 2.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
-  *** 1.4. Added "New for DR19" and "Updated for DR19" and coded TODO samely
-  *** 2.0. New Day Zero for everything on sdss.org
+  *** 2.1. Formatting of todo, newdr19, updatedr19
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -725,7 +724,6 @@ figcaption {
     display: none;
 }
 
-
 /* #################### 12. New/updated/todo ######################## */
 
     /* DR19 */
@@ -809,8 +807,7 @@ figcaption {
             border: solid 1px black;
             border-radius: 4px;
         }
-
-    /* ##################### 10. Press Releases ##################### */
+    /* ##################### 13. Press Releases ##################### */
     .contacts {
         border: 2px solid #867dba;
         width: 30%;
@@ -839,7 +836,7 @@ figcaption {
     }
 
 
-    /* ##################### 11. Value-added catalogs #####################  */
+    /* ##################### 14. Value-added catalogs #####################  */
 
     .vaclist {
         display: flex;
