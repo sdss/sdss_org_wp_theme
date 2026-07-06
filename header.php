@@ -21,6 +21,7 @@
 
 <script type="text/javascript" src="/wp-content/plugins/sdss_wp_shortcodes/authorhider.js"></script>
 <script type="text/javascript" src="/wp-content/plugins/sdss_wp_shortcodes/vacsearch.js"></script>
+<script type="text/javascript" src="/wp-content/plugins/sdss_wp_shortcodes/tutorialsearch.js"></script>
 </head>
 <body <?php body_class(); ?>>
 

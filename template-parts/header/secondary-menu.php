@@ -1,5 +1,5 @@
 
-<?php if ( preg_match('/(dr\d|data)/i',get_permalink())  ) {  ?>
+<?php if ( preg_match('/(dr\d|data)/i',home_url(add_query_arg(array(),$wp->request)))  ) {  ?>
 
 	<nav id="secondary-navigation" class="wrapper">
 	<?php 
@@ -17,9 +17,9 @@
 			);
 		} else {
 	?>
-		<div class="secondary-menu-container">
+		<div class="secondary-menu-container previous-dr">
 			<ul id="menu-data-release" class="secondary-menu">
-				<li id="menu-item-4296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4296"><a href="/dr<?php echo $this_dr; ?>/"><strong>DR<?php echo $this_dr; ?></strong></a>
+				<li id="menu-item-4296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4296"><a href="/dr<?php echo $this_dr; ?>/"><strong>Data Release <?php echo $this_dr; ?></strong></a>
 				</li>
 				<li id="menu-item-4288" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3579 current_page_item menu-item-4288"><a href="/dr<?php echo $this_dr; ?>/data_access/" aria-current="page">Data Access</a></li>
 				<li id="menu-item-4289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4289"><a href="/dr<?php echo $this_dr; ?>/bhm/">BHM</a></li>

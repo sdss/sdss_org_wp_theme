@@ -5,13 +5,14 @@
  Author: Jordan Raddick
  Author URI: https://www.jordanraddick.com
  Template: galaxis
- Version: 2.1
+ Version: 2.8.1
  License: GNU General Public License v2 or later
  License URI: https://www.gnu.org/licenses/gpl-2.0.html
  Tags: 
  Text Domain: sdss_org_wp_theme
  Version updates (see .versions for older versions):
-  *** 2.1. Formatting of todo, newdr19, updatedr19
+  *** 2.8. Tag styling for tutorials, both list and single tutorial display
+  *** 2.9. Changed secondary header of DR18/19 to spell out "Data Release"
  */
 /* ##################### 1. Fonts ##################### 
 /*-------------------------------------------------------------- 
@@ -75,6 +76,12 @@ a:visited {
     margin: auto;
 }
 
+    .explore-button > a:visited,
+    .explore-button > a:focus,
+    .explore-button > a:hover {color:#fff;
+    }
+
+
 .img-responsive {
     width: 100%;
     height: auto;
@@ -86,6 +93,10 @@ figcaption {
     text-align: left !important;
     padding: 8px;
     font-size: 0.925rem;
+}
+
+.wp-block-table {
+    overflow:auto;
 }
 
 
@@ -172,6 +183,12 @@ figcaption {
     border-radius: 5px;
     height: auto;
 }
+
+.previous-dr {
+    background-color: #dcf3ff;
+    border: none;
+}
+
 
 .secondary-menu {
     margin: 0 0 0 auto;
@@ -324,7 +341,7 @@ figcaption {
                 margin: 0px 0px 0px 0px;
             }
 
-    /* ##################### 3.4. Special message area ##################### */
+    /* ##################### 3.5. Special message area ##################### */
 
     .site-topbar {
         background-color: #1291ee;
@@ -726,87 +743,118 @@ figcaption {
 
 /* #################### 12. New/updated/todo ######################## */
 
-    /* DR19 */
-    .newdr19 {
-        margin: 2px 2px 2px 10px;
-    }
+.todo {
+    display:inline-block;
+    margin: 2px 2px 1.5em 10px;
+    padding:6px 1em;
+    color: white;
+    background-color: #ED7014;
+    border: none;
+    font-weight: 700;
+    vertical-align: middle;
+}    
 
-        .newdr19::before {
-            padding: 4px;
-            content: "New for DR19";
-            font-size: .8em;
-            font-weight: bold;
-            vertical-align: middle;
-            color: white;
-            background-color: #ED7014;
-            border: solid 1px black;
-            border-radius: 4px;
-        }
-
-    .updatedr19 {
-        margin: 2px 2px 2px 10px;
-    }
-    
-        .updatedr19::before {
-            padding: 4px;
-            content: "Updated for DR19";
-            font-size: .8em;
-            font-weight: bold;
-            vertical-align: middle;
-            color: white;
-            background-color: #EC9706;
-            border: solid 1px black;
-            border-radius: 4px;
-        }
-
-    .todo {
-        margin: 2px 2px 2px 10px;
+    .todo::before {
+        padding: 4px;
     }    
 
-        .todo::before {
-            padding: 4px;
-            content: "TO DO:";
-            font-size: .8em;
-            font-weight: bold;
-            vertical-align: middle;
-            color: white;
-            background-color: purple;
-            border: solid 1px black;
-            border-radius: 4px;
-        }    
 
-/* old for dr18 */
-    .newdr18 {
-        margin: 2px 2px 2px 10px;
+/* DR20 */
+
+.newdr20 {
+    position: relative;
+    vertical-align: top;
+    margin: 2px 12px 2px 10px;
+    /* box-shadow:.3rem 0.3rem .6rem .1em #333333aa;*/
+    border-radius: 1em;
+    padding: .3em 1.2em .4em;
+    font-size: .6em;
+    font-weight: 600;
+    color: #efefef;
+    background-color: #6051a2;
+    border: none;
+    border-radius: 1em;
+    text-transform: uppercase;
+}
+
+    .newdr20::before {
+        content: "New for DR20";
     }
-    
-        .newdr18::before {
-            padding: 4px;
-            content: "New for DR18";
-            font-size: .8em;
-            font-weight: bold;
-            vertical-align: middle;
-            color: white;
-            background-color: #ED7014;
-            border: solid 1px black;
-            border-radius: 4px;
-        }
-    
-    .updatedr18 {
-        margin: 2px 2px 2px 10px;
+
+.updatedr20 {
+    position: relative;
+    vertical-align: top;
+    margin: 2px 12px 2px 10px;
+    border-radius: 1em;
+    padding: .3em 1.2em .4em;
+    font-size: .6em;
+    font-weight: 600;
+    color: #efefef;
+    background-color: #332B57;
+    border: none;
+    border-radius: 1em;
+    text-transform: uppercase;
+}
+
+    .updatedr20::before {
+        content: "Updated for DR20";
     }
+
+.noir {
+    background: #444;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius:5px;
+    font-family: "Raleway", "Open Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight:700;
+    white-space: nowrap;
+    color: #fff;
+}
+
+/* DR19 */
+
+.newdr19 {
+    position: relative;
+    vertical-align:top;
+    margin: 2px 12px 2px 10px;
+   /* box-shadow:.3rem 0.3rem .6rem .1em #333333aa;*/
+    border-radius:1em;
+    padding: .3em 1.2em .4em;
+    font-size: .6em;
+    font-weight: 600;
+    color:#efefef;
+    background-color: #6051a2;
+    border: none;
+    border-radius: 1em;
+    text-transform:uppercase;
+}
+
+    .newdr19::before {
+     content: "New for DR19";   
+}
+
+.updatedr19 {
+    position: relative;
+    vertical-align:top;
+    margin: 2px 12px 2px 10px;
+    border-radius:1em;
+    padding: .3em 1.2em .4em;
+    font-size: .6em;
+    font-weight: 600;
+    color:#efefef;
+    background-color: #332B57;
+    border: none;
+    border-radius: 1em;
+    text-transform:uppercase;
+}
+
+    .updatedr19::before {
+    content: "Updated for DR19";
     
-        .updatedr18::before {
-            padding: 4px;
-            content: "Updated for DR18";
-            font-size: .8em;
-            font-weight: bold;
-            vertical-align: middle;
-            color: white;
-            background-color: #EC9706;
-            border: solid 1px black;
-            border-radius: 4px;
-        }
+    }
+
+    
     /* ##################### 13. Press Releases ##################### */
     .contacts {
         border: 2px solid #867dba;
@@ -842,7 +890,6 @@ figcaption {
         display: flex;
         flex-flow: row wrap;
         flex-basis: 100%;
-        /*border: 1px solid blue;*/
     }
 
 .vac {
@@ -853,8 +900,6 @@ figcaption {
     border-radius: 25px;
     padding: 15px;
     width: 48%;
-    /*min-height:500px;*/
-    /*border: 5px solid purple; */
 }
 
 
@@ -863,7 +908,6 @@ figcaption {
             width: 100%;
         }
     }
-
 
         .vac h2 {
             font-size: 1.37em; /* make vac h2 the size of h3 without changing semantic structure */
@@ -874,21 +918,11 @@ figcaption {
             text-decoration: none;
         }
 
-/*    .vac-left {
-        width: 48%;
-        float: left;
-    }
-
-    .vac-right {
-        width: 48%;
-        float: right;
-    }*/
-
     .vac-description {
         /*margin: 10px;*/
     }
 
-    single-vac {
+    .single-vac {
     }
 
     .single-vac h2 {
@@ -914,21 +948,10 @@ figcaption {
     }
 
     .vac-authors {
-        /*    background-color:yellow;
-    color: DarkSlateGrey;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-        /* margin-left: 10px;
-    margin-top: 10px; */
         font-style: italic;
-        /*margin-bottom: 10px;*/
     }
 
     .vac-authors-full {
-        /*background-color: yellow;
-    /*    color: DarkSlateGrey;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-        /* margin-left: 10px;
-    margin-top: 10px; */
         font-style: italic;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -940,16 +963,7 @@ figcaption {
         flex-flow: row wrap;
         margin-top: 5px;
         margin-bottom: 5px;
-        /*border: 1px solid green;
-    width: 100%;
-    display: inline-block;*/
     }
-
-    /*.vac-tags-row {
-    margin-top: 0;
-}*/
-
-
 
     .vac-tag {
         background-color: #cccccc;
@@ -969,7 +983,6 @@ figcaption {
     }
 
     .vac-dr {
-        /*.label-primary;*/
         background-color: #2C3E50;
     }
 
@@ -1017,7 +1030,6 @@ figcaption {
         overflow: auto;
         padding-left: 10px;
         margin-bottom: 10px;
-        /*padding: 5px;*/
     }
 
     .vac-datamodel {
@@ -1030,7 +1042,6 @@ figcaption {
 
 
     .vac-cas-info {
-        /* background-color: pink;*/
         padding: 10px;
         border: 2px solid black;
         border-radius: 5px;
@@ -1038,26 +1049,22 @@ figcaption {
     }
 
     .vac-cas-info-title {
-        /*background-color: yellow;*/
         vertical-align: middle;
         margin: 0;
     }
 
         .vac-cas-info-title h3 {
             display: inline;
-            /*background-color: silver;*/
             vertical-align: middle;
         }
 
     .vac-cas-info ul {
-        /*background-color: orange;*/
         margin-top: 0;
         margin-bottom: 10px;
     }
 
     .vac-tags-cas-info {
         display: inline-flex;
-        /*background-color: dodgerblue;*/
         height: 100%;
         margin-left: 5px;
         vertical-align: middle;
@@ -1093,11 +1100,10 @@ figcaption {
         }
 
 
-/* ##################### 11.1. VAC Search controls #####################  */
+/* ##################### 14.1. VAC Search controls #####################  */
 
 .vac-search-controls {
     background-color: #276591;
-    /*border: 2px solid black; */
     border-radius: 1.5rem;
     padding: 0.4rem 0 1rem 0rem;
 }
@@ -1112,42 +1118,18 @@ figcaption {
     margin-bottom: 0.1rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;
-    /*background-color: purple;
-    background-color: red;*/
 }
 
 .vac-counts {
     color: white;
     font-style: italic;
-    /*background-color: orange; */
     text-align: center;
     margin-top: 0.1rem;
     margin-bottom: 0.75rem;
     line-height: 1.3;
 }
 
-/*.vac-search-textbox-and-label {
-    color: white;
-    display: flex;
-    flex-basis: 100%;
-    flex-flow: row wrap;
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
-}
-
-    .vac-search-textbox-and-label > label {
-        margin-left: 0.5rem;
-        background-color: #2A516E;
-        padding: 0.4rem;
-        border-radius: 1rem;
-    }
-
-    .vac-search-textbox-and-label > input {
-    }
-*/
-
 .vac-filter-all-checkboxes {
-    /*background-color: green;*/
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0;
@@ -1155,7 +1137,6 @@ figcaption {
 }
 
 .vac-filter {
-    /*background-color: gold; */ 
     display: flex;
     flex-basis: 100%;
     flex-flow: row wrap;
@@ -1166,7 +1147,6 @@ figcaption {
 .vac-filter-title {
     padding: 0 10px;
     text-align: center;
-    /*background-color: red;*/
     color: white;
     line-height: 1.3;
     width: 100%;
@@ -1176,7 +1156,6 @@ figcaption {
 }
 
 .vac-filter-checkbox-list {
-    /*background-color: lavender;*/
     color: white;
     display: flex;
     flex-basis: 100%;
@@ -1184,14 +1163,12 @@ figcaption {
 }
 
 .vac-filter-checkbox-with-label {
-    /*background-color: yellow;*/
     margin: 0;
     white-space: nowrap;
     padding-left: 5px;
     accent-color: white;
 }
     .vac-filter-checkbox-with-label > label {
-        /*background-color: peachpuff;*/
         padding-left: 8px;
     }
 
@@ -1238,7 +1215,7 @@ figcaption {
         }
 
 
-/* ########### 12. Mouseover tooltips (from https://www.w3schools.com/css/css_tooltip.asp) ######## */
+/* ########### 15. Mouseover tooltips (from https://www.w3schools.com/css/css_tooltip.asp) ######## */
 /* Tooltip container */
 .tooltip {
     position: relative;
@@ -1270,7 +1247,7 @@ figcaption {
 
 
 
-/* ##################### 13. Glossary alphabetical index  #####################  */
+/* ##################### 16. Glossary alphabetical index  #####################  */
 
 .glossaryindex {
     /*background-color: aqua;*/
@@ -1339,7 +1316,7 @@ figcaption {
             }
 
 
-/* ##################### 14. SDSS People  #####################  */
+/* ##################### 17. SDSS People  #####################  */
 
 #people-flex-container {
     display: flex;
@@ -1387,3 +1364,304 @@ figcaption {
     float: right;
     margin-left: 1rem;
 }
+
+/* ##################### 18. Tip and remember classes requested by JJ  #####################  */
+
+.remember {
+    padding: 1rem;
+    border: 0.25rem solid red;
+    border-radius: 0.5rem;
+    width:auto;
+}
+
+.tip {
+    margin-left: 1rem;
+    padding: 1rem;
+    background-color: #ffffb2;
+    float:right;
+    width:40%;
+    border-radius: 0.5rem;
+}
+
+.scroller > table {
+    overflow: auto;
+}
+
+
+/* ##################### 19. Tutorials, copied from VAC section ########################## */
+
+    .tutoriallist {
+        display: flex;
+        flex-flow: row wrap;
+        flex-basis: 100%;
+    }
+
+.tutorial {
+    /*display: inline-block;*/
+    display: inline;
+    margin: 10px 5px 10px 5px;
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 15px;
+    width: 48%;
+}
+
+
+    @media screen and (max-width: 900px) {
+        .tutorial {
+            width: 100%;
+        }
+    }
+
+        .tutorial h2 {
+            font-size: 1.37em; /* make tutorial h2 the size of h3 without changing semantic structure */
+            margin-bottom: 0;
+        }
+
+        .tutorial a {
+            text-decoration: none;
+        }
+
+    .tutorial-description {
+        /*margin: 10px;*/
+    }
+
+    .single-tutorial {
+    }
+
+    .single-tutorial h2 {
+        margin-bottom: 0;
+    }
+
+    .single-tutorial h3 {
+        margin-bottom: 5px;
+    }
+
+
+    .single-tutorial-description {
+        font-weight: bold;
+    }
+
+        .single-tutorial-description p {
+            margin-bottom: 0;
+        }
+
+    .single-tutorial-abstract {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .tutorial-authors {
+        font-style: italic;
+    }
+
+    .tutorial-authors-full {
+        font-style: italic;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .tutorial-tags {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .tutorial-tag {
+        background-color: #cccccc;
+        vertical-align: central;
+        display: inline;
+        padding: 0.2em 0.6em 0.3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: 0.25em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+    .tutorial-dr {
+        background-color: #2C3E50;
+    }
+
+    .tutorial-dr-latest {
+        background-color: #6256a3;
+    }
+
+    .tutorial-survey {
+        background-color: #f0ad4e;
+    }
+
+    .tutorial-tag-tag {
+        background-color: #5bc0de;
+    }
+
+    .tutorial-object {
+        background-color: #d9534f;
+    }
+
+    .tutorial-table {
+    }
+
+        .tutorial-table a {
+            color: white;
+        }
+
+    .tutorial-box {
+        background-color: #396c8f;
+        border-radius: 6px; /*0 6px 0 6px;*/
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+        .tutorial-box a {
+            color: white;
+        }
+            
+    .tutorial-www {
+        font-weight: bold;
+        font-size: 1.1em;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        overflow-wrap: break-word;
+        padding: 10px;
+        line-height: 1.25;
+    }
+
+    .tutorial-back-to-list {
+        border-radius: 9999px;
+        color: #fff;
+        background-color: #32373c;
+        box-shadow: none;
+        font-size: 1.125em;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    }
+
+        .tutorial-back-to-list a {
+            display: inline-block;
+            text-align: center;
+            word-break: break-word;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+/* ##################### 14.1. tutorial Search controls #####################  */
+
+.tutorial-search-controls {
+    background-color: #276591;
+    border-radius: 1.5rem;
+    padding: 0.4rem 0 1rem 0rem;
+}
+
+.tutorial-search-title {
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    line-height: 1.3;
+
+    margin-bottom: 0.1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.tutorial-counts {
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.1rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.tutorial-filter-all-checkboxes {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0;
+    padding: 0 10px 10px 10px;
+}
+
+.tutorial-filter {
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    padding: 5px;
+    margin: 5px 5px 10px 5px;
+}
+
+.tutorial-filter-title {
+    padding: 0 10px;
+    text-align: center;
+    color: white;
+    line-height: 1.3;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: bold;
+    padding-bottom: 0.25rem;
+}
+
+.tutorial-filter-checkbox-list {
+    color: white;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+}
+
+.tutorial-filter-checkbox-with-label {
+    margin: 0;
+    white-space: nowrap;
+    padding-left: 5px;
+    accent-color: white;
+}
+    .tutorial-filter-checkbox-with-label > label {
+        padding-left: 8px;
+    }
+
+
+    .tutorial-filter-checkbox-with-label-survey {
+        min-width: 50%;
+        max-width: 100%;
+    }
+
+    .tutorial-filter-checkbox-with-label-objclass {
+        min-width: 33%;
+        max-width: 100%;
+        text-align: center;
+        margin:auto;
+    }
+
+.tutorial-filter-bulk-select {
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    min-width: 50%;
+    max-width: 100%;
+    margin: 5px;
+}
+
+    .tutorial-filter-bulk-select > .clear-all-filters {
+        margin: 5px auto;
+        background-color: white;
+    }
+
+    .tutorial-filter-bulk-select > .select-all-catalogs {
+        margin: 5px auto;
+        background-color: white;
+    }
+
+    .tutorial-filter-bulk-select a {
+        color:black;
+    }
+
+        .tutorial-filter-bulk-select a:hover {
+            color: #44b0fc;
+        }

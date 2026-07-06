@@ -8,3 +8,25 @@ Version updates
  *** 1.4. Added "New for DR19" and "Updated for DR19" and coded TODO samely
  *** 2.0. New Day Zero for everything on sdss.org
  *** 2.1. Formatting of todo, newdr19, updatedr19
+ *** 2.1.1. Re-order those in list
+ *** 2.2. Better formatting of todo, newdr19, updatedr19 from Kate
+ *** 2.3. Created all DR18 sidebar widgets
+ *** 2.4. Blue-signaled DR18 menu, removed TO DO text, added tip and remember classes
+ *** 2.4.1. Added widget area for News
+ *** 2.4.2. Load news sidebar by default so it shows up on category page
+ *** 2.4.3. Added class "scroller" to make tables scrollbarable
+ *** 2.4.4. Added scrollbars to bottom of wp tables
+ *** 2.5. Added newdr20 and updatedr20 CSS classes
+ *** 2.5.1. Added future menu sidebar widget
+ *** 2.5.2. Added noir class for "no APOGEE data in DR20" msg
+ *** 2.5.3. Formatted noir class (thanks Kate)
+ *** 2.5.4. Future page buttons now stay white
+ *** 2.5.5. Declare side menu for tutorial search TBD
+ *** 2.6. Show search sidebar for Tutorials
+ *** 2.6.1. Initialize tutorial search JS function
+ *** 2.7. Tutorial search box only appears in /dr20/tutorials/python/
+ *** 2.7.1. Removed some unneeded classes for formatting tutorials
+ *** 2.7.2. Using tutorial-tag-tag class to format tutorial tags
+ *** 2.8. Tag styling for tutorials, both list and single tutorial display
+ *** 2.8.1. Sidebar of Python Tutorials page: filter widget moved above regular menu
+ *** 2.9. Changed secondary header of DR18/19 to spell out "Data Release"
